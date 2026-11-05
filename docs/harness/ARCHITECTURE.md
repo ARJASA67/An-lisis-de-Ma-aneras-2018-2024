@@ -195,3 +195,20 @@ Mientras el alumno anota (H3, H6), el asistente avanza en lo que no depende de e
 - PRD completo: `PRD_unificado_examen1_mineria_textos.md` (fuente de verdad; este mapa no lo sustituye).
 - Estructura del repo y `.gitignore`: PRD §9. Makefile: PRD §10. Formatos exactos de los seis CSV: PRD §3.5.
 - Skills del arnés: ver `CLAUDE.md` (índice) y `.claude/skills/*/SKILL.md`.
+
+### Mapa del PRD por líneas (v3.0; léelo por secciones, no entero)
+
+| Sección | Líneas | Sección | Líneas |
+| --- | --- | --- | --- |
+| §0 Uso del documento y reglas del asistente | 11-66 | §6.9-6.10 Fusión y normalización | 586-607 |
+| §1 Contexto, rúbrica, Fase 0 | 68-115 | §6.11 Gold y selección | 608-635 |
+| §2 Restricciones y herramientas | 117-150 | §6.12 Evaluación IE y errores | 636-653 |
+| §3 Kit, contratos, formatos, offsets | 152-248 | §6.13 Tablas de respuesta | 654-677 |
+| §4 Decisiones D01-D22 y PV | 251-291 | §6.14-6.16 Reporte, láminas, demo | 678-716 |
+| §5 Consultas y Q9/Q10 | 294-331 | §7 App local | 719-729 |
+| §6 Módulos (lista) | 334-368 | §8 Esquemas de datos | 732-760 |
+| §6.1 Corpus y segmentación | 370-400 | §9 Estructura del repo | 763-862 |
+| §6.2-6.4 Preproceso, índice, ranking | 401-469 | §10 Makefile | 865-896 |
+| §6.5-6.6 Pool, juicios, evaluación IR | 470-500 | §11 Reproducibilidad, README, IA, commits | 899-939 |
+| §6.7 Reglas y gazetteers | 501-565 | §12 Hitos, prioridades, recortes | 942-985 |
+| §6.8 NER | 566-585 | §13-§15 Validación, riesgos, anexos | 988-1146 |

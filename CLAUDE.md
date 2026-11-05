@@ -48,6 +48,7 @@ Por hito del PRD (§12.2):
 - **Cifras**: toda cifra del reporte, README o láminas proviene de un archivo en `salida/`; lo que falte se declara pendiente.
 - **Commits**: Conventional Commits con tipo en inglés y descripción en español (`feat(ranking): ...`, `data(juicios): ...`); uno por unidad probada. Etiquetas `reglas-congeladas` antes del gold y `v1.0-entrega` al final.
 - **Decisiones**: cada decisión y cada cambio posterior a una congelación se registra con fecha en `docs/decisiones.md`.
+- **PRD**: pesa ~58k tokens y la lectura lo trunca. Léelo por secciones con el mapa de líneas de `docs/harness/ARCHITECTURE.md` §9; cada skill cita las secciones que le tocan.
 - **Remote**: el repo vive en GitLab (`text-mining-ir-er`); el PRD habla de GitHub. Se registra en `docs/decisiones.md`; `AGENTS.md` de este repo es symlink a este archivo y cumple PRD §11.4.
 
 ## Retomar trabajo

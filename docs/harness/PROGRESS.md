@@ -17,5 +17,4 @@
 
 ## Bloqueos
 
-- Pendiente de aprobación del alumno: diff propuesto al arnés (mapa sección → líneas del PRD en `ARCHITECTURE.md` §9 y regla en `CLAUDE.md` de leer el PRD por secciones). Se propuso al cerrar la sesión del 2026-11-04 y no se aplicó.
-- Ninguno más. El kit del profesor (`corpus.py`, `consultas.csv`, `gazetteer_dependencias.csv`, `evaluar.py`) aún no está en el repo; se pide en la Fase 0.
+- Ninguno. El kit del profesor (`corpus.py`, `consultas.csv`, `gazetteer_dependencias.csv`, `evaluar.py`) aún no está en el repo; se pide en la Fase 0.
