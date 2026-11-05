@@ -1,0 +1,1 @@
+../../../.claude/skills/reglas-gazetteer/SKILL.md

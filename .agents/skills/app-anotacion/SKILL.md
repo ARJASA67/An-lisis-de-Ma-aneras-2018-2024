@@ -1,0 +1,1 @@
+../../../.claude/skills/app-anotacion/SKILL.md

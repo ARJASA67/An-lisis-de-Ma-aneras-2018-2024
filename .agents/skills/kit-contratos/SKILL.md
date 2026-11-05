@@ -1,0 +1,1 @@
+../../../.claude/skills/kit-contratos/SKILL.md

@@ -1,0 +1,1 @@
+../../../.claude/skills/system-onboarding/SKILL.md

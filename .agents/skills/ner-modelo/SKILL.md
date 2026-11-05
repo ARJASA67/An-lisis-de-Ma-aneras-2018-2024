@@ -1,0 +1,1 @@
+../../../.claude/skills/ner-modelo/SKILL.md

@@ -1,0 +1,1 @@
+../../../.claude/skills/laminas-demo/SKILL.md

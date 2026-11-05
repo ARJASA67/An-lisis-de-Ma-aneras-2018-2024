@@ -1,0 +1,1 @@
+../../../.claude/skills/tablas-respuesta/SKILL.md

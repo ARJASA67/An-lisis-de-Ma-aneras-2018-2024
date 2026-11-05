@@ -1,0 +1,1 @@
+../../../.claude/skills/integridad-congelacion/SKILL.md

@@ -1,0 +1,1 @@
+../../../.claude/skills/evaluacion-ie/SKILL.md

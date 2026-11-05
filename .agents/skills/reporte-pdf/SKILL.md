@@ -1,0 +1,1 @@
+../../../.claude/skills/reporte-pdf/SKILL.md

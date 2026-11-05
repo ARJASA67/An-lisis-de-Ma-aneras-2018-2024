@@ -1,0 +1,1 @@
+../../../.claude/skills/gold-anotacion/SKILL.md

@@ -1,0 +1,1 @@
+../../../.claude/skills/pool-juicios-ir/SKILL.md

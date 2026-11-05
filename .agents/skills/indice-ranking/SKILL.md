@@ -1,0 +1,1 @@
+../../../.claude/skills/indice-ranking/SKILL.md

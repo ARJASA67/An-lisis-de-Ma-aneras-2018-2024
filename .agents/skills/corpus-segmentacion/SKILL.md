@@ -1,0 +1,1 @@
+../../../.claude/skills/corpus-segmentacion/SKILL.md
