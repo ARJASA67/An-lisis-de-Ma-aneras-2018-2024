@@ -17,7 +17,7 @@ Fuente de verdad: PRD §9, §10, §11, §13.2 y decisiones D01 y D18. Si algo no
 Referencia: PRD §11.1 y D01.
 
 1. `pyproject.toml` con `requires-python = ">=3.11,<3.13"`.
-2. Dependencias de ejecución (exactamente estas): `pandas, numpy, scikit-learn, nltk, regex, datasets, pyarrow, transformers, torch, streamlit, python-pptx, pyyaml, rich, matplotlib, pypdf`.
+2. Dependencias de ejecución (exactamente estas): `pandas, numpy, scikit-learn, nltk, regex, datasets, pyarrow, transformers, torch, streamlit, python-pptx, pyyaml, rich, plotly, kaleido, pypdf`.
 3. Grupo de desarrollo: `pytest, rank_bm25, ruff`. Registrar el marcador `lento` en la configuración de pytest (`[tool.pytest.ini_options] markers`).
 4. `torch` solo CPU en Linux y Windows: índice `https://download.pytorch.org/whl/cpu` declarado en `[[tool.uv.index]]` y asignado en `[tool.uv.sources]` con marcadores de plataforma; en macOS el wheel por defecto ya es CPU/MPS y no se redirige.
 5. `.python-version` con `3.11`. `uv.lock` siempre versionado. Tras cada cambio de dependencias, regenerar `requirements.txt` con el comando exacto:

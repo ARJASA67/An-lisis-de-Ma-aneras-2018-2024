@@ -12,7 +12,7 @@ inconveniente con alguna?
 - `torch` (CPU): lo requiere `transformers` para el NER.
 - `pyarrow`: guardar los pasajes en formato Parquet.
 - `streamlit`: app local para capturar mis juicios de relevancia y mi gold; no sugiere ni precarga valores.
-- `matplotlib`: figuras del reporte.
+- `plotly` y `kaleido`: figuras del reporte (sustituyen a matplotlib por indicación del profesor).
 - `pypdf`: contar las páginas del PDF.
 - `python-pptx`: generar las láminas.
 - `pytest`: pruebas del código.

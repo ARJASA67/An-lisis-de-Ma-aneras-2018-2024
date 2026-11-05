@@ -33,7 +33,7 @@ Regla: se pregunta solo lo que no se puede inspeccionar (PRD §1.3). Todo lo dem
 
 ### Mensaje al profesor sobre utilerías (P07)
 
-1. El asistente redacta un mensaje corto con las utilerías de la tabla del PRD §2.2 que no aparecen en el enunciado (`torch`, `pyarrow`, `streamlit`, `matplotlib`, `pypdf`, `python-pptx`, `pytest`, `pyyaml`, `rich`, `uv`) y el papel de cada una.
+1. El asistente redacta un mensaje corto con las utilerías de la tabla del PRD §2.2 que no aparecen en el enunciado (`torch`, `pyarrow`, `streamlit`, `plotly`, `pypdf`, `python-pptx`, `pytest`, `pyyaml`, `rich`, `uv`) y el papel de cada una.
 2. El alumno lo envía y registra la respuesta en `docs/decisiones.md`.
 3. Mientras no haya respuesta se trabaja con ellas; cada una tiene su alternativa en la misma tabla.
 

@@ -18,7 +18,8 @@ dependencies = [
     "python-pptx",
     "pyyaml",
     "rich",
-    "matplotlib",
+    "plotly",
+    "kaleido",
     "pypdf",
 ]
 

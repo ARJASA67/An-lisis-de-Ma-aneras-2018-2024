@@ -131,7 +131,7 @@ Si falla cualquier punto 1 a 5, no se exporta y `make evaluar-ir` se niega a cor
    presencia de siglas o nombre propio, sinónimos conocidos según
    `config/sinonimos_consultas.yaml` (huachicol ↔ robo de combustible; adultos mayores ↔ pensión
    del Bienestar; AIFA ↔ Santa Lucía ↔ Felipe Ángeles; Dos Bocas ↔ refinería Olmeca).
-5. Figuras matplotlib, estilo sobrio, una paleta, títulos en mayúscula inicial:
+5. Figuras plotly (PNG por kaleido), estilo sobrio, una paleta, títulos en mayúscula inicial:
    `reporte/figuras/ir_map_por_modelo.png`, `ir_ap_por_consulta.png`, `ir_con_vs_sin_filtro.png`.
 6. El texto del análisis (reporte, p. 2) se escribe después de ver las etiquetas y describe esta
    colección; no se presenta como generalización.

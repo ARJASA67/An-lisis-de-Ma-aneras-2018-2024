@@ -137,7 +137,7 @@ Se pregunta solo lo que no se puede inspeccionar; las respuestas van a `docs/dec
 | `torch` | Requisito de `transformers` | Ninguna: sin ella no hay NER con modelo |
 | `pyarrow` | Parquet | CSV comprimido con pandas |
 | `streamlit` | App local de juicios, gold y gazetteer | Formularios por terminal con `input()` |
-| `matplotlib` | Figuras del reporte | Tablas en lugar de figuras |
+| `plotly` (+ `kaleido`) | Figuras del reporte (el profesor descartó matplotlib; ver `docs/decisiones.md`) | Tablas en lugar de figuras |
 | `pypdf` | Contar páginas del PDF | `pdfinfo` de poppler |
 | `python-pptx` | Generar láminas (P2) | Láminas a mano |
 | `pytest` | Pruebas | `assert` en scripts |
@@ -493,7 +493,7 @@ Se congelan corpus, consultas, configuración IR, rankings, pool y criterio ante
 2. **Vista con ventana (complementaria).** `salida/05_juicios_con_ventana.csv` con `relevante_ventana = relevante AND en_ventana` (fecha desconocida no cumple la ventana) y el mismo evaluador sobre él: `salida/05_resultados_ir_ventana.csv`. Las dos vistas separan cuánto ruido temático quita el filtro y cuántos pasajes fuera de ventana deja pasar la variante sin filtro. Se rotula como complementaria: cambian el criterio y el denominador de AP; nunca sustituye a `resultados_ir.csv`. Se cuentan por consulta los relevantes temáticos dentro y fuera de la ventana y los de fecha desconocida.
 3. `salida/05_ir_por_consulta.csv` en formato ancho (consulta × variante para P@5, P@10, AP, soporte, juzgados y no juzgados) y `salida/05_ir_ganador_por_consulta.csv`: ganador por AP con filtro, diferencia, y etiquetas **calculadas por el script**: longitud en tokens tras preprocesar (larga o corta respecto a la mediana de las diez), número de términos con df alto, presencia de siglas o nombre propio, sinónimos conocidos (`config/sinonimos_consultas.yaml`: huachicol ↔ robo de combustible; adultos mayores ↔ pensión del Bienestar; AIFA ↔ Santa Lucía ↔ Felipe Ángeles; Dos Bocas ↔ refinería Olmeca). El texto del análisis se escribe después de ver estas etiquetas.
 4. `mejor_modelo` = argmax MAP oficial entre `tfidf_con_filtro` y `bm25_con_filtro`; empate exacto a BM25 (D08). Se escribe `data/mejor_modelo.json` con modelo, MAP, alternativa, su MAP, versión de rankings y juicios. Si la diferencia es menor a 0.01, se marca y se comenta en el reporte sin cambiar la regla.
-5. Figuras (matplotlib, estilo sobrio, una paleta, títulos en mayúscula inicial): `reporte/figuras/ir_map_por_modelo.png`, `ir_ap_por_consulta.png`, `ir_con_vs_sin_filtro.png`.
+5. Figuras (plotly con exportación PNG por kaleido, estilo sobrio, una paleta, títulos en mayúscula inicial): `reporte/figuras/ir_map_por_modelo.png`, `ir_ap_por_consulta.png`, `ir_con_vs_sin_filtro.png`.
 6. Texto base para el análisis (EX, p. 2): en qué consultas gana cada modelo, consultas largas frente a cortas según las etiquetas, sinónimos, con y sin filtro en las dos vistas, y en qué consultas ayudarían embeddings densos (sin implementarlos). Las cifras describen esta colección y no se presentan como generalización.
 
 **Criterios de aceptación.** `resultados_ir.csv` con 10 consultas × 4 variantes más 4 filas de promedio; `no_juzgados == 0` en las cuatro variantes; ninguna consulta con cero relevantes sin nota en el reporte; horizonte de evaluación (AP sobre top-10) documentado.
@@ -900,7 +900,7 @@ Los objetivos tienen dependencias reales. Si faltan juicios, gold o textos human
 
 ### 11.1 Entorno
 
-- `pyproject.toml` con `requires-python = ">=3.11,<3.13"`. Dependencias: `pandas, numpy, scikit-learn, nltk, regex, datasets, pyarrow, transformers, torch (CPU), streamlit, python-pptx, pyyaml, rich, matplotlib, pypdf`. Desarrollo: `pytest, rank_bm25, ruff`. Marcador `lento` en pytest.
+- `pyproject.toml` con `requires-python = ">=3.11,<3.13"`. Dependencias: `pandas, numpy, scikit-learn, nltk, regex, datasets, pyarrow, transformers, torch (CPU), streamlit, python-pptx, pyyaml, rich, plotly, kaleido, pypdf`. Desarrollo: `pytest, rank_bm25, ruff`. Marcador `lento` en pytest.
 - `torch` CPU desde `https://download.pytorch.org/whl/cpu` en Linux y Windows (`[[tool.uv.index]]` y `[tool.uv.sources]`); en macOS el wheel por defecto ya es CPU/MPS.
 - `uv.lock` versionado; `requirements.txt` con `uv export --no-dev --format requirements-txt > requirements.txt` porque la rúbrica lo nombra.
 - `salida/manifiesto_ejecucion.json`: commit del código, hashes del kit, del snapshot y del orden de IDs, consultas, configuración, stopwords, gazetteers, muestras, juicios, gold, versión del protocolo, modelo y tokenizador con revisiones, dependencias, semillas, esquemas y parámetros. Las marcas de tiempo informan, no identifican.

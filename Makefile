@@ -7,6 +7,7 @@ PY := uv run python
 setup:
 	uv sync
 	-uv run python -c "import nltk; nltk.download('stopwords', download_dir='.nltk_data', quiet=True)" 2>/dev/null || echo "AVISO: NLTK no descargó stopwords; se usa config/stopwords_es.txt (respaldo versionado)"
+	-uv run plotly_get_chrome -y >/dev/null 2>&1 || echo "AVISO: no se instaló Chrome para kaleido; las figuras PNG no se podrán exportar"
 	@command -v pandoc >/dev/null || echo "AVISO: falta pandoc (solo 'make reporte' lo necesita)"
 	@command -v xelatex >/dev/null || echo "AVISO: falta xelatex (solo 'make reporte' lo necesita)"
 
