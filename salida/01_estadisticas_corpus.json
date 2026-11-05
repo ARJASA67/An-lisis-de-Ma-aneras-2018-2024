@@ -1,0 +1,17 @@
+{
+  "discursos": 2294,
+  "textos_vacios": 0,
+  "fecha_min": "2018-12-02",
+  "fecha_max": "2024-09-30",
+  "fecha_nat": 0,
+  "palabras": {
+    "minimo": 87,
+    "p10": 1552.3,
+    "mediana": 8502.5,
+    "media": 7881.5,
+    "p90": 14511.300000000005,
+    "maximo": 25938
+  },
+  "discursos_sin_marcas_tilde": 0,
+  "discursos_sin_marcas_reconocidas_por_el_kit": 2294
+}

@@ -7,10 +7,13 @@
 
 - 2026-11-04: H0 parcial. Entorno (`pyproject.toml`, `uv.lock`, `.python-version` 3.11, `Makefile`, `.gitignore`, carpetas), `make setup` verde, `docs/decisiones.md` con la Fase 0 (datos de entorno), `docs/mensaje_profesor_utilerias.md`.
 
+- 2026-11-04: H0 cerrado. Kit copiado con hashes, `src/mtx/adaptadores_kit.py`, 42 pruebas de contrato, `docs/contratos_kit.md`. Fase 0: alumno Daniel Gonzalez, plazo 11 de noviembre, plotly en lugar de matplotlib.
+- 2026-11-04: H1 parcial. `src/mtx/corpus.py`, `config/limpieza.yaml`, `scripts/01_corpus_y_pasajes.py`, `tests/test_corpus.py` (35 pruebas) y `make corpus` verde: 127,739 pasajes en `data/pasajes.parquet`. Falta `00_descubrir_consultas.py`, Q9 y Q10 `[VALIDAR]` y `data/consultas.csv`.
+
 ## Pendiente
 
-- H0 · Preparación (falta): el alumno entrega la ruta del kit, nombre, repo de entrega y plazo vigente; copiar el kit a `kit/` con hashes SHA-256 (quitar `kit/.gitkeep`), `tests/test_contratos_kit.py` (`make contratos`), `docs/contratos_kit.md`; el alumno envía el mensaje a profesor.
-- H1 · Datos y consultas → H2 · Recuperación → H3 · Juicios (humano) → H4 · Evaluación IR → H5 · Preparación IE → H6 · Gold (humano) → H7 · IE final → H8 · Respuestas → H9 · Entrega (PRD §12.2).
+- (H0 hecho salvo:) el alumno entrega la ruta del kit, nombre, repo de entrega y plazo vigente; copiar el kit a `kit/` con hashes SHA-256 (quitar `kit/.gitkeep`), `tests/test_contratos_kit.py` (`make contratos`), `docs/contratos_kit.md`; el alumno envía el mensaje a profesor.
+- Siguiente: `scripts/00_descubrir_consultas.py` y `config/candidatos_q9q10.yaml`; mostrar candidatos a Daniel y esperar su elección de Q9 y Q10. Luego H2. Orden completo: H1 → H2 · Recuperación → H3 · Juicios (humano) → H4 · Evaluación IR → H5 · Preparación IE → H6 · Gold (humano) → H7 · IE final → H8 · Respuestas → H9 · Entrega (PRD §12.2).
 
 ## Decisiones
 

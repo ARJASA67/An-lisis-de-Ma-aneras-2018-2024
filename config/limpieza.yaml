@@ -1,0 +1,73 @@
+# Parámetros de limpieza auditada (PRD §6.1.2, D05). El reporte cita este archivo.
+# Cada operación se cuenta por doc_id en salida/01_auditoria_corpus.csv.
+version: 1
+
+# Marcas de interlocutor del corpus real (verificadas el 2026-11-04 sobre los 2,294 discursos):
+#  - "~~~ETIQUETA texto", sin dos puntos, con espacios duros; solo tres etiquetas de reportero/presidente.
+#  - "NOMBRE, CARGO: texto" en línea (casi no hay saltos de línea), para los demás participantes.
+marcas:
+  prefijo_tilde: "~~~"
+  etiquetas_tilde:            # de la más larga a la más corta (INTERLOCUTORA antes que INTERLOCUTOR)
+    - "PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR"
+    - "INTERLOCUTORA"
+    - "INTERLOCUTOR"
+    - "PREGUNTA"
+  # Etiquetas en línea de una sola palabra que sí cuentan como interlocutor; el resto exige 2 o más palabras.
+  etiquetas_en_linea_una_palabra:
+    - "INTERVENCIÓN"
+    - "MODERADORA"
+    - "MODERADOR"
+    - "PRESENTADORA"
+    - "PRESENTADOR"
+    - "LOCUTORA"
+    - "LOCUTOR"
+  max_caracteres_etiqueta: 260
+  reportero:                  # PRD §6.1.3 punto 6; una marca desconocida no es reportero
+    exactas: ["PREGUNTA", "INTERLOCUTOR", "INTERLOCUTORA"]
+    prefijo: "PREGUNTA"
+
+# Acotaciones que no son habla. A diferencia del PRD, no se borra todo paréntesis en mayúsculas:
+# siglas como (IMSS), (PROFECO) o (SEDENA) son entidades y se conservan. Se borra solo lo que
+# coincide por completo con alguno de estos patrones (sin distinguir mayúsculas).
+acotaciones:
+  - 'inaudible'
+  - 'falla (?:de|en)(?: la)? (?:transmisi[oó]n|audio|micr[oó]fono|se[ñn]al)'
+  - 'se corta la transmisi[oó]n'
+  - '(?:inicia|inicio|finaliza|fin|final|termina|contin[uú]a|reanuda|pausa|pausan|se detiene)(?: de| del)?(?: el)? (?:video|v[ií]deo|audio|grabaci[oó]n)(?: [^()]*)?'
+  - 'proyecci[oó]n de (?:video|v[ií]deo)(?: [^()]*)?'
+  - 'himno nacional(?: mexicano)?'
+  - 'toque militar'
+  - 'corte de list[oó]n'
+  - 'firma de convenio'
+  - 'entrega de reconocimientos?'
+  - 'guardia de honor'
+  - 'enlace (?:videollamada|telef[oó]nico|en vivo)'
+  - '(?:inicia|reanuda|finaliza|termina) videollamada'
+  - 'habla (?:en )?(?:lengua ind[ií]gena|ind[ií]gena|ingl[eé]s|franc[eé]s|portugu[eé]s)'
+  - 'subt[ií]tulos(?: en espa[ñn]ol)?'
+  - '(?:interpretaci[oó]n|traducci[oó]n) (?:del?|en) [^()]*'
+  - 'en ese momento [^()]*'
+  - 'aplausos?'
+  - 'risas?'
+  - '…'
+  - 'corte'
+  - 'palmea'
+
+# Lemas anuales del gobierno que encabezan algunos discursos ("2022: Año de ..."): ruido de encabezado.
+lemas:
+  - "Año del Caudillo del Sur, Emiliano Zapata"
+  - "Año de Leona Vicario, Benemérita Madre de la Patria"
+  - "Año de la Independencia"
+  - "Año de Ricardo Flores Magón, precursor de la Revolución Mexicana"
+  - "Año de Francisco Villa, el revolucionario del pueblo"
+  - "Año de Felipe Carrillo Puerto, benemérito del proletariado, revolucionario y defensor del Mayab"
+
+duplicados:
+  shingle_palabras: 5
+  jaccard_minimo: 0.9         # casi duplicado: misma fecha y Jaccard >= este valor (U12)
+  # doc_id que NO deben excluirse aunque el criterio los marque (reversión manual del alumno).
+  reversiones: []
+
+fechas:
+  rango_valido: ["2018-12-01", "2024-09-30"]
+  tolerancia_dias: 3

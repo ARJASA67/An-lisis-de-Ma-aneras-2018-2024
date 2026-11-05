@@ -1,0 +1,61 @@
+tipo,interlocutor,es_reportero,intervenciones,descartadas,porcentaje_descartado,ejemplo
+resumen,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR,False,50622,22287,44.03,
+resumen,INTERLOCUTORA,True,27248,19702,72.31,
+resumen,PREGUNTA,True,12437,6068,48.79,
+resumen,INTERVENCIÓN,False,5396,5272,97.7,
+resumen,JESÚS RAMÍREZ CUEVAS,False,2366,2290,96.79,
+resumen,VOZ MUJER,False,1335,601,45.02,
+resumen,VOZ HOMBRE,False,985,503,51.07,
+resumen,"JESÚS RAMÍREZ CUEVAS, COORDINADOR GENERAL DE COMUNICACIÓN SOCIAL Y VOCERO DE PRESIDENCIA",False,441,416,94.33,
+resumen,MARCELO EBRARD CASAUBON,False,725,295,40.69,
+resumen,ROSA ICELA RODRÍGUEZ VELÁZQUEZ,False,399,217,54.39,
+resumen,INTERVENCIÓN HOMBRE,False,226,198,87.61,
+resumen,INTERVENCIÓN MUJER,False,219,192,87.67,
+resumen,ANDRÉS MANUEL LÓPEZ OBRADOR,False,266,179,67.29,
+resumen,VOCES A CORO,False,171,169,98.83,
+resumen,MODERADORA,False,187,156,83.42,
+resumen,LUIS CRESENCIO SANDOVAL GONZÁLEZ,False,346,155,44.8,
+resumen,MARCELO EBRARD CASAUBÓN,False,399,146,36.59,
+resumen,CIRO GÓMEZ LEYVA,False,134,120,89.55,
+resumen,HUGO LÓPEZ-GATELL RAMÍREZ,False,481,107,22.25,
+resumen,ZOÉ ROBLEDO ABURTO,False,324,104,32.1,
+resumen,LUISA MARÍA ALCALDE LUJÁN,False,163,102,62.58,
+resumen,"JESÚS RAMÍREZ CUEVAS, COORDINADOR GENERAL DE COMUNICACIÓN SOCIAL Y VOCERO DE LA PRESIDENCIA",False,118,97,82.2,
+resumen,PABLO GÓMEZ ÁLVAREZ,False,152,92,60.53,
+resumen,ANA ELIZABETH GARCÍA VILCHIS,False,320,80,25.0,
+resumen,OCTAVIO ROMERO OROPEZA,False,158,78,49.37,
+resumen,DIEGO FERNÁNDEZ DE CEVALLOS,False,96,77,80.21,
+resumen,JORGE ALCOCER VARELA,False,192,75,39.06,
+resumen,PABLO REINAH,False,74,71,95.95,
+resumen,RICARDO SHEFFIELD PADILLA,False,176,69,39.2,
+resumen,ADÁN AUGUSTO LÓPEZ HERNÁNDEZ,False,103,65,63.11,
+resumen,ISRAEL VALLARTA,False,64,64,100.0,
+resumen,JOSÉ RAFAEL OJEDA DURÁN,False,104,59,56.73,
+resumen,ALEJANDRO ENCINAS RODRÍGUEZ,False,166,55,33.13,
+resumen,"ROCÍO NAHLE GARCÍA, SECRETARIA DE ENERGÍA",False,100,52,52.0,
+resumen,VICENTE FOX QUESADA,False,60,51,85.0,
+resumen,ALFONSO DURAZO MONTAÑO,False,118,47,39.83,
+resumen,BEATRIZ GUTIÉRREZ MUELLER,False,65,47,72.31,
+resumen,VOZ DE MUJER,False,116,44,37.93,
+resumen,OLGA SÁNCHEZ CORDERO,False,111,42,37.84,
+resumen,MANUEL BARTLETT DÍAZ,False,71,39,54.93,
+ejemplo,INTERVENCIÓN,False,,8,,"No, el primero no vale, segundo no vale…"
+ejemplo,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR,False,,12,,Ah bueno. ¿Y no tienes ahí la hora? Para que la repitas.
+ejemplo,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR,False,,17,,"Rafael Galván, gran dirigente, Rafael Galván. Sino toda la línea de transmisión desde Puerto Peñasco hasta Mexicali."
+ejemplo,INTERLOCUTORA,True,,13,,"Presidente, en esta investigación que van a realizar sobre esta exposición, fueron 319…"
+ejemplo,"JOSÉ RAFAEL OJEDA DURÁN, SECRETARIO DE MARINA",False,,4,,"Sí, es muy similar."
+ejemplo,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR,False,,1,,Sí.
+ejemplo,INTERLOCUTORA,True,,0,,
+ejemplo,JESÚS RAMÍREZ CUEVAS,False,,2,,Se presentó.
+ejemplo,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR,False,,2,,Con Total.
+ejemplo,INTERLOCUTORA,True,,35,,"Nada más, la última pregunta para el pueblo de Tabasco, estamos entrando al periodo de lluvias y todo eso. ¿Cómo va la cuestión del desfogue de las presas que tanto han afectado a la región?"
+ejemplo,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR,False,,31,,"Sí, que se vea su caso. No hay impunidad para nadie, sea quien sea. Y hasta donde nos alcance el tiempo, hasta donde humanamente podamos se va a hacer justicia siempre."
+ejemplo,MODERADORA,False,,4,,Integrantes del Poder Legislativo.
+ejemplo,JESÚS RAMÍREZ CUEVAS,False,,1,,No.
+ejemplo,INTERLOCUTORA,True,,4,,También aquí con nosotros.
+ejemplo,ANDRÉS MANUEL LÓPEZ OBRADOR,False,,32,,"No, pero sabe usted que eso lo que siempre ha dicho el régimen, porque no me tienen agarrado y tratan con un accidente que sufrió mi hermano de agarrarme, pero pruébeme usted."
+ejemplo,INTERLOCUTORA,True,,6,,¿Es la senadora Josefina Vázquez Mota?
+ejemplo,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR,False,,22,,"Mañana. Y, nada más en tu caso, es el único, lo demás va a ser abierto. Bueno, nos vemos. Hasta luego. ---"
+ejemplo,PREGUNTA,True,,5,,¿De a cómo el boleto?
+ejemplo,INTERLOCUTORA,True,,3,,¿Se está investigando?
+ejemplo,INTERLOCUTORA,True,,3,,Hugo López Guerrero.
