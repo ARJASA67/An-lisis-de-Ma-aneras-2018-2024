@@ -1,0 +1,51 @@
+# Sugerencias para Q9 y Q10 (PRD §5.2). Son candidatas, no consultas elegidas: el alumno elige dos,
+# distintas entre sí y de Q1 a Q8, y redacta consulta, ventana y pregunta. Editable.
+candidatos:
+  - id: guardia_nacional
+    tema: Guardia Nacional
+    terminos: ["guardia nacional", "despliegue", "elementos"]
+    desde: "2019-01-01"
+    hasta: "2020-12-31"
+    pregunta: "Qué dependencias la integran, en qué estados se despliega, cuántos elementos y qué fechas"
+  - id: insabi
+    tema: Insabi y sistema de salud
+    terminos: ["insabi", "seguro popular", "medicamentos"]
+    desde: "2019-06-01"
+    hasta: "2021-12-31"
+    pregunta: "Qué instituciones participan, qué funcionarios, qué montos y qué fechas de arranque"
+  - id: tren_interoceanico
+    tema: Tren Interoceánico del Istmo
+    terminos: ["interoceanico", "istmo", "salina cruz", "coatzacoalcos"]
+    desde: "2020-01-01"
+    hasta: "2024-06-30"
+    pregunta: "Qué dependencias y empresas, qué lugares conecta, qué montos y fechas de inauguración"
+  - id: reforma_electrica
+    tema: Reforma eléctrica y litio
+    terminos: ["reforma electrica", "litio", "cfe", "generacion"]
+    desde: "2021-09-01"
+    hasta: "2022-12-31"
+    pregunta: "Qué organizaciones, qué funcionarios, qué porcentajes y montos"
+  - id: aranceles_migracion
+    tema: Aranceles y acuerdo migratorio con EUA
+    terminos: ["aranceles", "trump", "guardia", "migrantes"]
+    desde: "2019-05-01"
+    hasta: "2019-07-31"
+    pregunta: "Qué países y funcionarios, qué porcentajes, qué fechas y cifras de migrantes"
+  - id: banco_bienestar
+    tema: Banco del Bienestar
+    terminos: ["banco del bienestar", "sucursales"]
+    desde: "2019-01-01"
+    hasta: "2023-12-31"
+    pregunta: "Qué institución, cuántas sucursales, en qué estados, con qué montos"
+  - id: mexicana_aviacion
+    tema: Mexicana de Aviación
+    terminos: ["mexicana de aviacion", "aerolinea", "marca"]
+    desde: "2023-01-01"
+    hasta: "2024-06-30"
+    pregunta: "Qué dependencias, qué montos de compra, qué fechas y rutas"
+  - id: ayotzinapa
+    tema: Caso Ayotzinapa
+    terminos: ["ayotzinapa", "normalistas", "comision de la verdad"]
+    desde: "2018-12-01"
+    hasta: "2023-12-31"
+    pregunta: "Qué organismos y funcionarios, qué fechas y qué lugares"
