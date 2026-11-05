@@ -1,0 +1,77 @@
+nombre,siglas,tipo
+Secretaría de Gobernación,Segob,dependencia
+Secretaría de Relaciones Exteriores,SRE,dependencia
+Secretaría de la Defensa Nacional,Sedena,dependencia
+Secretaría de Marina,Semar,dependencia
+Secretaría de Seguridad y Protección Ciudadana,SSPC,dependencia
+Secretaría de Hacienda y Crédito Público,SHCP,dependencia
+Secretaría de Bienestar,Bienestar,dependencia
+Secretaría de Medio Ambiente y Recursos Naturales,Semarnat,dependencia
+Secretaría de Energía,Sener,dependencia
+Secretaría de Economía,SE,dependencia
+Secretaría de Agricultura y Desarrollo Rural,Sader,dependencia
+Secretaría de Infraestructura Comunicaciones y Transportes,SICT,dependencia
+Secretaría de Comunicaciones y Transportes,SCT,dependencia
+Secretaría de la Función Pública,SFP,dependencia
+Secretaría de Educación Pública,SEP,dependencia
+Secretaría de Salud,Salud,dependencia
+Secretaría del Trabajo y Previsión Social,STPS,dependencia
+Secretaría de Desarrollo Agrario Territorial y Urbano,Sedatu,dependencia
+Secretaría de Cultura,Cultura,dependencia
+Secretaría de Turismo,Sectur,dependencia
+Consejería Jurídica del Ejecutivo Federal,CJEF,dependencia
+Instituto Mexicano del Seguro Social,IMSS,organismo
+Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,ISSSTE,organismo
+Petróleos Mexicanos,Pemex,empresa productiva del Estado
+Comisión Federal de Electricidad,CFE,empresa productiva del Estado
+Guardia Nacional,GN,organismo
+Comisión Nacional del Agua,Conagua,organismo
+Servicio de Administración Tributaria,SAT,organismo
+Banco de México,Banxico,organismo autónomo
+Instituto Nacional Electoral,INE,organismo autónomo
+Fondo Nacional de Fomento al Turismo,Fonatur,organismo
+Instituto del Fondo Nacional de la Vivienda para los Trabajadores,Infonavit,organismo
+Comisión Federal para la Protección contra Riesgos Sanitarios,Cofepris,organismo
+Instituto Nacional de Antropología e Historia,INAH,organismo
+Consejo Nacional de Humanidades Ciencias y Tecnologías,Conahcyt,organismo
+Consejo Nacional de Ciencia y Tecnología,Conacyt,organismo
+Comisión Nacional de los Salarios Mínimos,Conasami,organismo
+Instituto Nacional de Migración,INM,organismo
+Fiscalía General de la República,FGR,organismo autónomo
+Suprema Corte de Justicia de la Nación,SCJN,poder judicial
+Banco del Bienestar,Banco del Bienestar,organismo
+Instituto de Salud para el Bienestar,Insabi,organismo
+IMSS-Bienestar,IMSS-Bienestar,organismo
+Procuraduría Federal del Consumidor,Profeco,organismo
+Comisión Reguladora de Energía,CRE,organismo
+Comisión Nacional de Hidrocarburos,CNH,organismo
+Instituto Nacional de Estadística y Geografía,Inegi,organismo autónomo
+Comisión Nacional Bancaria y de Valores,CNBV,organismo
+Agencia Nacional de Aduanas de México,ANAM,organismo
+Unidad de Inteligencia Financiera,UIF,organismo
+Comisión Nacional de Búsqueda,CNB,organismo
+Instituto Nacional de los Pueblos Indígenas,INPI,organismo
+Diconsa,Diconsa,empresa
+Liconsa,Liconsa,empresa
+Segalmex,Segalmex,organismo
+Aeropuerto Internacional Felipe Ángeles,AIFA,obra
+Tren Maya,Tren Maya,obra
+Refinería Olmeca,Dos Bocas,obra
+Corredor Interoceánico del Istmo de Tehuantepec,CIIT,obra
+Consejo Coordinador Empresarial,CCE,organización empresarial
+Confederación Patronal de la República Mexicana,Coparmex,organización empresarial
+Cámara Nacional de la Industria de Transformación,Canacintra,organización empresarial
+Confederación de Cámaras Industriales,Concamin,organización empresarial
+Confederación de Cámaras Nacionales de Comercio,Concanaco,organización empresarial
+Organización Mundial de la Salud,OMS,organismo internacional
+Organización Panamericana de la Salud,OPS,organismo internacional
+Fondo Monetario Internacional,FMI,organismo internacional
+Banco Mundial,BM,organismo internacional
+Organización de las Naciones Unidas,ONU,organismo internacional
+Movimiento Regeneración Nacional,Morena,partido
+Partido Acción Nacional,PAN,partido
+Partido Revolucionario Institucional,PRI,partido
+Partido de la Revolución Democrática,PRD,partido
+Partido Verde Ecologista de México,PVEM,partido
+Partido del Trabajo,PT,partido
+Movimiento Ciudadano,MC,partido

@@ -1,0 +1,9 @@
+query_id,consulta,desde,hasta,pregunta_extraccion
+Q1,avances en la construcción del Tren Maya,2020-01-01,2023-12-31,"Qué dependencias y empresas participan, en qué estados y con qué montos"
+Q2,llegada y aplicación de vacunas contra el COVID-19,2020-12-01,2021-12-31,"Qué farmacéuticas, qué funcionarios y qué fechas y cantidades de dosis"
+Q3,refinería de Dos Bocas en Tabasco,2019-01-01,2022-12-31,"Qué organizaciones, qué personas responsables y qué montos de inversión"
+Q4,aeropuerto Felipe Ángeles en Santa Lucía,2019-01-01,2022-06-30,"Qué dependencia construye, qué lugares se mencionan y qué costos"
+Q5,programa Sembrando Vida y apoyo a campesinos,2019-01-01,2024-12-31,"Qué secretaría lo opera, en qué estados y con qué monto por beneficiario"
+Q6,combate al huachicol y robo de combustible,2018-12-01,2019-06-30,"Qué lugares, qué organizaciones y qué cifras de pérdidas o litros"
+Q7,pensión universal para adultos mayores,2018-12-01,2024-12-31,"Qué montos bimestrales, qué institución paga y qué fechas de aumento"
+Q8,aumento al salario mínimo y acuerdo con empresarios,2018-12-01,2024-01-31,"Qué organizaciones empresariales, qué porcentajes y qué montos diarios"
