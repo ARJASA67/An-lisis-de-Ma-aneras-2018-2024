@@ -6,10 +6,12 @@
 - H0 cerrado (2026-11-04): entorno `uv` (Python 3.11, torch CPU, plotly y kaleido), `Makefile`, kit copiado a `kit/` con hashes, `src/mtx/adaptadores_kit.py`, 42 pruebas de contrato, `docs/contratos_kit.md`, `docs/decisiones.md`. Alumno: Daniel Gonzalez. Plazo: entrega y presentación el 11 de noviembre de 2026, presentación a las 20:00 (CDMX). Repo de entrega: este GitLab.
 - H1 (2026-11-04): `src/mtx/corpus.py` (limpieza, canonización de marcas, fechas, duplicados, segmentación), `config/limpieza.yaml`, `scripts/01_corpus_y_pasajes.py`, `make corpus` verde: 127,739 pasajes, 5 discursos excluidos, 10 fechas reparadas. Descubrimiento de Q9 y Q10 (`make explorar`, `salida/00_candidatos_q9q10.md`). `data/consultas.csv` con Q9 y Q10 en borrador (`make consultas`). 79 pruebas rápidas verdes.
 
+- H2 en curso (2026-11-04): `src/mtx/preproceso.py` con 12 pruebas verdes, `config/stopwords_es.txt` (copia exacta de las 313 palabras de NLTK) y `config/stoplist_extra.txt`. Escritos pero **sin probar y sin scripts**: `src/mtx/indice.py` (índice a mano, persistencia, `matriz_conteos`) y `src/mtx/ranking.py` (BM25, Tfidf, filtro, `top_k`, `Buscador`, `variantes_oficiales`). Total: 94 pruebas rápidas verdes.
+
 ## Pendiente
 
 1. **Daniel aprueba o corrige Q9 y Q10** (`config/consultas_q9q10.yaml`, estado `borrador_pendiente_de_validar`): Banco del Bienestar y Tren Interoceánico, con ventanas y preguntas tomadas del PRD. Registrar la aprobación en `docs/decisiones.md`. Sin eso no se generan rankings.
-2. H2: `preproceso.py`, `indice.py`, `ranking.py`, scripts 02 y 03, pool (skill `indice-ranking`). Lo que no depende del texto de Q9 y Q10 (tokenizador, índice, TF-IDF, BM25, filtro, pruebas) puede avanzar ya.
+2. H2 (empezar aquí, skill `indice-ranking`): escribir `tests/test_indice.py` (T03, contra `CountVectorizer`), `tests/test_ranking.py` (T04 a T06: fórmulas a mano, subclase de `rank_bm25` con tolerancia 1e-6, fecha, 0/3/10 candidatos, marca sin efecto), `scripts/02_indice.py` (tokens.parquet, índice, `02_postings.md`, `02_vocabulario_top.csv`, `02_tokens_consultas.md`) y `scripts/03_ranking.py` (solo tras aprobar Q9 y Q10), luego `pool.py` y `04_pool.py`. Probar `indice.py` y `ranking.py` ya escritos; no asumir que funcionan.
 3. H3 (Daniel): `config/criterios_relevancia.md` `[VALIDAR]` y juicios en la app. Luego H4 a H9 (PRD §12.2).
 4. Daniel: verificar que el profesor tenga acceso a este repo de GitLab (el enunciado habla de GitHub).
 
