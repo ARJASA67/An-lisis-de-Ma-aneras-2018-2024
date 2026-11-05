@@ -4,11 +4,11 @@
 
 - SO: Linux x86_64 (Ubuntu, kernel 6.8)  Python: 3.12.3 del sistema; el proyecto usa 3.11.18 vía `uv` (`.python-version`)  uv: 0.11.14  pandoc: 3.1.3  TeX: XeTeX (TeX Live 2023), disponible para `make reporte`.
 - Acceso a Hugging Face: la API del dataset `carevies/discursos_AMLO` responde 200 (2026-11-04). La descarga completa del corpus se prueba en H1.
-- Repo: remoto en GitLab (`git@gitlab.com:oscar.acosta.mac/text-mining-ir-er.git`); el PRD habla de GitHub y del nombre `examen1-mineria-textos`. Se conserva GitLab; el enunciado exige entrega en GitHub, así que **pendiente**: confirmar con el alumno dónde se entrega.
+- Repo: remoto en GitLab (`git@gitlab.com:oscar.acosta.mac/text-mining-ir-er.git`); el PRD habla de GitHub y del nombre `examen1-mineria-textos`. El alumno confirmó el 2026-11-04 que se entrega en este repo de GitLab. Pendiente verificar que el profesor tenga acceso (el enunciado habla de GitHub).
 - Alumno: Daniel Gonzalez (portada y láminas). Falta confirmar si requiere apellido completo adicional.
-- Plazo vigente: **entrega el 11 de noviembre de 2026** (nuevo plazo informado por el alumno el 2026-11-04; hora y fecha de presentación no indicadas, pendientes). El enunciado original fijaba entrega el 28 de octubre a las 20:00 y presentación el 4 de noviembre.
-- Q9: pendiente (se elige tras explorar el corpus, PRD §5.2, `[VALIDAR]`).
-- Q10: pendiente (ídem).
+- Plazo vigente: **entrega el 11 de noviembre de 2026** (nuevo plazo informado por el alumno el 2026-11-04; hora de entrega no indicada). **Presentación el 11 de noviembre de 2026 a las 20:00 (CDMX)**, según el alumno. El enunciado original fijaba entrega el 28 de octubre a las 20:00 y presentación el 4 de noviembre.
+- Q9: tema elegido por el alumno el 2026-11-04: Banco del Bienestar. Redacción en `config/consultas_q9q10.yaml`, **borrador pendiente de `[VALIDAR]`** (ventana 2019-01-01 a 2023-12-31 y pregunta tomadas de los candidatos del PRD).
+- Q10: tema elegido por el alumno el 2026-11-04: Tren Interoceánico. Misma situación (ventana 2020-01-01 a 2024-06-30).
 - Horas disponibles: pendiente.
 - Utilerías: mensaje en `docs/mensaje_profesor_utilerias.md`, enviado por el alumno (fecha exacta no registrada, antes del 2026-11-04). Respuesta del profesor (relatada por el alumno): todo está bien excepto `matplotlib`; usar `plotly` o `cufflinks`.
 - Estado previo: ninguno. Repo con arnés y PRD; sin commit entregado ni artefactos en `salida/` o `anotaciones/`.
@@ -28,3 +28,4 @@
 - (2026-11-04) Reparación de fechas: una candidata de título o URL fuera de [2018-12-01, 2024-09-30] se descarta antes de compararla. Sin esa guarda, títulos con año mal escrito (`03.03.30`, `17.12.16`, `11.10.09`, `26.04.18`) habrían reemplazado fechas originales correctas. Diez discursos corregidos con el título (año equivocado en `fecha`, por ejemplo 2020-05-15 → 2022-05-15); detalle en `salida/01_fechas_reparadas.csv`. Ninguna fecha NaT.
 - (2026-11-04) Duplicados: 5 discursos excluidos (4 exactos y 1 casi duplicado, Jaccard 0.9864), listados en `salida/01_duplicados.csv`; reversibles desde `config/limpieza.yaml`.
 - (2026-11-04) Resultado de la segmentación base (D02): 127,739 pasajes, 15.5 % de reporteros. El 64.94 % de las intervenciones de reporteros queda bajo `min_tokens=40` y se descarta. Supera el 10 % del PRD §6.1.4: **el reporte debe discutirlo como costo de D02.** La base se mantiene (D02), sin cambios, y todavía no hay juicios.
+- (2026-11-04) `data/consultas.csv` generado con el kit literal más Q9 y Q10 en borrador. No se generan rankings hasta que el alumno apruebe o corrija la redacción de Q9 y Q10.

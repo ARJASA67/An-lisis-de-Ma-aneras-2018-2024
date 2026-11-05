@@ -1,0 +1,16 @@
+# Q9 y Q10 elegidas por el alumno el 2026-11-04 (temas: Banco del Bienestar y Tren Interoceánico).
+# ESTADO: BORRADOR PENDIENTE DE [VALIDAR]. El alumno eligió los temas, pero la redacción de
+# consulta, ventana y pregunta es la sugerida en config/candidatos_q9q10.yaml. No generar
+# rankings hasta que el alumno apruebe o corrija este texto (PRD §5.2, regla 4 de §0.2).
+estado: borrador_pendiente_de_validar
+consultas:
+  - query_id: Q9
+    consulta: "operación y apertura de sucursales del Banco del Bienestar"
+    desde: "2019-01-01"
+    hasta: "2023-12-31"
+    pregunta_extraccion: "Qué institución, cuántas sucursales, en qué estados y con qué montos"
+  - query_id: Q10
+    consulta: "construcción y operación del Tren Interoceánico del Istmo de Tehuantepec"
+    desde: "2020-01-01"
+    hasta: "2024-06-30"
+    pregunta_extraccion: "Qué dependencias y empresas, qué lugares conecta, qué montos y fechas de inauguración"
