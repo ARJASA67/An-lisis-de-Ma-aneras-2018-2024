@@ -9,10 +9,22 @@ preentrenado para español.
 
 ## Estado
 
-El proyecto está en el hito H0 (preparación): todavía no hay código ni kit del
-profesor en el repo. Este README se reemplaza en el hito H9 por el README de
-10 secciones que exige el enunciado (instalación desde cero, reproducción de
-resultados, flujo completo, uso de IA).
+Hitos H0 (preparación) y H1 (datos) hechos salvo la aprobación de Q9 y Q10. Ya
+corren `make setup`, `make contratos`, `make corpus`, `make consultas`,
+`make explorar` y `make test`. Siguen H2 (índice y rankings), H3 y H6 (juicios y
+gold, trabajo humano) y el resto hasta H9. Este README se reemplaza en H9 por el
+README de 10 secciones que exige el enunciado (instalación desde cero,
+reproducción de resultados, flujo completo, uso de IA).
+
+Uso mínimo hoy (Linux, Python 3.11 y `uv`):
+
+```bash
+make setup      # entorno, torch CPU, Chrome para kaleido
+make contratos  # pruebas de contrato del kit (kit/ no se modifica)
+make corpus     # descarga el corpus, limpia y segmenta: data/pasajes.parquet
+make consultas  # data/consultas.csv = kit + Q9 + Q10
+make test       # pruebas rápidas, sin red
+```
 
 ## Documentos de referencia
 
@@ -22,6 +34,8 @@ resultados, flujo completo, uso de IA).
 | `CLAUDE.md` / `AGENTS.md` | Orquestador para asistentes de programación: índice de skills, convenciones y qué no tocar |
 | `docs/harness/ARCHITECTURE.md` | Mapa de componentes, flujos de datos, congelaciones e invalidación |
 | `docs/harness/PROGRESS.md` | Estado del trabajo entre sesiones |
+| `docs/decisiones.md` | Fase 0 y cada decisión con fecha (formato real del corpus, fechas, plotly) |
+| `docs/contratos_kit.md` | Hashes y comportamiento verificado de `kit/` |
 | `.claude/skills/` | Skills por hito (H0 a H9); `.agents/skills/` las expone a otros agentes |
 
 ## Entregables previstos

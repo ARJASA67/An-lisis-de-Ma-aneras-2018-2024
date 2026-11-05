@@ -46,10 +46,12 @@ en `salida/` o `data/`.
 
 | Módulo | Responsabilidad | Script | Entradas principales | Salidas principales |
 | --- | --- | --- | --- | --- |
-| `config.py` | Rutas, constantes, semillas, carga de `config/*.yaml`, telemetría | todos | `config/proyecto.yaml`, `ranking.yaml`, `ner.yaml`, `limpieza.yaml` | — |
+| `config.py` | Rutas, constantes, semillas, carga de `config/*.yaml` | todos | `config/proyecto.yaml`, `ranking.yaml`, `ner.yaml`, `limpieza.yaml` | — |
 | `contratos.py` | Esquemas de los CSV, validadores de columnas y claves | 99 | — | errores de validación |
 | `adaptadores_kit.py` | **Único punto de contacto con `kit/`** | 01, 05, 09 | `kit/corpus.py`, `kit/evaluar.py` | envoltorios |
-| `corpus.py` | Carga, limpieza de ruido (D05), segmentación propia (D02-D04) | 00, 01 | corpus HF vía kit | `data/pasajes.parquet`, `data/corpus_meta.json`, `salida/01_*` |
+| `corpus.py` | Carga, limpieza de ruido y canonización de marcas (D05), reparación de fechas, duplicados, segmentación propia (D02-D04) | 01 | corpus HF vía kit, `config/limpieza.yaml` | `data/pasajes.parquet`, `data/corpus_meta.json`, `salida/01_*` |
+| `consultas.py` | `data/consultas.csv` = kit literal + Q9 + Q10 | 00b | `kit/consultas.csv`, `config/consultas_q9q10.yaml` | `data/consultas.csv` |
+| `descubrimiento.py` | Señal de candidatos para Q9 y Q10 (no elige) | 00 | `pasajes.parquet`, `config/candidatos_q9q10.yaml` | `salida/00_candidatos_q9q10.md` |
 | `preproceso.py` | Tokenizador, stoplist, stemmer | 02 | `pasajes.parquet`, `config/stop*.txt` | `data/tokens.parquet` |
 | `indice.py` | Índice invertido a mano, postings, persistencia | 02 | `tokens.parquet` | `data/indice.pkl`, `indice_meta.json`, `salida/02_*` |
 | `ranking.py` | TF-IDF (sklearn), BM25 propio, filtro de fecha, top-k, `buscar()` | 03 | índice, `data/consultas.csv` | `salida/ranking.csv` → `ranking.csv`, `salida/03_*` |
@@ -85,6 +87,11 @@ en `salida/` o `data/`.
 ## 3. Flujos de datos y contratos entre componentes
 
 ### 3.1 Texto, offsets y la marca de interlocutor (D03)
+
+El corpus real (verificado en H1) trae marcas `~~~ETIQUETA texto` y `NOMBRE, CARGO: texto` en
+línea, casi sin saltos de línea; la expresión del kit no reconoce ninguna. `limpiar_ruido()` las
+canoniza a una intervención por línea (`texto_canonico`) y `partir_canonico()` las separa;
+`ventanas()` sí viene del kit. Ver `docs/decisiones.md`.
 
 El contrato más delicado del sistema. Un pasaje es `f"{quien}: {trozo}"`:
 
