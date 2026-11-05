@@ -51,16 +51,16 @@ def _ejemplos(pasajes: pd.DataFrame, n_terminos: pd.Series, mascara: pd.Series,
 def a_markdown(resultados: list[dict], consultas_obligatorias: pd.DataFrame) -> str:
     """Informe `salida/00_candidatos_q9q10.md`."""
     L = ["# Candidatos para Q9 y Q10", "",
-         "Señal calculada sobre `data/pasajes.parquet` (127 mil pasajes, cuerpo sin la marca de "
-         "interlocutor, búsqueda sin acentos ni mayúsculas). **Esto no elige nada**: Daniel "
-         "decide dos temas distintos entre sí y de Q1 a Q8, y redacta consulta, ventana y "
-         "pregunta. La redacción final queda `[VALIDAR]`.", "",
+         ("Señal calculada sobre `data/pasajes.parquet` (127 mil pasajes, cuerpo sin la marca de "
+          "interlocutor, búsqueda sin acentos ni mayúsculas). **Esto no elige nada**: Daniel "
+          "decide dos temas distintos entre sí y de Q1 a Q8, y redacta consulta, ventana y "
+          "pregunta. La redacción final queda `[VALIDAR]`."), "",
          "## Consultas obligatorias (no se tocan)", ""]
     for r in consultas_obligatorias.itertuples():
         L.append(f"- {r.query_id}: {r.consulta} ({r.desde} a {r.hasta})")
     L += ["", "## Resumen", "",
-          "| Candidato | Pasajes (todo el corpus) | Pasajes en ventana | Con 2 o más términos | "
-          "Discursos en ventana |", "| --- | ---: | ---: | ---: | ---: |"]
+          ("| Candidato | Pasajes (todo el corpus) | Pasajes en ventana | Con 2 o más términos | "
+           "Discursos en ventana |"), "| --- | ---: | ---: | ---: | ---: |"]
     for r in resultados:
         c = r["candidato"]
         L.append(f"| {c['tema']} | {r['pasajes_total']:,} | {r['pasajes_ventana']:,} | "
@@ -71,10 +71,10 @@ def a_markdown(resultados: list[dict], consultas_obligatorias: pd.DataFrame) -> 
               f"- Términos semilla: {', '.join(c['terminos'])}",
               f"- Ventana sugerida: {c['desde']} a {c['hasta']}",
               f"- Pregunta sugerida: {c['pregunta']}",
-              f"- Pasajes por término (todo el corpus): "
+              "- Pasajes por término (todo el corpus): "
               + ", ".join(f"`{t}` {n:,}" for t, n in r["por_termino"].items()),
-              f"- Discursos distintos: {r['discursos_total']:,} en todo el corpus, "
-              f"{r['discursos_ventana']:,} en la ventana",
+              (f"- Discursos distintos: {r['discursos_total']:,} en todo el corpus, "
+               f"{r['discursos_ventana']:,} en la ventana"),
               "- Pasajes por año: " + ", ".join(f"{a}: {n:,}" for a, n in r["por_anio"].items()),
               "", "Ejemplos (primeros 300 caracteres del cuerpo):", ""]
         for e in r["ejemplos"]:
