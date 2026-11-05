@@ -1,0 +1,60 @@
+[project]
+name = "mtx"
+version = "0.1.0"
+description = "Sistema de recuperación y extracción de información sobre discursos presidenciales (Examen 1, Minería de Textos)"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "nltk",
+    "regex",
+    "datasets",
+    "pyarrow",
+    "transformers",
+    "torch",
+    "streamlit",
+    "python-pptx",
+    "pyyaml",
+    "rich",
+    "matplotlib",
+    "pypdf",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "rank_bm25",
+    "ruff",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mtx"]
+
+# torch en CPU: Linux y Windows desde el índice de PyTorch; macOS usa el wheel por defecto.
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not lento'"
+markers = [
+    "lento: usa el corpus o modelos reales (requiere red); se corre con `make test-lento`",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = ["kit"]

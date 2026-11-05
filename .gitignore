@@ -1,0 +1,28 @@
+# Entorno
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Datos regenerables (PRD §9)
+data/*.parquet
+data/*.pkl
+data/*.npz
+kit/data/
+
+# Pesos de modelos y cachés de Hugging Face
+hf_home/
+*.safetensors
+*.bin
+*.onnx
+
+# Reporte intermedio de LaTeX
+reporte/*.aux
+reporte/*.log
+reporte/*.out
+reporte/*.toc
+
+# Editor / sistema
+.DS_Store
+*.swp
