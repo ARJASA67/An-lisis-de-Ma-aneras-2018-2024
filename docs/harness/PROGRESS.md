@@ -12,9 +12,11 @@
 
 - Pool (2026-11-08): `src/mtx/pool.py` (construcción, orden con semilla 42, comparación de hashes, `validar_juicios()` de solo lectura), `scripts/04_pool.py` (`make pool`, idempotente, se detiene si el pool cambió y hay juicios) y `tests/test_pool.py` (21 pruebas, T07 y T08). `salida/04_pool.csv`: 176 pares; Q5, Q7 y Q8 bajo 15 pasajes (alto solape entre variantes, sin error), Q6 con 28 y 12 fuera de ventana. Sin juicios.
 
+- App de anotación (2026-11-08): `src/mtx/app/` con Estado y Juicios (`make app`) y alternativa `make app-cli`; `componentes.py` sin Streamlit (escritura atómica con respaldo y revisión, resaltado desde offsets, modo ciego, almacén de juicios, estado de artefactos); `tests/test_app.py` (T15, 22 pruebas con rutas temporales); `docs/pruebas_app.md`. No registra juicios sin `config/criterios_relevancia.md`. `anotaciones/` sigue vacía. Gold, Gazetteer y Demo quedan para H5 y H6.
+
 ## Pendiente
 
-1. `src/mtx/app/` (skill `app-anotacion`) para que Daniel haga H3: `config/criterios_relevancia.md` `[VALIDAR]` y juicios. Falta también `make validar` con `validar_juicios()` (script 99).
+1. H3 (Daniel, trabajo humano): escribir `config/criterios_relevancia.md`, mostrarlo íntegro para `[VALIDAR]` y juzgar los 176 pares en `make app`. Cronometrar la primera consulta y reestimar (150 a 400 pasajes × 40 s). Falta `make validar` con `validar_juicios()` (script 99), que el asistente puede escribir mientras tanto.
 2. Aplicar el diff del arnés (CLAUDE.md, `corpus-segmentacion`, `kit-contratos`, `indice-ranking`, `entrega-reproducible`): Daniel dijo "Sí" pero el diff no está en el repo; pedirle que lo pegue.
 3. Revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist.
 4. Luego H4 a H9 (PRD §12.2).
