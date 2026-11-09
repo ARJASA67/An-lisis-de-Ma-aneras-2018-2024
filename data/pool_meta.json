@@ -1,0 +1,20 @@
+{
+  "pool_sha256": "504a39cc79c0f99243e2790c2ff247f675948de0d692267f0288918c1df03db3",
+  "ranking_sha256": "2da7bd09e1a590b00c720266d5ec082ce0a71188f23784fad2052521fa312c4e",
+  "pasajes_sha256": "766859a1ab322a449b6ce3ef9e25d15b95f275d140804f3935db7c1de632af0d",
+  "consultas_sha256": "37377bcbeccede92aa2d99a9ca2d4f064d7f230f344b66836903d117e5a3e3b1",
+  "semilla_orden": 42,
+  "filas": 176,
+  "por_consulta": {
+    "Q1": 19,
+    "Q2": 19,
+    "Q3": 19,
+    "Q4": 15,
+    "Q5": 14,
+    "Q6": 28,
+    "Q7": 12,
+    "Q8": 14,
+    "Q9": 21,
+    "Q10": 15
+  }
+}

@@ -10,11 +10,14 @@
 
 - H2 cerrado salvo juicios (2026-11-08): Q9 y Q10 aprobadas por Daniel (registrado en `docs/decisiones.md`); también confirmó acceso del profesor al repo de GitLab. `scripts/03_ranking.py` (`make ranking`) genera `ranking.csv` (400 filas, copia idéntica en la raíz) y `salida/03_{ranking_detalle,solape_modelos,excluidos_por_filtro}.csv`. `tests/test_ranking_real.py` (lento, 7 pruebas) cubre los criterios bloqueantes: 400 filas y claves únicas, top-10 con filtro dentro de la ventana, Q3 con refinería o Pemex, Q1 con Tren Maya, Q6 con huachicol, TF-IDF distinto de BM25 y `kit/evaluar.py ir` con juicios sintéticos. 140 pruebas verdes (con las lentas). Ningún ranking idéntico entre TF-IDF y BM25; ninguna fila sin señal léxica. Observación para el reporte: la ventana de Q6 (2018-12 a 2019-06) deja solo 11,120 pasajes elegibles y el top-10 sin filtro casi no coincide con el filtrado (1 de 10 en TF-IDF, 0 en BM25).
 
+- Pool (2026-11-08): `src/mtx/pool.py` (construcción, orden con semilla 42, comparación de hashes, `validar_juicios()` de solo lectura), `scripts/04_pool.py` (`make pool`, idempotente, se detiene si el pool cambió y hay juicios) y `tests/test_pool.py` (21 pruebas, T07 y T08). `salida/04_pool.csv`: 176 pares; Q5, Q7 y Q8 bajo 15 pasajes (alto solape entre variantes, sin error), Q6 con 28 y 12 fuera de ventana. Sin juicios.
+
 ## Pendiente
 
-1. `pool.py` y `04_pool.py` (skill `pool-juicios-ir`): pool de las 4 variantes sin juicios. Después H3 (Daniel): `config/criterios_relevancia.md` `[VALIDAR]` y juicios en la app (`app-anotacion`, aún sin escribir).
-2. Revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist.
-3. Luego H4 a H9 (PRD §12.2).
+1. `src/mtx/app/` (skill `app-anotacion`) para que Daniel haga H3: `config/criterios_relevancia.md` `[VALIDAR]` y juicios. Falta también `make validar` con `validar_juicios()` (script 99).
+2. Aplicar el diff del arnés (CLAUDE.md, `corpus-segmentacion`, `kit-contratos`, `indice-ranking`, `entrega-reproducible`): Daniel dijo "Sí" pero el diff no está en el repo; pedirle que lo pegue.
+3. Revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist.
+4. Luego H4 a H9 (PRD §12.2).
 
 ## Decisiones
 
