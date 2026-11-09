@@ -55,10 +55,11 @@ en `salida/` o `data/`.
 | `preproceso.py` | Tokenizador, stoplist, stemmer | 02 | `pasajes.parquet`, `config/stop*.txt` | `data/tokens.parquet` |
 | `indice.py` | Índice invertido a mano, postings, persistencia | 02 | `tokens.parquet` | `data/indice.pkl`, `indice_meta.json`, `tfidf.pkl`, `tfidf_X.npz`, `salida/02_*` (incluye `02_memoria.json`) |
 | `ranking.py` | TF-IDF (sklearn), BM25 propio, filtro de fecha, top-k, `buscar()` | 03 | índice, `tfidf.pkl`, `tfidf_X.npz`, `data/consultas.csv` (se valida el hash de `tokens.parquet`) | `salida/ranking.csv` → `ranking.csv`, `salida/03_*` |
-| `pool.py` | Pool de relevancia (D06), `validar_juicios()` | 04, 99 | `ranking.csv` | `salida/04_pool.csv`; valida `anotaciones/juicios_relevancia.csv` |
-| `evaluacion.py` | Envoltorio de `evaluar.py` (ir/ie), vista con ventana, análisis de errores | 05, 09 | juicios, ranking, gold, entidades | `resultados_ir.csv`, `resultados_ie.csv`, `salida/05_*`, `salida/09_*`, `data/mejor_modelo.json` |
+| `pool.py` | Pool de relevancia (D06), orden de presentación con semilla 42, `validar_juicios()` de solo lectura | 04, 99 | `ranking.csv`, `pasajes.parquet` | `salida/04_pool.csv`, `data/pool_meta.json`; valida `anotaciones/juicios_relevancia.csv` y exporta `juicios_relevancia.csv` |
+| `hoja_juicios.py` | Hoja de cálculo ciega para repartir juicios entre compañeros y su lectura validada | 04b, 04c | pool, criterios | `salida/04_hoja_juicios.xlsx`; el importador registra con el almacén de la app |
+| `evaluacion.py` | Envoltorio de `evaluar.py` (ir/ie), vista con ventana, etiquetas por consulta, mejor modelo (D08), análisis de errores. La parte IR existe; la de IE llega en H7 | 05, 09 | juicios, ranking, gold, entidades | `resultados_ir.csv`, `resultados_ie.csv`, `salida/05_*`, `salida/09_*`, `data/mejor_modelo.json`, `reporte/figuras/ir_*.png` |
 | `muestreo.py` | Muestra gold y conjunto de selección con emparejamiento global | 08b | `ranking.csv`, `mejor_modelo.json` | `anotaciones/muestra_gold.csv`, `muestra_seleccion.csv` |
-| `reglas.py` | Regex FECHA y MONTO, cantidades auxiliares, gazetteers, regla de marca, colisiones | 06 | `texto` canónico, `kit/gazetteer_dependencias.csv`, `config/gazetteer_*.csv` | `salida/06_*`, `salida/cantidades_auxiliares.csv` |
+| `reglas.py` | Regex FECHA y MONTO, cantidades auxiliares, gazetteers, regla de marca (por segmentos: el corpus trae «NOMBRE, CARGO»), cargo sin ORG/LOC, colisiones, minado de siglas | 06 | `texto` canónico, `config/gazetteer_extendido.csv` (parte del kit), `config/gazetteer_loc.csv` | `salida/06_*`, `salida/cantidades_auxiliares.csv` |
 | `ner_modelo.py` | Pipeline HF, chunking, caché versionada, posproceso de spans | 07 | pasajes del top-10 del ganador, `config/ner.yaml` | `data/cache_ner/`, `salida/07_uniones_spans.csv` |
 | `fusion.py` | Fusión reglas + modelo por span exacto (D12) | 08 | salidas de 06 y 07 | `entidades.csv`, `salida/entidades_unicas.csv`, `entidades_enriquecidas.csv` |
 | `normalizacion.py` | `fecha_iso`, `valor_num`, moneda, canónicos (sin tocar spans) | 08 | entidades | columnas de `entidades_enriquecidas.csv` |
@@ -67,7 +68,7 @@ en `salida/` o `data/`.
 | `reporte.py` | Tablas y figuras del reporte | 11 | `salida/`, `anotaciones/valoraciones.yaml` | `reporte/figuras/`, `reporte/tablas/`, sección de resultados del README |
 | `laminas.py` (P2) | Generación del pptx | 12 | figuras | `laminas/laminas.pptx` |
 | `demo.py` | Demo en terminal con `rich`, sin red | 13 | artefactos cacheados | salida en terminal |
-| `app/` | Streamlit: Estado, Juicios, Gold, Gazetteer, Demo (P2) | `make app` | pool, muestras, siglas candidatas | todo lo que vive en `anotaciones/` y `config/gazetteer_extendido.csv` |
+| `app/` | Streamlit: Estado y Juicios hoy; Gold, Gazetteer y Demo (P2) siguen. `componentes.py` (sin Streamlit): escritura atómica con respaldo y revisión, resaltado desde offsets, modo ciego, almacén de juicios; `cli.py` como alternativa | `make app`, `make app-cli` | pool, muestras, siglas candidatas | todo lo que vive en `anotaciones/` (CSV, `*.meta.json` con revisión, anotadores y hash del pool; `respaldo/` ignorada) y `config/gazetteer_extendido.csv` |
 
 ### 2.2 Zonas del repositorio por quién las produce y quién las puede tocar
 
