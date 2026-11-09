@@ -1,8 +1,7 @@
 # Q9 y Q10 elegidas por el alumno el 2026-11-04 (temas: Banco del Bienestar y Tren Interoceánico).
-# ESTADO: BORRADOR PENDIENTE DE [VALIDAR]. El alumno eligió los temas, pero la redacción de
-# consulta, ventana y pregunta es la sugerida en config/candidatos_q9q10.yaml. No generar
-# rankings hasta que el alumno apruebe o corrija este texto (PRD §5.2, regla 4 de §0.2).
-estado: borrador_pendiente_de_validar
+# ESTADO: APROBADAS por el alumno (Daniel) el 2026-11-08, sin cambios sobre la redacción sugerida
+# en config/candidatos_q9q10.yaml (consulta, ventana y pregunta). Registrado en docs/decisiones.md.
+estado: aprobada
 consultas:
   - query_id: Q9
     consulta: "operación y apertura de sucursales del Banco del Bienestar"
