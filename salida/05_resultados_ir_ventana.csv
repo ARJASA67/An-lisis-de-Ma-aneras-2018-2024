@@ -1,0 +1,45 @@
+query_id,modelo,P@5,P@10,AP,relevantes_recuperados,relevantes_en_pool,no_juzgados
+Q1,bm25_con_filtro,1.0,0.9,0.6923,9.0,13.0,0.0
+Q1,bm25_sin_filtro,1.0,0.9,0.6846,9.0,13.0,0.0
+Q1,tfidf_con_filtro,0.8,0.6,0.3833,6.0,13.0,0.0
+Q1,tfidf_sin_filtro,0.8,0.6,0.3833,6.0,13.0,0.0
+Q10,bm25_con_filtro,1.0,0.9,0.8664,9.0,10.0,0.0
+Q10,bm25_sin_filtro,1.0,0.9,0.8664,9.0,10.0,0.0
+Q10,tfidf_con_filtro,0.4,0.5,0.2844,5.0,10.0,0.0
+Q10,tfidf_sin_filtro,0.4,0.5,0.2844,5.0,10.0,0.0
+Q2,bm25_con_filtro,0.4,0.7,0.4641,7.0,8.0,0.0
+Q2,bm25_sin_filtro,0.2,0.5,0.2383,5.0,8.0,0.0
+Q2,tfidf_con_filtro,0.4,0.3,0.1667,3.0,8.0,0.0
+Q2,tfidf_sin_filtro,0.4,0.3,0.151,3.0,8.0,0.0
+Q3,bm25_con_filtro,0.4,0.5,0.3042,5.0,9.0,0.0
+Q3,bm25_sin_filtro,0.4,0.4,0.1926,4.0,9.0,0.0
+Q3,tfidf_con_filtro,0.8,0.7,0.5463,7.0,9.0,0.0
+Q3,tfidf_sin_filtro,0.6,0.5,0.3497,5.0,9.0,0.0
+Q4,bm25_con_filtro,0.6,0.5,0.6926,5.0,5.0,0.0
+Q4,bm25_sin_filtro,0.6,0.5,0.6926,5.0,5.0,0.0
+Q4,tfidf_con_filtro,0.4,0.2,0.18,2.0,5.0,0.0
+Q4,tfidf_sin_filtro,0.4,0.2,0.18,2.0,5.0,0.0
+Q5,bm25_con_filtro,0.6,0.8,0.5309,8.0,10.0,0.0
+Q5,bm25_sin_filtro,0.6,0.8,0.5309,8.0,10.0,0.0
+Q5,tfidf_con_filtro,0.4,0.6,0.2889,6.0,10.0,0.0
+Q5,tfidf_sin_filtro,0.4,0.6,0.2889,6.0,10.0,0.0
+Q6,bm25_con_filtro,1.0,0.9,0.6555,9.0,13.0,0.0
+Q6,bm25_sin_filtro,0.0,0.0,0.0,0.0,13.0,0.0
+Q6,tfidf_con_filtro,1.0,0.8,0.5972,8.0,13.0,0.0
+Q6,tfidf_sin_filtro,0.0,0.1,0.0085,1.0,13.0,0.0
+Q7,bm25_con_filtro,0.6,0.8,0.7176,8.0,9.0,0.0
+Q7,bm25_sin_filtro,0.6,0.8,0.7176,8.0,9.0,0.0
+Q7,tfidf_con_filtro,0.8,0.7,0.5556,7.0,9.0,0.0
+Q7,tfidf_sin_filtro,0.8,0.7,0.5556,7.0,9.0,0.0
+Q8,bm25_con_filtro,1.0,0.8,0.7058,8.0,11.0,0.0
+Q8,bm25_sin_filtro,1.0,0.8,0.7058,8.0,11.0,0.0
+Q8,tfidf_con_filtro,0.8,0.9,0.6883,9.0,11.0,0.0
+Q8,tfidf_sin_filtro,0.8,0.9,0.6883,9.0,11.0,0.0
+Q9,bm25_con_filtro,1.0,1.0,0.625,10.0,16.0,0.0
+Q9,bm25_sin_filtro,0.6,0.7,0.3644,7.0,16.0,0.0
+Q9,tfidf_con_filtro,1.0,1.0,0.625,10.0,16.0,0.0
+Q9,tfidf_sin_filtro,0.8,0.8,0.3857,8.0,16.0,0.0
+PROMEDIO (MAP = AP),bm25_con_filtro,0.76,0.78,0.6254,,,
+PROMEDIO (MAP = AP),bm25_sin_filtro,0.6,0.63,0.4993,,,
+PROMEDIO (MAP = AP),tfidf_con_filtro,0.68,0.63,0.4316,,,
+PROMEDIO (MAP = AP),tfidf_sin_filtro,0.54,0.52,0.3275,,,

@@ -1,0 +1,7 @@
+# Grupos de términos equivalentes para etiquetar consultas (PRD §6.6). Solo se usan para describir
+# el análisis de IR; no expanden las consultas ni cambian ningún ranking.
+grupos:
+  huachicol: ["huachicol", "robo de combustible"]
+  adultos_mayores: ["adultos mayores", "pensión del Bienestar"]
+  aeropuerto_nuevo: ["AIFA", "Santa Lucía", "Felipe Ángeles"]
+  refineria_dos_bocas: ["Dos Bocas", "refinería Olmeca"]

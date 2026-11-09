@@ -1,0 +1,12 @@
+{
+  "comando": "python kit/evaluar.py ir juicios_relevancia.csv ranking.csv",
+  "ejecutado": "2026-11-08T23:09:25",
+  "juicios_sha256": "93864994e9fc3518ae0390f3c3dd19af7b405d504defc023f632c0fd80f14b87",
+  "ranking_sha256": "2da7bd09e1a590b00c720266d5ec082ce0a71188f23784fad2052521fa312c4e",
+  "pool_sha256": "504a39cc79c0f99243e2790c2ff247f675948de0d692267f0288918c1df03db3",
+  "evaluar_py_sha256": "b70c33ca2cd1436a7d26186786e8ca6685e7d4e3bab8820d054bf6bea891a90f",
+  "resultados_ir_sha256": "9381561f5f81aefac29ae7e06ec10e9789f46c66bd6c6a8c1f6b676c5ab4911e",
+  "problemas": [],
+  "alerta_map": false,
+  "mediana_longitud_tokens": 4.5
+}

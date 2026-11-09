@@ -16,12 +16,15 @@
 
 - H3 cerrado (2026-11-08): criterios aprobados (`config/criterios_relevancia.md`, PRD §6.5 sin cambios), 176 de 176 juicios (Q1 a Q4 en la app, Q5 a Q10 por hoja e importador `04c`), `make validar` sin errores y `juicios_relevancia.csv` en la raíz. Hoja colaborativa: `src/mtx/hoja_juicios.py`, `make hoja-juicios`. 186 pruebas rápidas verdes.
 
+- H4 cerrado (2026-11-08): `src/mtx/evaluacion.py`, `scripts/05_evaluar_ir.py` (`make evaluar-ir`), `resultados_ir.csv` oficial (MAP BM25 con filtro 0.5750 vs TF-IDF con filtro 0.3846), vista con ventana complementaria, tablas por consulta, ganador con etiquetas, tres figuras en `reporte/figuras/`, `config/sinonimos_consultas.yaml` y `data/mejor_modelo.json` = `bm25_con_filtro`. 200 pruebas rápidas y 8 lentas verdes.
+
 ## Pendiente
 
-1. H4: `src/mtx/evaluacion.py` (parte IR) y `scripts/05_evaluar_ir.py` (`make evaluar-ir`): `kit/evaluar.py ir`, `resultados_ir.csv`, vista con ventana, tablas por consulta, ganador por consulta, tres figuras plotly y `data/mejor_modelo.json` por D08 (skill `pool-juicios-ir`). Alerta si MAP del ganador < 0.15.
+1. H5 (PRD §12.2): `reglas.py` (regex FECHA y MONTO, cantidades auxiliares, gazetteers ORG y LOC, regla de marca), `config/criterios_anotacion.md` (Daniel, `[VALIDAR]`), minado de siglas candidatas (revisión de Daniel), pestaña Gazetteer de la app, `make congelar` y etiqueta `reglas-congeladas`; NER (`ner-modelo`) con revisión fija. Skills `reglas-gazetteer` y `ner-modelo`.
 2. Aplicar el diff del arnés (CLAUDE.md, `corpus-segmentacion`, `kit-contratos`, `indice-ranking`, `entrega-reproducible`): Daniel dijo "Sí" pero el diff no está en el repo; pedirle que lo pegue.
 3. Revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist.
-4. Luego H5 a H9 (PRD §12.2): reglas y gazetteer, NER, gold (pestañas Gold y Gazetteer de la app), fusión, evaluación IE, tablas, reporte, láminas.
+4. Daniel: declarar el tiempo real de anotación; decidir qué hacer con `04_hoja_juicios_done.xlsx` en la raíz (sin versionar).
+5. Luego H6 a H9: gold, fusión, evaluación IE, tablas, reporte, láminas.
 
 ## Decisiones
 

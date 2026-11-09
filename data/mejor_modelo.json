@@ -1,0 +1,9 @@
+{
+  "modelo": "bm25_con_filtro",
+  "map": 0.575,
+  "alternativa": "tfidf_con_filtro",
+  "map_alternativa": 0.3846,
+  "empate_exacto": false,
+  "ranking_sha256": "2da7bd09e1a590b00c720266d5ec082ce0a71188f23784fad2052521fa312c4e",
+  "juicios_sha256": "93864994e9fc3518ae0390f3c3dd19af7b405d504defc023f632c0fd80f14b87"
+}

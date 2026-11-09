@@ -1,0 +1,11 @@
+query_id,longitud_tokens,longitud,terminos_df_alto,terminos_df_alto_lista,sigla_o_nombre_propio,sinonimos_conocidos
+Q1,4,corta,4,avanc|construccion|tren|may,True,
+Q2,4,corta,3,lleg|aplic|vacun,True,
+Q3,4,corta,3,refin|dos|tabasc,True,refineria_dos_bocas
+Q4,5,larga,4,aeropuert|felip|angel|sant,True,aeropuerto_nuevo
+Q5,5,larga,5,program|sembr|vid|apoy|campesin,True,
+Q6,4,corta,3,combat|rob|combust,False,huachicol
+Q7,4,corta,4,pension|universal|adult|mayor,False,adultos_mayores
+Q8,5,larga,5,aument|salari|minim|acuerd|empresari,False,
+Q9,5,larga,3,oper|banc|bienest,True,
+Q10,6,larga,3,construccion|oper|tren,True,
