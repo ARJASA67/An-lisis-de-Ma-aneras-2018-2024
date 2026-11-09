@@ -1,0 +1,240 @@
+passage_id,fuente_ganadora,fuente_suprimida,tipo_ganadora,tipo_suprimida,inicio_ganadora,fin_ganadora,texto_ganador,inicio_suprimida,fin_suprimida,texto_suprimido,motivo
+11_14,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+11_15,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+11_16,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+15_10,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+15_11,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+15_19,marca,gazetteer_loc,PER,LOC,0,25,ALEJADRA FRAUSTO GUERRERO,17,25,GUERRERO,span_mas_largo
+15_25,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+15_39,marca,gazetteer_loc,PER,LOC,0,25,ALEJADRA FRAUSTO GUERRERO,17,25,GUERRERO,span_mas_largo
+22_22,marca,gazetteer_org,PER,ORG,0,30,MANUEL ALEJANDRO CANSINO ARIAS,17,24,CANSINO,span_mas_largo
+71_27,gazetteer_org,gazetteer_loc,ORG,LOC,649,687,Secretaría de Marina de Estados Unidos,673,687,Estados Unidos,span_mas_largo
+72_8,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+72_9,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+72_10,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_11,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_12,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_13,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_14,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_15,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_16,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_17,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_18,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_19,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_20,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_21,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_22,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+72_37,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+74_10,gazetteer_org,gazetteer_loc,ORG,LOC,1054,1085,Secretaría de Salud de Veracruz,1077,1085,Veracruz,span_mas_largo
+74_11,gazetteer_org,gazetteer_loc,ORG,LOC,182,213,Secretaría de Salud de Veracruz,205,213,Veracruz,span_mas_largo
+97_21,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_22,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_23,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_24,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_25,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_26,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_27,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_28,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_29,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_30,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_31,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_32,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_33,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_34,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_35,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_36,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+97_37,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+185_81,gazetteer_org,marca,ORG,PER,25,45,SECRETARÍA DE MARINA,25,45,SECRETARÍA DE MARINA,jerarquia
+187_3,gazetteer_org,gazetteer_loc,ORG,LOC,955,989,Guardia Nacional de Estados Unidos,975,989,Estados Unidos,span_mas_largo
+187_4,gazetteer_org,gazetteer_loc,ORG,LOC,112,146,Guardia Nacional de Estados Unidos,132,146,Estados Unidos,span_mas_largo
+213_27,gazetteer_org,gazetteer_loc,ORG,LOC,275,318,Secretaría de Educación Pública de Guerrero,310,318,Guerrero,span_mas_largo
+226_52,gazetteer_org,gazetteer_loc,ORG,LOC,850,889,Secretaría de Energía de Estados Unidos,875,889,Estados Unidos,span_mas_largo
+226_52,gazetteer_org,gazetteer_loc,ORG,LOC,1071,1110,Secretaría de Energía de Estados Unidos,1096,1110,Estados Unidos,span_mas_largo
+226_53,gazetteer_org,gazetteer_loc,ORG,LOC,247,286,Secretaría de Energía de Estados Unidos,272,286,Estados Unidos,span_mas_largo
+226_53,gazetteer_org,gazetteer_loc,ORG,LOC,441,480,Secretaría de Energía de Estados Unidos,466,480,Estados Unidos,span_mas_largo
+227_14,gazetteer_org,marca,ORG,ORG,0,23,SECRETARÍA DE BIENESTAR,0,23,SECRETARÍA DE BIENESTAR,jerarquia
+227_15,gazetteer_org,marca,ORG,ORG,0,23,SECRETARÍA DE BIENESTAR,0,23,SECRETARÍA DE BIENESTAR,jerarquia
+253_8,gazetteer_org,gazetteer_loc,ORG,LOC,691,748,Secretaría de Seguridad y Protección Ciudadana de Tabasco,741,748,Tabasco,span_mas_largo
+375_10,gazetteer_org,gazetteer_loc,ORG,LOC,1121,1164,Fiscalía General de la República de Nayarit,1157,1164,Nayarit,span_mas_largo
+375_11,gazetteer_org,gazetteer_loc,ORG,LOC,194,237,Fiscalía General de la República de Nayarit,230,237,Nayarit,span_mas_largo
+379_29,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+379_30,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+379_31,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+379_32,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+379_33,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+379_34,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+379_35,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+379_36,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+379_37,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+382_11,marca,gazetteer_loc,PER,LOC,0,20,FAUSTO GUERRERO DÍAZ,7,15,GUERRERO,span_mas_largo
+382_12,marca,gazetteer_loc,PER,LOC,0,20,FAUSTO GUERRERO DÍAZ,7,15,GUERRERO,span_mas_largo
+415_44,marca,gazetteer_loc,PER,LOC,26,48,REGIDORA EN TAMAULIPAS,38,48,TAMAULIPAS,span_mas_largo
+416_45,gazetteer_org,gazetteer_loc,ORG,LOC,834,879,Comisión Nacional del Agua de San Luis Potosí,864,879,San Luis Potosí,span_mas_largo
+436_40,gazetteer_org,marca,ORG,ORG,0,23,SECRETARÍA DE BIENESTAR,0,23,SECRETARÍA DE BIENESTAR,jerarquia
+479_19,gazetteer_org,marca,ORG,ORG,0,23,SECRETARÍA DE BIENESTAR,0,23,SECRETARÍA DE BIENESTAR,jerarquia
+480_25,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+480_26,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+480_27,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+480_28,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+480_29,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+480_30,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+480_31,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+487_95,gazetteer_org,gazetteer_loc,ORG,LOC,379,409,Banco del Bienestar de Chiapas,402,409,Chiapas,span_mas_largo
+502_35,gazetteer_org,marca,ORG,ORG,0,23,SECRETARÍA DE BIENESTAR,0,23,SECRETARÍA DE BIENESTAR,jerarquia
+527_9,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+527_10,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+527_11,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+527_12,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+527_13,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+527_14,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+527_15,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+527_16,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+527_17,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+527_18,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+534_3,gazetteer_org,gazetteer_loc,ORG,LOC,405,442,Secretaría de Turismo de Quintana Roo,430,442,Quintana Roo,span_mas_largo
+539_21,gazetteer_org,marca,ORG,ORG,0,21,SECRETARÍA DE CULTURA,0,21,SECRETARÍA DE CULTURA,jerarquia
+539_22,gazetteer_org,marca,ORG,ORG,0,21,SECRETARÍA DE CULTURA,0,21,SECRETARÍA DE CULTURA,jerarquia
+546_13,gazetteer_org,gazetteer_loc,ORG,LOC,875,905,Secretaría de Salud de Sinaloa,898,905,Sinaloa,span_mas_largo
+578_19,gazetteer_org,gazetteer_loc,ORG,LOC,394,424,Secretaría de Salud de Durango,417,424,Durango,span_mas_largo
+590_98,gazetteer_org,gazetteer_loc,ORG,LOC,507,537,Secretaría de Salud de Durango,530,537,Durango,span_mas_largo
+723_18,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+723_19,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+723_20,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+744_32,marca,gazetteer_org,PER,ORG,0,23,UIF PABLO GÓMEZ ÁLVAREZ,0,3,UIF,span_mas_largo
+744_33,marca,gazetteer_org,PER,ORG,0,23,UIF PABLO GÓMEZ ÁLVAREZ,0,3,UIF,span_mas_largo
+744_34,marca,gazetteer_org,PER,ORG,0,23,UIF PABLO GÓMEZ ÁLVAREZ,0,3,UIF,span_mas_largo
+762_11,gazetteer_org,marca,ORG,PER,20,41,SECRETARÍA DE ENERGÍA,20,41,SECRETARÍA DE ENERGÍA,jerarquia
+824_34,marca,gazetteer_org,PER,ORG,24,69,ENFERMERA DEL HOSPITAL IMSS-BIENESTAR TECUALA,47,61,IMSS-BIENESTAR,span_mas_largo
+825_13,gazetteer_org,marca,ORG,PER,20,41,SECRETARÍA DE ENERGÍA,20,41,SECRETARÍA DE ENERGÍA,jerarquia
+839_12,gazetteer_org,marca,ORG,PER,20,41,SECRETARÍA DE ENERGÍA,20,41,SECRETARÍA DE ENERGÍA,jerarquia
+842_26,gazetteer_org,marca,ORG,PER,20,41,SECRETARÍA DE ENERGÍA,20,41,SECRETARÍA DE ENERGÍA,jerarquia
+868_6,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_7,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_8,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_9,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_10,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_11,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_12,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_13,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_14,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_15,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_16,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_17,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_18,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_19,marca,gazetteer_org,PER,ORG,64,84,NATURALEZA Y CULTURA,77,84,CULTURA,span_mas_largo
+868_20,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+868_21,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+868_22,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+868_23,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+868_24,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+868_25,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+919_14,gazetteer_org,marca,ORG,PER,20,41,SECRETARÍA DE ENERGÍA,20,41,SECRETARÍA DE ENERGÍA,jerarquia
+956_24,gazetteer_org,marca,ORG,PER,20,41,SECRETARÍA DE ENERGÍA,20,41,SECRETARÍA DE ENERGÍA,jerarquia
+966_75,gazetteer_org,gazetteer_loc,ORG,LOC,488,526,Secretaría de Marina de Estados Unidos,512,526,Estados Unidos,span_mas_largo
+972_18,gazetteer_org,marca,ORG,PER,20,41,SECRETARÍA DE ENERGÍA,20,41,SECRETARÍA DE ENERGÍA,jerarquia
+1010_48,gazetteer_org,marca,ORG,PER,20,41,SECRETARÍA DE ENERGÍA,20,41,SECRETARÍA DE ENERGÍA,jerarquia
+1031_1,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1031_2,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1031_3,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1031_4,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1031_5,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1031_6,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1031_7,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1041_16,gazetteer_org,marca,ORG,PER,20,41,SECRETARÍA DE ENERGÍA,20,41,SECRETARÍA DE ENERGÍA,jerarquia
+1048_86,gazetteer_org,gazetteer_loc,ORG,LOC,1019,1049,Secretaría de Salud de Hidalgo,1042,1049,Hidalgo,span_mas_largo
+1048_87,gazetteer_org,gazetteer_loc,ORG,LOC,80,110,Secretaría de Salud de Hidalgo,103,110,Hidalgo,span_mas_largo
+1163_9,marca,gazetteer_loc,PER,LOC,0,33,MARÍA HORTENSIA CASTAÑEDA HIDALGO,26,33,HIDALGO,span_mas_largo
+1178_28,marca,gazetteer_loc,PER,LOC,42,66,UNIVERSIDAD DE SALAMANCA,57,66,SALAMANCA,span_mas_largo
+1181_4,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_5,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_6,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_7,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_8,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_9,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_10,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_11,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_12,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_13,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_14,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_15,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_16,gazetteer_org,marca,ORG,ORG,0,25,SECRETARÍA DE GOBERNACIÓN,0,25,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_17,gazetteer_org,marca,ORG,PER,73,98,SECRETARÍA DE GOBERNACIÓN,73,98,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_18,gazetteer_org,marca,ORG,PER,73,98,SECRETARÍA DE GOBERNACIÓN,73,98,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_19,gazetteer_org,marca,ORG,PER,73,98,SECRETARÍA DE GOBERNACIÓN,73,98,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_20,gazetteer_org,marca,ORG,PER,73,98,SECRETARÍA DE GOBERNACIÓN,73,98,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_21,gazetteer_org,marca,ORG,PER,73,98,SECRETARÍA DE GOBERNACIÓN,73,98,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_22,gazetteer_org,marca,ORG,PER,73,98,SECRETARÍA DE GOBERNACIÓN,73,98,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_23,gazetteer_org,marca,ORG,PER,73,98,SECRETARÍA DE GOBERNACIÓN,73,98,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_24,gazetteer_org,marca,ORG,PER,73,98,SECRETARÍA DE GOBERNACIÓN,73,98,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_25,gazetteer_org,marca,ORG,PER,73,98,SECRETARÍA DE GOBERNACIÓN,73,98,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1181_26,gazetteer_org,marca,ORG,PER,73,98,SECRETARÍA DE GOBERNACIÓN,73,98,SECRETARÍA DE GOBERNACIÓN,jerarquia
+1182_21,gazetteer_org,gazetteer_loc,ORG,LOC,1203,1233,Secretaría de Salud de Nayarit,1226,1233,Nayarit,span_mas_largo
+1182_22,gazetteer_org,gazetteer_loc,ORG,LOC,250,280,Secretaría de Salud de Nayarit,273,280,Nayarit,span_mas_largo
+1186_32,marca,gazetteer_org,PER,ORG,25,50,DRECTOR GENERAL DE BIRMEX,44,50,BIRMEX,span_mas_largo
+1197_71,marca,gazetteer_org,PER,ORG,25,50,DRECTOR GENERAL DE BIRMEX,44,50,BIRMEX,span_mas_largo
+1208_12,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1208_13,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1208_14,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1208_15,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1208_16,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1208_17,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1208_18,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1219_69,marca,gazetteer_org,PER,ORG,25,50,DRECTOR GENERAL DE BIRMEX,44,50,BIRMEX,span_mas_largo
+1241_67,marca,gazetteer_org,PER,ORG,0,21,FMI ALBERTO FERNÁNDEZ,0,3,FMI,span_mas_largo
+1241_68,marca,gazetteer_org,PER,ORG,0,21,FMI ALBERTO FERNÁNDEZ,0,3,FMI,span_mas_largo
+1241_69,marca,gazetteer_org,PER,ORG,0,21,FMI ALBERTO FERNÁNDEZ,0,3,FMI,span_mas_largo
+1271_96,gazetteer_org,gazetteer_loc,ORG,LOC,832,865,Secretaría de Salud de Nuevo León,855,865,Nuevo León,span_mas_largo
+1378_8,marca,gazetteer_loc,PER,LOC,0,32,AURA ARGENTINA ERAZO VALLE SOLÍS,5,14,ARGENTINA,span_mas_largo
+1380_89,gazetteer_org,gazetteer_loc,ORG,LOC,1044,1074,Secretaría de Salud de Chiapas,1067,1074,Chiapas,span_mas_largo
+1380_90,gazetteer_org,gazetteer_loc,ORG,LOC,101,131,Secretaría de Salud de Chiapas,124,131,Chiapas,span_mas_largo
+1391_95,gazetteer_org,gazetteer_loc,ORG,LOC,681,710,Guardia Nacional de Chihuahua,701,710,Chihuahua,span_mas_largo
+1485_20,gazetteer_org,gazetteer_loc,ORG,LOC,545,575,Secretaría de Salud de Tabasco,568,575,Tabasco,span_mas_largo
+1534_2,marca,gazetteer_loc,PER,LOC,21,41,GOBERNADO DE YUCATÁN,34,41,YUCATÁN,span_mas_largo
+1534_3,marca,gazetteer_loc,PER,LOC,21,41,GOBERNADO DE YUCATÁN,34,41,YUCATÁN,span_mas_largo
+1534_4,marca,gazetteer_loc,PER,LOC,21,41,GOBERNADO DE YUCATÁN,34,41,YUCATÁN,span_mas_largo
+1534_5,marca,gazetteer_loc,PER,LOC,21,41,GOBERNADO DE YUCATÁN,34,41,YUCATÁN,span_mas_largo
+1534_6,marca,gazetteer_loc,PER,LOC,21,41,GOBERNADO DE YUCATÁN,34,41,YUCATÁN,span_mas_largo
+1534_7,marca,gazetteer_loc,PER,LOC,21,41,GOBERNADO DE YUCATÁN,34,41,YUCATÁN,span_mas_largo
+1534_8,marca,gazetteer_loc,PER,LOC,21,41,GOBERNADO DE YUCATÁN,34,41,YUCATÁN,span_mas_largo
+1534_9,marca,gazetteer_loc,PER,LOC,21,41,GOBERNADO DE YUCATÁN,34,41,YUCATÁN,span_mas_largo
+1534_10,marca,gazetteer_loc,PER,LOC,21,41,GOBERNADO DE YUCATÁN,34,41,YUCATÁN,span_mas_largo
+1534_11,marca,gazetteer_loc,PER,LOC,21,41,GOBERNADO DE YUCATÁN,34,41,YUCATÁN,span_mas_largo
+1540_54,gazetteer_org,gazetteer_loc,ORG,LOC,456,487,Secretaría de Salud de Guerrero,479,487,Guerrero,span_mas_largo
+1556_7,marca,gazetteer_org,PER,ORG,0,21,PROMOCIÓN DE LA SALUD,16,21,SALUD,span_mas_largo
+1556_8,marca,gazetteer_org,PER,ORG,0,21,PROMOCIÓN DE LA SALUD,16,21,SALUD,span_mas_largo
+1556_9,marca,gazetteer_org,PER,ORG,0,21,PROMOCIÓN DE LA SALUD,16,21,SALUD,span_mas_largo
+1556_10,marca,gazetteer_org,PER,ORG,0,21,PROMOCIÓN DE LA SALUD,16,21,SALUD,span_mas_largo
+1556_11,marca,gazetteer_org,PER,ORG,0,21,PROMOCIÓN DE LA SALUD,16,21,SALUD,span_mas_largo
+1557_44,gazetteer_org,gazetteer_loc,ORG,LOC,377,417,Secretaría de Salud del Estado de México,401,417,Estado de México,span_mas_largo
+1565_80,gazetteer_org,gazetteer_loc,ORG,LOC,74,107,Secretaría de Salud de Tamaulipas,97,107,Tamaulipas,span_mas_largo
+1670_9,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1670_10,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1769_5,gazetteer_org,marca,ORG,PER,13,34,SECRETARÍA DE ENERGÍA,13,34,SECRETARÍA DE ENERGÍA,jerarquia
+1816_83,marca,gazetteer_org,PER,ORG,35,65,POBLACIÓN Y MIGRACIÓN DE SEGOB,60,65,SEGOB,span_mas_largo
+1816_84,marca,gazetteer_org,PER,ORG,35,65,POBLACIÓN Y MIGRACIÓN DE SEGOB,60,65,SEGOB,span_mas_largo
+1816_85,marca,gazetteer_org,PER,ORG,35,65,POBLACIÓN Y MIGRACIÓN DE SEGOB,60,65,SEGOB,span_mas_largo
+1816_86,marca,gazetteer_org,PER,ORG,35,65,POBLACIÓN Y MIGRACIÓN DE SEGOB,60,65,SEGOB,span_mas_largo
+1816_87,marca,gazetteer_org,PER,ORG,35,65,POBLACIÓN Y MIGRACIÓN DE SEGOB,60,65,SEGOB,span_mas_largo
+1877_22,gazetteer_org,gazetteer_loc,ORG,LOC,524,554,Secretaría de Salud de Chiapas,547,554,Chiapas,span_mas_largo
+1881_11,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1881_12,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1881_25,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+1881_26,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2052_3,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2052_4,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2052_5,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2052_43,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2052_44,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2120_4,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2120_5,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2120_6,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2120_7,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2120_8,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2120_9,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2120_10,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2120_11,marca,gazetteer_loc,PER,LOC,0,26,ALEJANDRA FRAUSTO GUERRERO,18,26,GUERRERO,span_mas_largo
+2232_6,gazetteer_org,marca,ORG,PER,0,21,SECRETARÍA DE ENERGÍA,0,21,SECRETARÍA DE ENERGÍA,jerarquia
+2232_7,gazetteer_org,marca,ORG,PER,0,21,SECRETARÍA DE ENERGÍA,0,21,SECRETARÍA DE ENERGÍA,jerarquia
+2232_8,gazetteer_org,marca,ORG,PER,0,21,SECRETARÍA DE ENERGÍA,0,21,SECRETARÍA DE ENERGÍA,jerarquia
+2240_8,gazetteer_org,marca,ORG,ORG,0,22,SECRETARÍA DE ECONOMÍA,0,22,SECRETARÍA DE ECONOMÍA,jerarquia
+2240_9,gazetteer_org,marca,ORG,ORG,0,22,SECRETARÍA DE ECONOMÍA,0,22,SECRETARÍA DE ECONOMÍA,jerarquia

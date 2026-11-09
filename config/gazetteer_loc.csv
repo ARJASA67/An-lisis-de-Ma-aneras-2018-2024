@@ -1,0 +1,60 @@
+nombre,variantes,categoria,origen,evidencia
+Aguascalientes,,estado,manual,PRD §6.7.5
+Baja California,,estado,manual,PRD §6.7.5
+Baja California Sur,,estado,manual,PRD §6.7.5
+Campeche,,estado,manual,PRD §6.7.5
+Chiapas,,estado,manual,PRD §6.7.5
+Chihuahua,,estado,manual,PRD §6.7.5
+Ciudad de México,CDMX,estado,manual,PRD §6.7.5
+Coahuila,Coahuila de Zaragoza,estado,manual,PRD §6.7.5
+Colima,,estado,manual,PRD §6.7.5
+Durango,,estado,manual,PRD §6.7.5
+Guanajuato,,estado,manual,PRD §6.7.5
+Guerrero,,estado,manual,PRD §6.7.5
+Hidalgo,,estado,manual,PRD §6.7.5
+Jalisco,,estado,manual,PRD §6.7.5
+Estado de México,Edomex,estado,manual,PRD §6.7.5
+Michoacán,Michoacán de Ocampo,estado,manual,PRD §6.7.5
+Morelos,,estado,manual,PRD §6.7.5
+Nayarit,,estado,manual,PRD §6.7.5
+Nuevo León,,estado,manual,PRD §6.7.5
+Oaxaca,,estado,manual,PRD §6.7.5
+Puebla,,estado,manual,PRD §6.7.5
+Querétaro,,estado,manual,PRD §6.7.5
+Quintana Roo,,estado,manual,PRD §6.7.5
+San Luis Potosí,,estado,manual,PRD §6.7.5
+Sinaloa,,estado,manual,PRD §6.7.5
+Sonora,,estado,manual,PRD §6.7.5
+Tabasco,,estado,manual,PRD §6.7.5
+Tamaulipas,,estado,manual,PRD §6.7.5
+Tlaxcala,,estado,manual,PRD §6.7.5
+Veracruz,Veracruz de Ignacio de la Llave,estado,manual,PRD §6.7.5
+Yucatán,,estado,manual,PRD §6.7.5
+Zacatecas,,estado,manual,PRD §6.7.5
+Palenque,,municipio,manual,PRD §6.7.5
+Cancún,,municipio,manual,PRD §6.7.5
+Tulum,,municipio,manual,PRD §6.7.5
+Mérida,,municipio,manual,PRD §6.7.5
+Chetumal,,municipio,manual,PRD §6.7.5
+Escárcega,,municipio,manual,PRD §6.7.5
+Tula,,municipio,manual,PRD §6.7.5
+Salamanca,,municipio,manual,PRD §6.7.5
+Minatitlán,,municipio,manual,PRD §6.7.5
+Salina Cruz,,municipio,manual,PRD §6.7.5
+Coatzacoalcos,,municipio,manual,PRD §6.7.5
+Santa Lucía,,municipio,manual,PRD §6.7.5
+Istmo de Tehuantepec,,municipio,manual,PRD §6.7.5
+Tren Maya,,obra,manual,PRD §6.7.5; EX p. 3
+Dos Bocas,,obra,manual,PRD §6.7.5; EX p. 3
+refinería Olmeca,,obra,manual,PRD §6.7.5; EX p. 3
+AIFA,,obra,manual,PRD §6.7.5; EX p. 3
+Aeropuerto Internacional Felipe Ángeles,,obra,manual,PRD §6.7.5; EX p. 3
+Tren Interoceánico,,obra,manual,PRD §6.7.5; EX p. 3
+Corredor Interoceánico,,obra,manual,PRD §6.7.5; EX p. 3
+Estados Unidos,,pais,manual,PRD §6.7.5
+China,,pais,manual,PRD §6.7.5
+Rusia,,pais,manual,PRD §6.7.5
+India,,pais,manual,PRD §6.7.5
+Argentina,,pais,manual,PRD §6.7.5
+Cuba,,pais,manual,PRD §6.7.5
+Washington,,capital,manual,PRD §6.7.5
