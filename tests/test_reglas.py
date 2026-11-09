@@ -275,6 +275,41 @@ def test_marca_nombre_coma_cargo_no_toma_el_cargo_como_persona():
     assert pers == ["ZOÉ ROBLEDO ABURTO"]
 
 
+def test_cargo_en_marca_no_genera_org_ni_loc():
+    # Decisión del alumno (2026-11-08): «SECRETARIO DE SALUD» es un cargo, no una ORG.
+    texto = "SECRETARIO DE SALUD, JORGE ALCOCER VARELA: Hoy hablamos del IMSS."
+    ents, cols = reglas.extraer_reglas_con_colisiones(texto, texto.index("Hoy"))
+    assert [(e.tipo, e.texto) for e in ents if e.en_marca] == [("PER", "JORGE ALCOCER VARELA")]
+    assert [e.texto for e in ents if e.tipo == "ORG"] == ["IMSS"]  # el cuerpo no cambia
+    assert any(c["motivo"] == "cargo_en_marca" and c["texto_suprimido"] == "SALUD" for c in cols)
+    otra = "ZOÉ ROBLEDO ABURTO, DIRECTOR GENERAL DEL IMSS: Hoy no hay nada."
+    _, cols = reglas.extraer_reglas_con_colisiones(otra, otra.index("Hoy"))
+    assert any(c["motivo"] == "cargo_en_marca" and c["texto_suprimido"] == "IMSS" for c in cols)
+
+
+def test_cargo_largo_con_organizacion_tampoco_se_marca():
+    label = "ZOÉ ROBLEDO ABURTO, DIRECTOR GENERAL DEL INSTITUTO MEXICANO DEL SEGURO SOCIAL (IMSS)"
+    assert [t for tipo, t, *_ in marca(label) if tipo != "PER"] == []
+
+
+def test_salud_bienestar_y_cultura_solo_con_mayuscula_inicial(gaz):
+    # Decisión del alumno (2026-11-08): como ORG solo con mayúscula; en minúscula son palabras comunes.
+    assert textos("ORG", "la salud y el bienestar y la cultura de todos") == []
+    assert textos("ORG", "Salud, Bienestar y Cultura informaron") == ["Salud", "Bienestar", "Cultura"]
+    assert textos("ORG", "la Secretaría de Salud informó") == ["Secretaría de Salud"]
+
+
+@pytest.mark.parametrize("sigla", ["COVID", "IEPS", "ONG"])
+def test_covid_ieps_y_ong_no_son_org(sigla, gaz):
+    assert textos("ORG", f"por el {sigla} en el país") == []
+
+
+def test_siglas_aceptadas_por_el_alumno_estan_en_el_gazetteer(gaz):
+    for s in ["UNAM", "DEA", "DIF", "OEA", "INAI", "CNTE", "MVS", "FBI", "OCDE", "SNTE", "ITAM",
+              "CTM", "PGR", "CNDH", "CIA", "SME"]:
+        assert s in gaz.terminos("ORG"), s
+
+
 def test_marca_solo_nombre_sin_cargo_es_per():
     assert ("PER", "JESÚS RAMÍREZ CUEVAS", "marca", True) in marca("JESÚS RAMÍREZ CUEVAS")
     assert ("PER", "HUGO LÓPEZ-GATELL RAMÍREZ", "marca", True) in marca("HUGO LÓPEZ-GATELL RAMÍREZ")
@@ -329,15 +364,15 @@ def test_invariante_de_offsets_en_200_pasajes_reales():
 # ------------------------------------------------------------------ minado de siglas
 def test_minar_siglas_excluye_conocidas_romanos_y_marca():
     p = pd.DataFrame({
-        "texto": (["PRESIDENTE JUAN PEREZ: el INAI y el IMSS opinan en el siglo XIX sobre el INAI"] * 6),
+        "texto": (["PRESIDENTE JUAN PEREZ: el ZXQ y el IMSS opinan en el siglo XIX sobre el ZXQ"] * 6),
         "inicio_cuerpo": [len("PRESIDENTE JUAN PEREZ: ")] * 6})
     s = reglas.minar_siglas(p, min_frecuencia=5)
-    assert list(s["sigla"]) == ["INAI"]  # IMSS ya está en el gazetteer; XIX es romano
-    assert s.loc[0, "frecuencia"] == 6 and "INAI" in s.loc[0, "ejemplo"]
+    assert list(s["sigla"]) == ["ZXQ"]  # IMSS ya está en el gazetteer; XIX es romano
+    assert s.loc[0, "frecuencia"] == 6 and "ZXQ" in s.loc[0, "ejemplo"]
 
 
 def test_minar_siglas_toma_nombre_propuesto_del_patron():
-    t = "la Comisión Nacional de los Derechos Humanos (CNDH) emitió"
+    t = "la Zona Especial de Beneficios (ZEB) emitió"
     p = pd.DataFrame({"texto": [t] * 5, "inicio_cuerpo": [0] * 5})
     s = reglas.minar_siglas(p, min_frecuencia=5)
-    assert s.loc[0, "nombre_propuesto"] == "Comisión Nacional de los Derechos Humanos"
+    assert s.loc[0, "nombre_propuesto"] == "Zona Especial de Beneficios"

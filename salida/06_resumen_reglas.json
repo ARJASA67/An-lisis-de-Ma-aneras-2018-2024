@@ -2,15 +2,15 @@
   "pasajes": 127739,
   "entidades_por_tipo_y_fuente": {
     "FECHA|regex_fecha": 20958,
-    "LOC|gazetteer_loc": 148635,
+    "LOC|gazetteer_loc": 146618,
     "MONTO|regex_monto": 35967,
-    "ORG|gazetteer_org": 89807,
+    "ORG|gazetteer_org": 79851,
     "PER|marca": 105276
   },
-  "colisiones": 239,
-  "siglas_candidatas": 289,
+  "colisiones": 15764,
+  "siglas_candidatas": 273,
   "gazetteer": {
-    "terminos_org": 159,
+    "terminos_org": 190,
     "terminos_loc": 67,
     "estados": 32
   },
@@ -19,7 +19,7 @@
     "PORCENTAJE": 33
   },
   "modelo_para_auxiliares": "bm25_con_filtro",
-  "sha256_gazetteer_extendido": "084f617a0e19866be539f93d8174f80721a78d167178adac934aca8019a00ef8",
+  "sha256_gazetteer_extendido": "c3384fef35ec61ce31691bb2e1614c6dada60900ba319f6d0b49bb711a6f788f",
   "sha256_gazetteer_loc": "98183e62ba97eb99af3b4409565b2e0f1ca61a7eb1d57f6cc6f32892b94374b5",
-  "sha256_reglas_py": "33692cdf9b1b3a9003e11f4e8f40f70c2dbda4b12c7ec9df8d7dc9166b94ac75"
+  "sha256_reglas_py": "0cedfdf7b3551e44031db60e2798d7d9ee4ecdab2096a0afd1bba5c2a6afe69e"
 }

@@ -369,6 +369,31 @@ def _persona_en_segmento(seg: str, solo_segmento: bool) -> tuple[int, int] | Non
     return resto[0].start(), resto[-1].end()
 
 
+def _spans_cargo(texto: str, inicio_cuerpo: int) -> list[tuple[int, int]]:
+    """Offsets de los cargos en la marca: ningún ORG ni LOC se marca dentro de un cargo.
+
+    Con comas, un segmento que empieza con palabra de cargo es cargo completo; sin comas, solo
+    las palabras de cargo iniciales (`PRESIDENTE` en `PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR`).
+    """
+    if inicio_cuerpo <= 0:
+        return []
+    marca = texto[:len(texto[:inicio_cuerpo].rstrip(": \t\n"))]
+    segmentos = marca.split(",")
+    spans, cursor = [], 0
+    for seg in segmentos:
+        palabras = list(_RE_PALABRA.finditer(seg))
+        if palabras and palabras[0].group() in CARGOS:
+            if len(segmentos) > 1:
+                spans.append((cursor + palabras[0].start(), cursor + palabras[-1].end()))
+            else:
+                k = 0
+                while k < len(palabras) and palabras[k].group() in CARGOS:
+                    k += 1
+                spans.append((cursor + palabras[0].start(), cursor + palabras[k - 1].end()))
+        cursor += len(seg) + 1
+    return spans
+
+
 def _marca(texto: str, inicio_cuerpo: int, org_gaz: list[tuple[int, int]]) -> list[Entidad]:
     """PER de la marca (cargo quitado por lista cerrada) y ORG si la marca entera es una ORG."""
     if inicio_cuerpo <= 0:
@@ -421,11 +446,20 @@ def extraer_reglas_con_colisiones(texto: str, inicio_cuerpo: int, gaz: Gazetteer
     """Todas las fuentes de reglas, resueltas; devuelve también los solapes suprimidos."""
     gaz = gaz or cargar_gazetteer()
     gazet = _gazetteers(texto, inicio_cuerpo, gaz)
+    cargos = _spans_cargo(texto, inicio_cuerpo)
+    en_cargo = [e for e in gazet if any(a <= e.inicio and e.fin <= b for a, b in cargos)]
+    gazet = [e for e in gazet if e not in en_cargo]
     org_spans = [(e.inicio, e.fin) for e in gazet if e.tipo == "ORG"]
     candidatas = _fechas(texto) + _montos(texto) + gazet + _marca(texto, inicio_cuerpo, org_spans)
     for e in candidatas:
         e.en_marca = e.inicio < inicio_cuerpo
-    return resolver_colisiones(candidatas)
+    ganadoras, colisiones = resolver_colisiones(candidatas)
+    colisiones += [{
+        "fuente_ganadora": "marca", "fuente_suprimida": e.fuente, "tipo_ganadora": "CARGO",
+        "tipo_suprimida": e.tipo, "inicio_ganadora": "", "fin_ganadora": "", "texto_ganador": "",
+        "inicio_suprimida": e.inicio, "fin_suprimida": e.fin, "texto_suprimido": e.texto,
+        "motivo": "cargo_en_marca"} for e in en_cargo]
+    return ganadoras, colisiones
 
 
 def extraer_reglas(texto: str, inicio_cuerpo: int, gaz: Gazetteer | None = None) -> list[Entidad]:
