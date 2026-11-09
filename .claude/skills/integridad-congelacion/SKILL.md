@@ -30,6 +30,9 @@ herramienta y valida formatos; estos valores los produce el alumno leyendo pasaj
 4. **Revisión de siglas** del gazetteer (hito H5). El asistente mina candidatos; aceptar o rechazar
    cada sigla es del alumno.
 5. **Valoraciones** de las tablas de respuesta (`valoraciones.yaml`, 10 entradas). Redacta el alumno.
+6. **Delegar juicios o gold a otro agente de IA**, incluido redactar el prompt para que otro modelo
+   (Claude, Gemini) juzgue. El trabajo colaborativo con compañeros es válido solo si el profesor lo
+   autorizó y queda registrado con fecha en `docs/decisiones.md`.
 
 Lista de verificación antes de cualquier escritura:
 

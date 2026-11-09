@@ -35,6 +35,8 @@ Menú mínimo de la CLI (el PRD solo fija las tres funciones; el punto de entrad
 - Antes de escribir, releer `revision` del disco; si no coincide con la que la sesión cargó, detener la escritura y mostrar "editado desde otra pestaña: recarga antes de guardar" (T15). Nunca sobrescribir en silencio.
 - Reanudable: al reabrir, la app carga el CSV y sitúa al alumno en el primer elemento pendiente.
 - UTF-8 sin BOM, separador coma, columnas exactas de PRD §3.5.
+- La `revision` vive en `anotaciones/<nombre>.meta.json` (las columnas del CSV son exactas), junto con `pool_sha256` y `anotadores`; los respaldos van a `anotaciones/respaldo/` (ignorada en git).
+- Rutas y criterios por defecto se resuelven al llamar (`ruta or CONSTANTE`), no como argumento por defecto: si no, `monkeypatch` en las pruebas no tiene efecto.
 
 ### Offsets y resaltado (PRD §3.6, §7)
 - Offsets = índices de carácter Python sobre el `texto` completo e inmutable del pasaje (marca de interlocutor incluida); `inicio` inclusivo, `fin` exclusivo; invariante `0 <= inicio < fin <= len(texto)` y `texto[inicio:fin] == texto_entidad`.
@@ -93,6 +95,8 @@ T15 (PRD §13, `tests/`): "cambio de texto, modelo o regla; interrupción; dos p
 4. Cerrar y reabrir: la app retoma en el primer pendiente con el mismo conteo.
 5. Resaltado: pasaje con `<`, `&` y un carácter fuera del BMP antes de la entidad; el HTML escapa y los offsets siguen cumpliendo el invariante.
 6. Modo ciego: sin `cierre_gold.json`, ninguna vista expone predicciones de la muestra aunque exista `salida/entidades.csv`.
+
+Pruebas de la app: `streamlit.testing.v1.AppTest.from_file` con ruta absoluta y rutas temporales para juicios y criterios. Usar `width="stretch"`, no `use_container_width` (deprecado).
 
 `docs/pruebas_app.md`: lista de exactamente 10 pasos que el alumno recorre una vez (PRD §7), cada uno con acción y resultado esperado: arranque, Estado sin "completado" falso, juicio 1/0/omitir/anterior, reapertura, dos pestañas, búsqueda con desambiguación, selección por tokens con `$`, validación de duplicado, gazetteer, cierre del gold.
 

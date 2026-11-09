@@ -51,6 +51,8 @@ kit/data/
 __pycache__/
 # pesos de modelos (caché de Hugging Face, *.bin, *.safetensors fuera del repo)
 ```
+Además se ignoran `salida/*.xlsx` (hojas de reparto de juicios) y `anotaciones/respaldo/` (copias previas de la app; las anotaciones en sí sí se versionan).
+
 Regla: un recurso excluido que no pueda reconstruirse desde la fuente lleva instrucciones y hash para recuperarlo en `docs/reproducibilidad.md`. Nunca se añaden `anotaciones/` ni `data/cache_ner/` al `.gitignore`.
 
 Nota sobre este repo: el `README.md` actual es la plantilla que GitLab genera al crear el proyecto; se reemplaza por completo en H9 con las 10 secciones de PRD §11.2. El remote `origin` apunta a GitLab aunque el PRD hable de GitHub (§1, Fase 0 punto 3, §2). Registrar la decisión en `docs/decisiones.md` con fecha, motivo y efecto (acceso del profesor comprobado sobre GitLab; condición 15).
@@ -145,6 +147,9 @@ Referencia: PRD §11.5.
 - Etiquetas:
   1. `reglas-congeladas` sobre el commit que fija reglas, gazetteers y `config/criterios_anotacion.md`, antes de abrir el gold (D15; `make congelar`).
   2. `v1.0-entrega` sobre el commit final, con la hora real registrada en `docs/reproducibilidad.md` y en `docs/decisiones.md` (condición 15). Comprobar que el profesor tiene acceso al remote antes de registrarla.
+- `make congelar` exige el árbol rastreado limpio y crea la etiqueta solo en local: súbela con `git push origin reglas-congeladas` (un `git push` normal no sube etiquetas).
+- `uv add <paquete>` modifica `pyproject.toml` y `uv.lock`: se commitean juntos.
+- Esperas en segundo plano: `pgrep -f patrón` coincide con el propio comando y nunca termina; usa `until grep -q MARCADOR archivo.log; do sleep 5; done` o `ps aux | grep "[p]atrón"`.
 - No se publica ni se cambia la versión entregada bajo una autorización destinada a otra cosa (por ejemplo, "revisa el documento"). Entre la entrega y la presentación no se cambia código que afecte cifras del reporte (PRD §12).
 
 ## make validar: las 15 condiciones de entrega

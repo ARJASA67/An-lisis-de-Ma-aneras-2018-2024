@@ -109,6 +109,17 @@ Todas las comprobaciones son de solo lectura sobre los juicios:
 
 Si falla cualquier punto 1 a 5, no se exporta y `make evaluar-ir` se niega a correr.
 
+## Reparto entre compañeros (solo con autorización del profesor)
+
+1. `make hoja-juicios` genera `salida/04_hoja_juicios.xlsx` (una pestaña por consulta pendiente, ciega
+   al modelo, sin precarga). Se sube a Drive a mano: pasar 104 pasajes por el conector de Sheets cuesta
+   unos 80,000 tokens y arriesga errores de copia.
+2. Al volver, `scripts/04c_importar_juicios_hoja.py hoja.xlsx` revisa sin escribir; con `--aplicar`
+   registra con `AlmacenJuicios` (atómico, no pisa juicios, guarda el anotador por consulta en
+   `juicios_relevancia.meta.json`). Lo corre el alumno o lo autoriza explícitamente.
+3. Sheets devuelve `doc_id` como `253.0`: `hoja_juicios.leer()` lo normaliza.
+4. AP topa en 10/relevantes del pool (Q9: 10/21): se documenta el horizonte en el reporte.
+
 ## Evaluación oficial y vista con ventana
 
 `05_evaluar_ir.py` con la parte IR de `evaluacion.py` (PRD §3.4, §6.6):

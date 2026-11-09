@@ -88,6 +88,12 @@ Cantidades auxiliares (PRD §6.7.3, D11):
 5. Sin cuota de extensión: se justifica por cobertura útil y se reportan entradas base, nuevas, rechazadas y cobertura.
 6. D14: farmacéuticas, marcas de vacuna y mecanismos multilaterales (Pfizer, BioNTech, AstraZeneca, CanSino, Sputnik V, Gamaleya, Sinovac, Moderna, Janssen, Johnson & Johnson, Abdala, Patria, COVAX) son ORG; el genérico "vacuna" queda fuera del span.
 
+Lecciones del corpus real (H5):
+- Siglas de 5 letras o menos y `COMUNES_SENSIBLES` (Salud, Bienestar, Cultura, Patria, Morena): coincidencia exacta o todo en mayúsculas; nunca en minúscula.
+- `Nombre (SIGLA)` casi no aparece en el cuerpo: la minería se basa en frecuencia. El alumno revisa solo las de frecuencia ≥ 50; se filtran los números romanos.
+- Las pruebas de minado usan siglas inventadas (`ZXQ`): una sigla real aceptada (INAI, CNDH) la excluye de los candidatos.
+- Los nombres completos de siglas aceptadas los escribe el asistente; el alumno los confirma antes de `make congelar`. `make reglas` tarda unos 3 minutos.
+
 Entradas que deben existir (test `test_gazetteer_entradas_obligatorias`): IMSS, ISSSTE, Pemex, CFE, Sedena, Semar, Conagua, Fonatur, Insabi, Cofepris, Birmex, Pfizer, AstraZeneca, CanSino, Sputnik V, COVAX, Coparmex, CCE, Concanaco, Conasami, Morena, PAN, PRI, PRD, ONU, OMS, OPS, FMI, Banco Mundial, Banxico, SAT, Guardia Nacional, Secretaría del Bienestar, STPS, SICT, Sener, Sedatu, Grupo Carso, ICA.
 
 ### LOC (PRD §6.7.5)
@@ -110,6 +116,8 @@ Se analiza `texto[:inicio_cuerpo]` (PRD §6.7.6, §3.6). Procedencia `fuente="ma
 | `PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR:` | PER `ANDRÉS MANUEL LÓPEZ OBRADOR`: se quita el cargo por **lista de cargos conocidos**, no por suponer que todo lo que sigue es persona |
 | Marca sin coma que coincide con el gazetteer | ORG |
 | `PREGUNTA`, `INTERLOCUTOR`, `INTERLOCUTORA` y marcas genéricas | sin entidad |
+
+Corpus real: las marcas vienen como `NOMBRE` solo y `NOMBRE, CARGO`, no `CARGO, NOMBRE` como supone el PRD. La regla va por segmentos separados por coma; el cargo inicial solo se quita si la marca no tiene comas (si no, `FEDERAL DEL CONSUMIDOR` sale como PER); un segmento que empieza con cargo es cargo completo y no genera ORG ni LOC (decisión del alumno, motivo `cargo_en_marca` en `06_colisiones_reglas.csv`).
 
 Pasos:
 1. Mantén la lista de cargos (PRESIDENTE, SECRETARIO/A, SUBSECRETARIO/A, DIRECTOR/A GENERAL, GOBERNADOR/A, etc.) en el módulo, documentada; no la amplíes a ciegas.
