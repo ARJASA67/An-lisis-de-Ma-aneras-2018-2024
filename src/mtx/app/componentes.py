@@ -196,8 +196,11 @@ class AlmacenJuicios:
         fila = self.df[(self.df["query_id"] == q) & (self.df["passage_id"] == pid)]
         return None if fila.empty else fila.iloc[0]["relevante"]
 
-    def registrar(self, q: str, pid: str, valor: str) -> None:
-        """Guarda 1, 0 u omitido (`""`) de inmediato. Lanza `ConflictoRevision` si hay edición ajena."""
+    def registrar(self, q: str, pid: str, valor: str, anotador: str | None = None) -> None:
+        """Guarda 1, 0 u omitido (`""`) de inmediato. Lanza `ConflictoRevision` si hay edición ajena.
+
+        Con `anotador` (trabajo colaborativo) la meta guarda quién juzgó cada consulta.
+        """
         if valor not in {"0", "1", ""}:
             raise ValueError(f"Juicio inválido: {valor!r}")
         if (q, pid) not in self.docs:
@@ -211,8 +214,13 @@ class AlmacenJuicios:
             df.loc[mascara, "relevante"] = valor
         else:
             df.loc[len(df)] = [q, str(self.docs[(q, pid)]), pid, valor]
-        self.revision = escribir_csv_atomico(self.ruta, df, self.revision,
-                                             {"pool_sha256": self.hash_pool})
+        extra = {"pool_sha256": self.hash_pool}
+        anotadores = dict(leer_meta(self.ruta).get("anotadores", {}))
+        if anotador:
+            anotadores[q] = anotador
+        if anotadores:
+            extra["anotadores"] = anotadores
+        self.revision = escribir_csv_atomico(self.ruta, df, self.revision, extra)
         self.df = df
 
     def progreso(self, q: str | None = None) -> tuple[int, int]:

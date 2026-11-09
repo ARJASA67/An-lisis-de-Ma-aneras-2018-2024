@@ -21,6 +21,7 @@ dependencies = [
     "plotly",
     "kaleido",
     "pypdf",
+    "openpyxl>=3.1.5",
 ]
 
 [dependency-groups]

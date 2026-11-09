@@ -26,3 +26,6 @@ reporte/*.toc
 # Editor / sistema
 .DS_Store
 *.swp
+
+# Hojas generadas para repartir juicios
+salida/*.xlsx
