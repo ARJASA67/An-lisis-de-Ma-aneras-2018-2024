@@ -9,10 +9,13 @@ preentrenado para español.
 
 ## Estado
 
-Hitos H0 (preparación) y H1 (datos) hechos salvo la aprobación de Q9 y Q10; H2 (recuperación) empezado: preprocesamiento listo, índice y ranking escritos y por probar. Ya
+Hitos H0 (preparación) y H1 (datos) hechos; Q9 y Q10 aprobadas por el alumno. H2
+(recuperación) hecho en lo técnico: preprocesamiento, índice invertido a mano,
+TF-IDF y BM25 probados, y `ranking.csv` generado con las cuatro variantes. Ya
 corren `make setup`, `make contratos`, `make corpus`, `make consultas`,
-`make explorar` y `make test`. Siguen H2 (índice y rankings), H3 y H6 (juicios y
-gold, trabajo humano) y el resto hasta H9. Este README se reemplaza en H9 por el
+`make explorar`, `make indice`, `make ranking` y `make test` (`make test-lento`
+añade los criterios bloqueantes de IR sobre el corpus real). Siguen el pool de
+juicios, H3 y H6 (juicios y gold, trabajo humano) y el resto hasta H9. Este README se reemplaza en H9 por el
 README de 10 secciones que exige el enunciado (instalación desde cero,
 reproducción de resultados, flujo completo, uso de IA).
 

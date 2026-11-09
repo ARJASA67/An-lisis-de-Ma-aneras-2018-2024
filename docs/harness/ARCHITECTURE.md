@@ -53,8 +53,8 @@ en `salida/` o `data/`.
 | `consultas.py` | `data/consultas.csv` = kit literal + Q9 + Q10 | 00b | `kit/consultas.csv`, `config/consultas_q9q10.yaml` | `data/consultas.csv` |
 | `descubrimiento.py` | Señal de candidatos para Q9 y Q10 (no elige) | 00 | `pasajes.parquet`, `config/candidatos_q9q10.yaml` | `salida/00_candidatos_q9q10.md` |
 | `preproceso.py` | Tokenizador, stoplist, stemmer | 02 | `pasajes.parquet`, `config/stop*.txt` | `data/tokens.parquet` |
-| `indice.py` | Índice invertido a mano, postings, persistencia | 02 | `tokens.parquet` | `data/indice.pkl`, `indice_meta.json`, `salida/02_*` |
-| `ranking.py` | TF-IDF (sklearn), BM25 propio, filtro de fecha, top-k, `buscar()` | 03 | índice, `data/consultas.csv` | `salida/ranking.csv` → `ranking.csv`, `salida/03_*` |
+| `indice.py` | Índice invertido a mano, postings, persistencia | 02 | `tokens.parquet` | `data/indice.pkl`, `indice_meta.json`, `tfidf.pkl`, `tfidf_X.npz`, `salida/02_*` (incluye `02_memoria.json`) |
+| `ranking.py` | TF-IDF (sklearn), BM25 propio, filtro de fecha, top-k, `buscar()` | 03 | índice, `tfidf.pkl`, `tfidf_X.npz`, `data/consultas.csv` (se valida el hash de `tokens.parquet`) | `salida/ranking.csv` → `ranking.csv`, `salida/03_*` |
 | `pool.py` | Pool de relevancia (D06), `validar_juicios()` | 04, 99 | `ranking.csv` | `salida/04_pool.csv`; valida `anotaciones/juicios_relevancia.csv` |
 | `evaluacion.py` | Envoltorio de `evaluar.py` (ir/ie), vista con ventana, análisis de errores | 05, 09 | juicios, ranking, gold, entidades | `resultados_ir.csv`, `resultados_ie.csv`, `salida/05_*`, `salida/09_*`, `data/mejor_modelo.json` |
 | `muestreo.py` | Muestra gold y conjunto de selección con emparejamiento global | 08b | `ranking.csv`, `mejor_modelo.json` | `anotaciones/muestra_gold.csv`, `muestra_seleccion.csv` |
