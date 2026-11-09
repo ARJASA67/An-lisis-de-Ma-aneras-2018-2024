@@ -29,3 +29,4 @@ reporte/*.toc
 
 # Hojas generadas para repartir juicios
 salida/*.xlsx
+anotaciones/respaldo/

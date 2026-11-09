@@ -101,10 +101,19 @@ def leer(ruta: Path) -> tuple[pd.DataFrame, dict[str, str]]:
             if pid is None:
                 continue
             filas.append({"query_id": ws.title, "passage_id": str(pid).strip(),
-                          "doc_id": str(ws.cell(row=r, column=3).value).strip(),
+                          "doc_id": _entero(ws.cell(row=r, column=3).value),
                           "relevante": _normalizar(ws.cell(row=r, column=COL_RELEVANTE).value)})
     return pd.DataFrame(filas, columns=pool.COLUMNAS_JUICIOS[:1] + ["passage_id", "doc_id",
                                                                     "relevante"]), anotadores
+
+
+def _entero(v) -> str:
+    """`doc_id` tras pasar por Sheets puede llegar como 253.0: se devuelve `"253"`."""
+    try:
+        f = float(v)
+    except (TypeError, ValueError):
+        return str(v).strip()
+    return str(int(f)) if f == int(f) else str(v).strip()
 
 
 def _normalizar(v) -> str:

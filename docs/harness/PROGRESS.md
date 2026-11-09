@@ -14,12 +14,14 @@
 
 - App de anotación (2026-11-08): `src/mtx/app/` con Estado y Juicios (`make app`) y alternativa `make app-cli`; `componentes.py` sin Streamlit (escritura atómica con respaldo y revisión, resaltado desde offsets, modo ciego, almacén de juicios, estado de artefactos); `tests/test_app.py` (T15, 22 pruebas con rutas temporales); `docs/pruebas_app.md`. No registra juicios sin `config/criterios_relevancia.md`. `anotaciones/` sigue vacía. Gold, Gazetteer y Demo quedan para H5 y H6.
 
+- H3 cerrado (2026-11-08): criterios aprobados (`config/criterios_relevancia.md`, PRD §6.5 sin cambios), 176 de 176 juicios (Q1 a Q4 en la app, Q5 a Q10 por hoja e importador `04c`), `make validar` sin errores y `juicios_relevancia.csv` en la raíz. Hoja colaborativa: `src/mtx/hoja_juicios.py`, `make hoja-juicios`. 186 pruebas rápidas verdes.
+
 ## Pendiente
 
-1. H3 (Daniel, trabajo humano): escribir `config/criterios_relevancia.md`, mostrarlo íntegro para `[VALIDAR]` y juzgar los 176 pares en `make app`. Cronometrar la primera consulta y reestimar (150 a 400 pasajes × 40 s). Falta `make validar` con `validar_juicios()` (script 99), que el asistente puede escribir mientras tanto.
+1. H4: `src/mtx/evaluacion.py` (parte IR) y `scripts/05_evaluar_ir.py` (`make evaluar-ir`): `kit/evaluar.py ir`, `resultados_ir.csv`, vista con ventana, tablas por consulta, ganador por consulta, tres figuras plotly y `data/mejor_modelo.json` por D08 (skill `pool-juicios-ir`). Alerta si MAP del ganador < 0.15.
 2. Aplicar el diff del arnés (CLAUDE.md, `corpus-segmentacion`, `kit-contratos`, `indice-ranking`, `entrega-reproducible`): Daniel dijo "Sí" pero el diff no está en el repo; pedirle que lo pegue.
 3. Revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist.
-4. Luego H4 a H9 (PRD §12.2).
+4. Luego H5 a H9 (PRD §12.2): reglas y gazetteer, NER, gold (pestañas Gold y Gazetteer de la app), fusión, evaluación IE, tablas, reporte, láminas.
 
 ## Decisiones
 

@@ -117,3 +117,15 @@ def test_importar_con_almacen_guarda_anotador_y_no_pisa(tmp_path):
     meta = c.leer_meta(tmp_path / "j.csv")
     assert meta["anotadores"] == {"Q2": "Luis"} and meta["pool_sha256"] == "x"
     assert alm.estado("Q2", "1_0") == "0"
+
+
+def test_doc_id_flotante_de_sheets_se_normaliza(tmp_path):
+    ruta = libro(tmp_path, ["Q2"])
+    wb = load_workbook(ruta)
+    ws = wb["Q2"]
+    for r in range(h.FILA_ENCABEZADO + 1, ws.max_row + 1):
+        ws.cell(row=r, column=3, value=float(ws.cell(row=r, column=3).value))
+    wb.save(ruta)
+    hoja, _ = h.leer(ruta)
+    assert set(hoja["doc_id"]) <= {"1", "3"}
+    assert h.revisar(hoja, {"Q2": "Ana"}, PL) == []
