@@ -54,7 +54,7 @@ Estructura (`src/mtx/indice.py`, PRD §6.3): `dict[str, dict[int, int]]` términ
 2. Persistir `data/indice.pkl` (pickle protocolo 5) y `data/indice_meta.json` con N, tamaño del vocabulario, avgdl, fecha de construcción y hash de `data/tokens.parquet` para invalidar la caché. Si el hash no coincide, se reconstruye; nunca se usa un índice viejo con tokens nuevos.
 3. Verificación cruzada obligatoria: `CountVectorizer(analyzer=identidad)` sobre los mismos tokens, donde `identidad` es una función definida a nivel de módulo (`def identidad(tokens): return tokens`), no un lambda, para que el pickle sea cargable en otro proceso.
 4. `tests/test_indice.py` (T03): para 50 términos aleatorios y para conteos conocidos de un fixture sintético, df y suma de tf del dict coinciden con la matriz de scikit-learn, incluidos nombres que aparecen solo en marcas (deben tener df = 0 en ambos).
-5. Salidas del script `02_indice.py`:
+5. Salidas del script `02_indice.py` (que también persiste `data/tfidf.pkl` y `data/tfidf_X.npz` y escribe `salida/02_memoria.json`; medido: 42 s, pico de 1.3 GB, `indice.pkl` de 43.5 MB, así que la memoria no es un riesgo):
    - `salida/02_postings.md`: `tren`, `vacuna`, `refinería`, `huachicol` en su forma stemmed, indicando el stem; por término: df, idf (fórmula BM25), top-15 pasajes por tf con `passage_id`, `fecha` y 80 caracteres de contexto, con la nota de que es una muestra y la lista completa vive en el índice.
    - `salida/02_vocabulario_top.csv`: 200 términos más frecuentes por df, para la discusión de la stoplist.
    - `salida/02_tokens_consultas.md` (ver sección anterior).
@@ -81,7 +81,7 @@ $$\mathrm{score}(q, p) = \sum_{t \in q} \mathrm{idf}(t) \cdot \frac{tf_{t,p}\,(k
 Validación obligatoria (`tests/test_ranking.py`, T04):
 
 1. Corpus sintético pequeño con puntajes TF-IDF y BM25 calculados a mano; ceros sin NaN.
-2. Consistencia con `rank_bm25`: `BM25Okapi` usa `ln((N - df + 0.5)/(df + 0.5))` con un piso epsilon para términos con df > N/2, así que comparar rankings directos puede fallar sin que haya bug. Definir una subclase de `BM25Okapi` que sobrescriba `_calc_idf` con la fórmula propia y comparar puntajes sobre 200 pasajes y 5 consultas con tolerancia absoluta 1e-6. Documentar que, sin la subclase, la diferencia se concentra en términos con df > N/2.
+2. Consistencia con `rank_bm25`: `BM25Okapi` usa `ln((N - df + 0.5)/(df + 0.5))` (sin el `1 +` de la fórmula propia) y un piso epsilon para términos con df > N/2, así que comparar rankings directos falla sin que haya bug. Definir una subclase de `BM25Okapi` que sobrescriba `_calc_idf` con la fórmula propia y comparar puntajes sobre 200 pasajes y 5 consultas con tolerancia absoluta 1e-6. Documentar que, sin la subclase, la diferencia aparece en todos los términos (`ln(x)` frente a `ln(1+x)`); el piso epsilon solo la agrava con df > N/2.
 3. `rank_bm25` va solo en el grupo de desarrollo de las dependencias; `ranking.py` no lo importa.
 
 ## Filtro de fecha, top-k y desempates
@@ -133,6 +133,7 @@ No se cierra la fase de IR mientras falte uno (PRD §6.4):
 - [ ] T03 (conteos contra `CountVectorizer`), T04 (fórmulas y subclase de `rank_bm25`, tolerancia 1e-6), T05 (fecha en límites exactos, ausente, ventana abierta e invertida) y T06 (cero, tres y diez candidatos; términos desconocidos) en verde.
 - [ ] `python kit/evaluar.py ir juicios_relevancia.csv ranking.csv` corre contra `ranking.csv` con un `juicios_relevancia.csv` sintético sin lanzar excepción.
 - [ ] `salida/02_tokens_consultas.md`, `salida/02_postings.md`, `salida/02_vocabulario_top.csv`, `data/indice_meta.json` y los tres `salida/03_*.csv` existen y se regeneran desde cero con `02_indice.py` y `03_ranking.py`.
+- [ ] Los criterios con corpus real viven en `tests/test_ranking_real.py` (marcador `lento`); sus juicios sintéticos existen solo en `tmp_path`, nunca en `anotaciones/`.
 
 ## Skills relacionadas
 
