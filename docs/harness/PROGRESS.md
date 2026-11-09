@@ -18,13 +18,16 @@
 
 - H4 cerrado (2026-11-08): `src/mtx/evaluacion.py`, `scripts/05_evaluar_ir.py` (`make evaluar-ir`), `resultados_ir.csv` oficial (MAP BM25 con filtro 0.5750 vs TF-IDF con filtro 0.3846), vista con ventana complementaria, tablas por consulta, ganador con etiquetas, tres figuras en `reporte/figuras/`, `config/sinonimos_consultas.yaml` y `data/mejor_modelo.json` = `bm25_con_filtro`. 200 pruebas rápidas y 8 lentas verdes.
 
+- H5, reglas cerradas y congeladas (2026-11-08): `src/mtx/reglas.py`, `scripts/06_reglas.py` (`make reglas`), `tests/test_reglas.py` (108 pruebas y 2 `xfail` documentados), `config/gazetteer_extendido.csv` (109 filas: kit, PRD, 16 siglas minadas), `config/gazetteer_loc.csv`, `config/criterios_anotacion.md` aprobado por Daniel. Etiqueta `reglas-congeladas` creada. Desviación del PRD §6.7.6 en la regla de marca (el corpus trae «NOMBRE, CARGO»), documentada. Cambios posteriores a reglas o gazetteers son exploratorios y conservan el F1 congelado (D15).
+
 ## Pendiente
 
-1. H5 (PRD §12.2): `reglas.py` (regex FECHA y MONTO, cantidades auxiliares, gazetteers ORG y LOC, regla de marca), `config/criterios_anotacion.md` (Daniel, `[VALIDAR]`), minado de siglas candidatas (revisión de Daniel), pestaña Gazetteer de la app, `make congelar` y etiqueta `reglas-congeladas`; NER (`ner-modelo`) con revisión fija. Skills `reglas-gazetteer` y `ner-modelo`.
-2. Aplicar el diff del arnés (CLAUDE.md, `corpus-segmentacion`, `kit-contratos`, `indice-ranking`, `entrega-reproducible`): Daniel dijo "Sí" pero el diff no está en el repo; pedirle que lo pegue.
-3. Revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist.
-4. Daniel: declarar el tiempo real de anotación; decidir qué hacer con `04_hoja_juicios_done.xlsx` en la raíz (sin versionar).
-5. Luego H6 a H9: gold, fusión, evaluación IE, tablas, reporte, láminas.
+1. H5, NER (skill `ner-modelo`): `src/mtx/ner_modelo.py`, `scripts/07_ner.py`, `config/ner.yaml` con revisión fija del modelo, chunking, posproceso de spans y caché versionada en `data/cache_ner/`. Fijar `data/modelo_ner.json` por criterios técnicos, sin usar el gold (D09). Necesita descarga de modelos de Hugging Face (red).
+2. Muestra del gold (skill `gold-anotacion`, `08b_muestra_gold.py`, semilla 42) y pestañas Gold y Gazetteer de la app; luego el alumno anota el gold (H6). El gold solo se abre con la etiqueta `reglas-congeladas` ya creada.
+3. Aplicar el diff del arnés (CLAUDE.md, `corpus-segmentacion`, `kit-contratos`, `indice-ranking`, `entrega-reproducible`): Daniel dijo "Sí" pero el diff no está en el repo; pedirle que lo pegue.
+4. Revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist.
+5. Daniel: declarar el tiempo real de anotación; decidir qué hacer con `04_hoja_juicios_done.xlsx` en la raíz (sin versionar).
+6. Luego H7 a H9: fusión, evaluación IE, tablas, reporte, láminas.
 
 ## Decisiones
 
