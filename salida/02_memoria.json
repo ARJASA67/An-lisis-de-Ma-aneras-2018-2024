@@ -1,0 +1,9 @@
+{
+  "rss_maximo_mb_tras_tokens": 757.2,
+  "rss_maximo_mb_tras_indice": 1008.1,
+  "rss_maximo_mb_final": 1296.4,
+  "indice_pkl_mb": 43.5,
+  "tfidf_npz_mb": 63.8,
+  "segundos": 42.0,
+  "postings_totales": 7238490
+}
