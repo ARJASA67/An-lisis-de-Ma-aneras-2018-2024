@@ -26,7 +26,7 @@
 2. Muestra del gold (skill `gold-anotacion`, `08b_muestra_gold.py`, semilla 42) y pestañas Gold y Gazetteer de la app; luego el alumno anota el gold (H6). El gold solo se abre con la etiqueta `reglas-congeladas` ya creada.
 3. Aplicar el diff del arnés (CLAUDE.md, `corpus-segmentacion`, `kit-contratos`, `indice-ranking`, `entrega-reproducible`): Daniel dijo "Sí" pero el diff no está en el repo; pedirle que lo pegue.
 4. Revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist.
-5. Daniel: declarar el tiempo real de anotación; decidir qué hacer con `04_hoja_juicios_done.xlsx` en la raíz (sin versionar).
+5. Daniel: declarar el tiempo real de anotación (hoy sin declarar); decidir qué hacer con `04_hoja_juicios_done.xlsx` en la raíz (sin versionar).
 6. Luego H7 a H9: fusión, evaluación IE, tablas, reporte, láminas.
 
 ## Decisiones
@@ -35,6 +35,7 @@ Ver `docs/decisiones.md`. Las no obvias: el corpus real tiene otro formato de ma
 
 ## Bloqueos
 
-- Ninguno de Daniel por ahora; H3 (juicios) es trabajo suyo y bloqueará H4 en adelante.
+- NER: necesita red para descargar el modelo de Hugging Face; fijar `data/modelo_ner.json` solo por criterios técnicos, sin gold. Antes de fijarlo, Daniel aprueba el modelo propuesto.
+- H6 (gold) es trabajo humano de Daniel y bloqueará H7 en adelante.
 - NLTK no descarga stopwords aquí (validación de rutas); `preproceso.py` debe usar `config/stopwords_es.txt`, que hay que crear versionado en H2.
 - Kaleido necesita el Chrome que instala `plotly_get_chrome` (`make setup` lo hace); los Chromium de snap fallan.
