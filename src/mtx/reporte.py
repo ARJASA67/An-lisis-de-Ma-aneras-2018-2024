@@ -120,7 +120,21 @@ def tabla_respuestas(s: Path = config.DIR_SALIDA) -> str:
     return _md(t)
 
 
-TABLAS = {"corpus": tabla_corpus, "ir": tabla_ir, "ir_consulta": tabla_ir_consulta,
+def tabla_postings(s: Path = config.DIR_SALIDA) -> str:
+    """Término, stem, df, idf de BM25 y los tres primeros postings de `02_postings.md`."""
+    texto = (s / "02_postings.md").read_text(encoding="utf-8")
+    filas = []
+    for bloque in texto.split("\n## ")[1:]:
+        cab = re.match(r"(\S+) → stem `([^`]+)`", bloque)
+        df_idf = re.search(r"df = (\d+) de N = \d+; idf BM25 = ([\d.]+)", bloque)
+        post = re.findall(r"^\| (\d+_\d+) \| [\d-]+ \| (\d+) \|", bloque, re.MULTILINE)[:3]
+        filas.append((cab.group(1), cab.group(2), _miles(df_idf.group(1)), df_idf.group(2),
+                      ", ".join(f"{p} (tf {t})" for p, t in post)))
+    return _md(pd.DataFrame(filas, columns=["Término", "Stem", "df", "idf BM25",
+                                            "Primeros postings por tf"]), "llrrl")
+
+
+TABLAS = {"corpus": tabla_corpus, "postings": tabla_postings, "ir": tabla_ir, "ir_consulta": tabla_ir_consulta,
           "ie": tabla_ie, "errores": tabla_errores, "respuestas": tabla_respuestas}
 
 
