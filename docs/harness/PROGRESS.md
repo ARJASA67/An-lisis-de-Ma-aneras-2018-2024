@@ -30,7 +30,7 @@
 1. ~~NER principal~~: aprobado y fijado en `data/modelo_ner.json` (2026-11-11, criterio técnico).
 2. ~~Muestra y pestaña Gold~~ hechas (2026-11-11). **Siguiente: Arturo anota el gold (H6)** en la pestaña Gold (`python -m uv run streamlit run src/mtx/app/app.py`), 20 pasajes, unas 2 a 3.5 h; al terminar, «Cerrar gold». Mientras tanto se puede construir la fusión (H7) sin mirar la muestra. Modo ciego: Arturo no abre `salida/entidades_*.csv`, `salida/07_*` ni `data/cache_ner/` hasta `cierre_gold.json`.
 3. H7 resto: `09_evaluar_ie.py` (necesita el gold cerrado), análisis de errores y evaluación de 20 IDs. Luego H8 (tablas) y H9 (reporte, láminas, README). P0 primero; recortes según PRD §12.4.
-3b. Arturo decide qué hacer con el cambio accidental en `anotaciones/juicios_relevancia.csv` (Q1 578_0 de 1 a vacío); ver `docs/decisiones.md`.
+3b. (Resuelto 2026-11-11) Juicio de Q1 578_0 restaurado a petición de Arturo.
 4. Pendientes heredados: revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist; declarar el tiempo real de anotación de juicios.
 5. Subir el repo al GitHub de Arturo cuando él cree el repo vacío y dé el visto bueno.
 
