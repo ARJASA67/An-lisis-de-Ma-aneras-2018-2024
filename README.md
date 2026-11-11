@@ -158,7 +158,7 @@ Se usó un asistente de IA (Claude, en Claude Code) en todo el proyecto, antes y
   `docs/decisiones.md`): aprobación de Q9 y Q10, criterios de relevancia y de anotación, revisión
   de siglas del gazetteer.
 - **Lo que decidió o hizo Arturo**: aprobación del NER, anotación y cierre del gold en la app sin
-  ver predicciones (modo ciego), valoraciones de las tablas y aprobación de cada corte del reporte.
+  ver predicciones (modo ciego, 1.5 horas), valoraciones de las tablas y aprobación de cada corte del reporte.
 - **Juicios de relevancia**: se hicieron a mano antes del relevo, Q1 a Q4 en la app y Q5 a Q10 en
   una hoja compartida entre compañeros con autorización del profesor. El asistente no juzgó, no
   sugirió valores ni redactó prompts para que otro modelo juzgara.
@@ -186,5 +186,5 @@ Se usó un asistente de IA (Claude, en Claude Code) en todo el proyecto, antes y
 | pytest, ruff (desarrollo) | pruebas y estilo | utilería |
 
 El índice invertido y BM25 están escritos a mano. La consulta al profesor sobre las utilerías
-está en `docs/mensaje_profesor_utilerias.md`; su respuesta: pendiente de registrar.
+está en `docs/mensaje_profesor_utilerias.md`; al 11 de noviembre de 2026 el profesor no respondió.
 `requirements.txt` se exporta de `uv.lock` con `uv export --no-dev --format requirements-txt`.
