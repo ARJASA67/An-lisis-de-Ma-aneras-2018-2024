@@ -1,0 +1,89 @@
+passage_id,tipo,texto_gold,texto_pred,inicio,fin,metodo,categoria,fuente,contexto
+216_81,PER,ÓSCAR DAVID LOZANO ÁGUILA (PER),ÓSCAR DA,0,8,modelo,frontera,modelo,"[[ÓSCAR DA]]VID LOZANO ÁGUILA: Muchas gracias, señor presidente. Muchas"
+216_81,PER,ÓSCAR DAVID LOZANO ÁGUILA (PER),ÓSCAR DA,0,8,modelo,en_marca,modelo,"[[ÓSCAR DA]]VID LOZANO ÁGUILA: Muchas gracias, señor presidente. Muchas"
+216_81,LOC,Istmo de Tehuantepec (LOC),corredor interoceánico del Istmo de Tehuantepec,582,629,regla,frontera,gazetteer,"obre todo porque estratégicamente es importante conectar el [[corredor interoceánico del Istmo de Tehuantepec]] con el Tren Maya. El punto de conexión será Palenque, ese e"
+343_2,PER,enero,,870,875,,omision,,"aumento al salario. Así también, como ya lo mencioné, para [[enero]] aumenta la pensión a adultos mayores 25 por ciento. Y van a"
+343_2,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: de ahí ya lo saben, la pensión para los Adultos Ma"
+343_2,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: de ahí ya lo saben, la pensión para los Adultos Ma"
+343_2,ORG,Estado de México (LOC),Estado,397,403,modelo,solape_otro_tipo,modelo,"a Delfina Gómez Álvarez, que representa a toda la gente del [[Estado]] de México, que respeta a todos, que escucha a todos, pero l"
+343_2,LOC,Estado de México (LOC),de México,404,413,modelo,frontera,modelo,"na Gómez Álvarez, que representa a toda la gente del Estado [[de México]], que respeta a todos, que escucha a todos, pero la maestra"
+354_38,LOC,Istmo,Istmo de Tehuantepec (LOC),43,48,ambos,frontera,gazetteer|modelo,VOZ HOMBRE: Comienza una nueva etapa en el [[Istmo]] de Tehuantepec. Con el objetivo de mejorar las condiciones
+354_38,LOC,Tehuantepec,Istmo de Tehuantepec (LOC),52,63,ambos,frontera,gazetteer|modelo,VOZ HOMBRE: Comienza una nueva etapa en el Istmo de [[Tehuantepec]]. Con el objetivo de mejorar las condiciones de vida de los
+354_38,LOC,Istmo,,292,297,,omision,,de Coatzacoalcos y Salina Cruz mediante el Ferrocarril del [[Istmo]] para facilitar el traslado de personas y mercancías. Aprove
+354_38,LOC,Centro y Sudamérica,Centro (LOC) | Sudamérica (LOC),921,940,modelo,frontera,modelo,"s y que conecta, además, con las navegaciones que parten de [[Centro y Sudamérica]] hacia este mismo destino. El Ferrocarril del Istmo de Tehua"
+354_38,LOC,Centro y Sudamérica,Centro (LOC) | Sudamérica (LOC),921,940,modelo,frontera:entidad_partida,modelo,"s y que conecta, además, con las navegaciones que parten de [[Centro y Sudamérica]] hacia este mismo destino. El Ferrocarril del Istmo de Tehua"
+354_38,LOC,Istmo,Istmo de Tehuantepec (LOC),986,991,regla,frontera,gazetteer,"o y Sudamérica hacia este mismo destino. El Ferrocarril del [[Istmo]] de Tehuantepec, columna vertebral del Corredor Interoceánic"
+354_38,LOC,Tehuantepec,Istmo de Tehuantepec (LOC),995,1006,regla,frontera,gazetteer,"érica hacia este mismo destino. El Ferrocarril del Istmo de [[Tehuantepec]], columna vertebral del Corredor Interoceánico, comunicará c"
+396_23,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL (SEDENA,SECRETARÍA DE LA DEFENSA NACIONAL (ORG) | SEDENA (ORG),0,79,regla,frontera,gazetteer,"[[DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL (SEDENA]]): de 160 habitaciones, el cual presenta un avance de 43.71."
+396_23,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL (SEDENA,SECRETARÍA DE LA DEFENSA NACIONAL (ORG) | SEDENA (ORG),0,79,regla,frontera:entidad_partida,gazetteer,"[[DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL (SEDENA]]): de 160 habitaciones, el cual presenta un avance de 43.71."
+396_23,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL (SEDENA,SECRETARÍA DE LA DEFENSA NACIONAL (ORG) | SEDENA (ORG),0,79,regla,en_marca,gazetteer,"[[DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL (SEDENA]]): de 160 habitaciones, el cual presenta un avance de 43.71."
+396_23,FECHA,mes de noviembre del presente año,,762,795,,omision,,"nce del 85.60 y se tiene programada su inauguración para el [[mes de noviembre del presente año]]. Actualmente se ejecutan trabajos en el lago artificial, en"
+396_23,ORG,Tren Maya (LOC),Tren Maya,1155,1164,modelo,tipo,modelo,"rtante para la empresa de participación estatal mayoritaria [[Tren Maya]]. La obra presenta un avance de 45.43, se han generado 200 e"
+396_23,ORG,Tren Maya (LOC),Tren Maya,1155,1164,modelo,tipo:obra_LOC_vs_ORG,modelo,"rtante para la empresa de participación estatal mayoritaria [[Tren Maya]]. La obra presenta un avance de 45.43, se han generado 200 e"
+420_10,ORG,Producción para el Bienestar,Bienestar (ORG),295,323,regla,frontera,gazetteer,"onde; el campesino que está sembrando y está en el programa [[Producción para el Bienestar]] saca de ahí, del banco, lo que le corresponde; el que está"
+420_10,ORG,Sembrando Vida,,386,400,,omision,,"ca de ahí, del banco, lo que le corresponde; el que está en [[Sembrando Vida]]. Pásame la tarjeta, pásame para acá. Esta tarjeta, Banco de"
+420_10,PER,Víctor,,607,613,,omision,,"al del Banco del Bienestar. Aquí en Álamo hay una sucursal, [[Víctor]], ya construida y operando, en todos los municipios. Ya se v"
+420_10,ORG,Sembrando Vida,,926,940,,omision,,"Bienestar. También va a continuar el programa, decía yo, de [[Sembrando Vida]]. Aquí producen cítrico, limón, naranja y también siembran á"
+420_10,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MAN,18,21,modelo,frontera,modelo,PRESIDENTE ANDRÉS [[MAN]]UEL LÓPEZ OBRADOR: manera directa. Por eso van a tener todos
+420_10,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MAN,18,21,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [[MAN]]UEL LÓPEZ OBRADOR: manera directa. Por eso van a tener todos
+420_10,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),L LÓPEZ,23,30,modelo,frontera,modelo,PRESIDENTE ANDRÉS MANUE[[L LÓPEZ]] OBRADOR: manera directa. Por eso van a tener todos su tarje
+420_10,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),L LÓPEZ,23,30,modelo,en_marca,modelo,PRESIDENTE ANDRÉS MANUE[[L LÓPEZ]] OBRADOR: manera directa. Por eso van a tener todos su tarje
+420_10,LOC,,México,845,851,modelo,espuria,modelo,"l territorio nacional, el banco más poderoso, más fuerte de [[México]], el Banco del Bienestar. También va a continuar el programa"
+499_68,FECHA,julio,,1186,1191,,omision,,"os operando mil 500, y en dos meses rebasamos a Azteca y en [[julio]]"
+499_68,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: Están llevándose a cabo las contrataciones, no sé"
+499_68,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: Están llevándose a cabo las contrataciones, no sé"
+776_72,ORG,gobierno federal,,68,84,,omision,,"TE ANDRÉS MANUEL LÓPEZ OBRADOR: Por lo general es apoyo del [[gobierno federal]]. En esta región hay muchos, miles de campesinos en el progr"
+776_72,ORG,programa Sembrando Vida,,139,162,,omision,,"deral. En esta región hay muchos, miles de campesinos en el [[programa Sembrando Vida]]. Por eso, cuando se presenta un fenómeno así pues nos agarr"
+776_72,ORG,programa Sembrando Vida,,312,335,,omision,,"e los afectados, ayer calculábamos que había tres mil en el [[programa Sembrando Vida]]. Esos sembradores reciben mes con mes un jornal para cultiv"
+776_72,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,frontera,modelo,PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: Por lo general es apoyo del gobierno federal. En e
+776_72,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: Por lo general es apoyo del gobierno federal. En e
+796_2,FECHA,enero del 24,,457,469,,omision,,"ropósito, ya estamos haciendo las proyecciones, es que para [[enero del 24]] reciban el doble de la pensión que están recibiendo ahora l"
+796_2,ORG,Jóvenes Construyendo el Futuro,,890,920,,omision,,"a ser universal. También vamos a seguir con el programa de [[Jóvenes Construyendo el Futuro]]. Este es un programa muy importante para los jóvenes, porqu"
+796_2,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MAN,18,21,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [[MAN]]UEL LÓPEZ OBRADOR: lo que podamos. Ya se está haciendo, no v"
+796_2,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MAN,18,21,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [[MAN]]UEL LÓPEZ OBRADOR: lo que podamos. Ya se está haciendo, no v"
+796_2,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),L,23,24,modelo,frontera,modelo,"PRESIDENTE ANDRÉS MANUE[[L]] LÓPEZ OBRADOR: lo que podamos. Ya se está haciendo, no vamo"
+796_2,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),L,23,24,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS MANUE[[L]] LÓPEZ OBRADOR: lo que podamos. Ya se está haciendo, no vamo"
+972_21,LOC,,Tren Maya,11,20,regla,espuria,gazetteer,VOZ MUJER: [[Tren Maya]]. Reporte de avances. Semana 53 de 157. En el tramo 1 llevam
+972_21,LOC,,Tren Maya,958,967,regla,espuria,gazetteer,iar operación en esta semana. Los trabajos generados por el [[Tren Maya]] en el sureste ascienden a 89 mil 550. El Tren Maya Avanza.
+972_21,LOC,,Tren Maya,1009,1018,regla,espuria,gazetteer,s por el Tren Maya en el sureste ascienden a 89 mil 550. El [[Tren Maya]] Avanza.
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MAN,18,21,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [[MAN]]UEL LÓPEZ OBRADOR: también con el programa de la frontera, p"
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MAN,18,21,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [[MAN]]UEL LÓPEZ OBRADOR: también con el programa de la frontera, p"
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),L,23,24,modelo,frontera,modelo,"PRESIDENTE ANDRÉS MANUE[[L]] LÓPEZ OBRADOR: también con el programa de la frontera, porq"
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),L,23,24,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS MANUE[[L]] LÓPEZ OBRADOR: también con el programa de la frontera, porq"
+1216_44,ORG,UMAS,,437,441,,sigla_no_reconocida,,"o mal hecho, esto fue en el periodo neoliberal. Esto de las [[UMAS]] es lo mismo, entonces nos toca ver cómo lo enfrentamos. Que"
+1216_44,ORG,UMAS,,437,441,,omision,,"o mal hecho, esto fue en el periodo neoliberal. Esto de las [[UMAS]] es lo mismo, entonces nos toca ver cómo lo enfrentamos. Que"
+1216_44,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,frontera,modelo,PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: cuotas para que el trabajador reciba más al moment
+1216_44,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: cuotas para que el trabajador reciba más al moment
+1216_44,ORG,,Estado,611,617,modelo,espuria,modelo,"como en este caso el patrón no es el empresario, sino es el [[Estado]], si se regresa al salario mínimo pues no aumentaría el sala"
+1277_28,PER,,SERVIDORA DE LA NACIÓN,17,39,regla,espuria,marca,"CAROLINA VARGAS, [[SERVIDORA DE LA NACIÓN]]: de hoy nos encontramos en la tercera y última jornada de e"
+1277_28,PER,,SERVIDORA DE LA NACIÓN,17,39,regla,en_marca,marca,"CAROLINA VARGAS, [[SERVIDORA DE LA NACIÓN]]: de hoy nos encontramos en la tercera y última jornada de e"
+1415_16,PER, ANDRÉS MANUEL LÓPEZ OBRADOR,ANDRÉS MANUEL LÓPEZ OBRADOR (PER) | MAN (ORG),10,38,regla|modelo,frontera,marca|modelo,"PRESIDENTE[[ ANDRÉS MANUEL LÓPEZ OBRADOR]]: anual, ningún banco, y nunca en la historia se habían entr"
+1415_16,PER, ANDRÉS MANUEL LÓPEZ OBRADOR,ANDRÉS MANUEL LÓPEZ OBRADOR (PER) | MAN (ORG),10,38,regla|modelo,en_marca,marca|modelo,"PRESIDENTE[[ ANDRÉS MANUEL LÓPEZ OBRADOR]]: anual, ningún banco, y nunca en la historia se habían entr"
+1415_16,ORG,Sembrando Vida,,319,333,,omision,,"También aquí en Veracruz hay un programa importante que es [[Sembrando Vida]], están trabajando permanentemente sembrando sus propias par"
+1415_16,MONTO,500,,791,794,,omision,,"actualmente son cinco mil pesos mensuales de jornal, dejan [[500]] de ahorro, pero este programa va a continuar. Estamos aquí"
+1527_0,LOC,Refinería Dos Bocas,Ref (ORG) | Dos Bocas (LOC) | Dos Bocas (ORG),806,825,modelo|regla,frontera,modelo|gazetteer,"jas y comprar jugo de naranja. Evaluación de trabajos de la [[Refinería Dos Bocas]], desde Paraíso, Tabasco En Paraíso, Tabasco, supervisamos e"
+1527_0,LOC,Tabasco ,Tabasco (LOC),842,850,ambos,frontera,gazetteer|modelo,"ación de trabajos de la Refinería Dos Bocas, desde Paraíso, [[Tabasco ]]En Paraíso, Tabasco, supervisamos el avance de las obras de"
+1527_0,LOC,Refinería Dos Bocas,Dos Bocas (LOC) | Bocas (LOC),913,932,regla|modelo,frontera,gazetteer|modelo,"Paraíso, Tabasco, supervisamos el avance de las obras de la [[Refinería Dos Bocas]]. Con este desarrollo, no dependeremos de la producción extr"
+1527_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: Amigas, amigos: Nos da mucho gusto estar aquí en e"
+1527_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: Amigas, amigos: Nos da mucho gusto estar aquí en e"
+1606_0,LOC,aeropuerto Felipe Ángeles,Felipe Ángeles (LOC),157,182,modelo,frontera,modelo,"les sobre la construcción del aeropuerto de Santa Lucía, el [[aeropuerto Felipe Ángeles]]. Me acompañan el general Luis Cresencio Sandoval, secretari"
+1606_0,LOC,aeropuerto de Texcoco,Texcoco (LOC),944,965,modelo,frontera,modelo,"ron sobre un comparativo con relación a lo que iba a ser el [[aeropuerto de Texcoco]]. Entonces, todo lo que es el aeropuerto de Santa Lucía Feli"
+1606_0,LOC,aeropuerto de Santa Lucía Felipe Ángeles,Santa Lucía (LOC) | Santa Lucía Felipe Ángeles (LOC),995,1035,regla|modelo,frontera,gazetteer|modelo,"a ser el aeropuerto de Texcoco. Entonces, todo lo que es el [[aeropuerto de Santa Lucía Felipe Ángeles]]. Avance del 7.37% en obras del aeropuerto Felipe Ángeles. C"
+1606_0,LOC,aeropuerto Felipe Ángeles,Felipe Ángeles (LOC),1067,1092,modelo,frontera,modelo,e Santa Lucía Felipe Ángeles. Avance del 7.37% en obras del [[aeropuerto Felipe Ángeles]]. Conferencia presidente AMLO El 18 de marzo de 1938 se tomó
+1606_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),ANDRÉS MANUEL LÓPEZ,11,30,modelo,frontera,modelo,"PRESIDENTE [[ANDRÉS MANUEL LÓPEZ]] OBRADOR: Buenos días. Ánimo. Bueno, el día de hoy vamos a i"
+1606_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),ANDRÉS MANUEL LÓPEZ,11,30,modelo,en_marca,modelo,"PRESIDENTE [[ANDRÉS MANUEL LÓPEZ]] OBRADOR: Buenos días. Ánimo. Bueno, el día de hoy vamos a i"
+1606_1,LOC,aeropuerto Felipe Ángeles,Felipe Ángeles (LOC),125,150,modelo,frontera,modelo,e Santa Lucía Felipe Ángeles. Avance del 7.37% en obras del [[aeropuerto Felipe Ángeles]]. Conferencia presidente AMLO El 18 de marzo de 1938 se tomó
+1606_1,FECHA,"Miércoles, 18 de marzo de 2020",Miércoles (LOC) | 18 de marzo de 2020 (FECHA),331,361,modelo|regla,frontera,modelo|regex,"e es de todos. Publicado por Andrés Manuel López Obrador en [[Miércoles, 18 de marzo de 2020]] Y mañana vamos a informar sobre la administración del nuevo"
+1606_1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,frontera,modelo,PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: lo que es el aeropuerto de Santa Lucía Felipe Ánge
+1606_1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: lo que es el aeropuerto de Santa Lucía Felipe Ánge
+1606_1,LOC,Santa Lucía Felipe Ángeles (LOC),Santa Lucía,67,78,regla,frontera,gazetteer,NTE ANDRÉS MANUEL LÓPEZ OBRADOR: lo que es el aeropuerto de [[Santa Lucía]] Felipe Ángeles. Avance del 7.37% en obras del aeropuerto Fe
+2115_5,MONTO,Sesenta y cinco mil,,40,59,,omision,,"PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: [[Sesenta y cinco mil]], o sea, se robaban el equivalente a lo que es el presupuest"
+2115_5,MONTO,65 mil millones,,143,158,,omision,,"quivalente a lo que es el presupuesto público de Michoacán, [[65 mil millones]]. Y ya estaba hecho una costumbre, lo tenían hasta contabili"
+2115_5,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MAN,18,21,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [[MAN]]UEL LÓPEZ OBRADOR: Sesenta y cinco mil, o sea, se robaban el"
+2115_5,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MAN,18,21,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [[MAN]]UEL LÓPEZ OBRADOR: Sesenta y cinco mil, o sea, se robaban el"
+2115_5,ORG,Torre de Pemex (LOC),Pemex,379,384,regla,solape_otro_tipo,gazetteer,"tenían hasta sistemas de cámaras, monitoreos en la Torre de [[Pemex]], un piso estaba dedicado a monitorear los ductos para ver c"
+2149_27,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: el país y al sector energético, ahora tenemos que"
+2149_27,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: el país y al sector energético, ahora tenemos que"
+2149_27,LOC,Sonda de Campeche (LOC),Campeche,619,627,regla,frontera,gazetteer,"ara utilizar todo el petróleo que se produce en la Sonda de [[Campeche]] y en los campos petroleros de tierra de Tabasco, de Veracru"
+2274_1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,frontera,modelo,PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: de un plan que tiene vinculación al interior del g
+2274_1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR (PER),MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [[MANUEL LÓPEZ]] OBRADOR: de un plan que tiene vinculación al interior del g
