@@ -83,6 +83,9 @@ def mostrar() -> None:
                 unsafe_allow_html=True)
 
     actual = alm.estado(q, pid)
+    if componentes.juicios_congelados():
+        _solo_lectura(q, pid, idx, ids, clave, actual)
+        return
     etiqueta = {None: "sin juzgar", "": "omitido (sin juzgar)", "0": "No relevante (0)",
                 "1": "Relevante (1)"}[actual]
     st.write(f"Estado de este pasaje: **{etiqueta}**")
@@ -113,3 +116,20 @@ def mostrar() -> None:
     with st.expander("Criterios de relevancia (tu archivo)"):
         st.markdown(componentes.CRITERIOS_RELEVANCIA.read_text(encoding="utf-8"))
     st.caption(f"Dirección de datos: {config.DIR_ANOTACIONES.name}/juicios_relevancia.csv")
+
+
+def _solo_lectura(q: str, pid: str, idx: int, ids: list[str], clave: str, actual) -> None:
+    """Juicios congelados (H4 cerrado): se pueden consultar, no cambiar."""
+    etiqueta = {None: "sin juzgar", "": "omitido (sin juzgar)", "0": "No relevante (0)",
+                "1": "Relevante (1)"}[actual]
+    st.info("Los juicios están **congelados** desde que se eligió el mejor modelo de IR "
+            "(`data/mejor_modelo.json`). Esta pestaña es de solo lectura: cambiar un juicio "
+            "alteraría las métricas IR y el ganador.")
+    st.write(f"Juicio registrado: **{etiqueta}**")
+
+    def mover(paso: int) -> None:
+        st.session_state[clave] = (idx + paso) % len(ids)
+
+    c1, c2 = st.columns(2)
+    c1.button("◀ Pasaje anterior", on_click=mover, args=(-1,), width="stretch", key="ro_ant")
+    c2.button("Pasaje siguiente ▶", on_click=mover, args=(1,), width="stretch", key="ro_sig")

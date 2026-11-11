@@ -218,12 +218,15 @@ def test_estado_nunca_completado_por_existir(tmp_path, monkeypatch):
 
 
 # ------------------------------------------------------------------ app de punta a punta (AppTest)
-def _app(tmp_path, monkeypatch, con_criterios=True):
+def _app(tmp_path, monkeypatch, con_criterios=True, congelado=False):
     from streamlit.testing.v1 import AppTest
     if con_criterios:
         (tmp_path / "c.md").write_text("Relevancia temática.", encoding="utf-8")
     monkeypatch.setattr(c, "CRITERIOS_RELEVANCIA", tmp_path / "c.md")
     monkeypatch.setattr(pool, "JUICIOS_CSV", tmp_path / "anot" / "juicios.csv")
+    monkeypatch.setattr(c, "MEJOR_MODELO", tmp_path / ("mejor.json" if not congelado else "m.json"))
+    if congelado:
+        (tmp_path / "m.json").write_text("{}", encoding="utf-8")
     ruta = pool.POOL_CSV.parents[1] / "src" / "mtx" / "app" / "app.py"
     return AppTest.from_file(str(ruta), default_timeout=120)
 
@@ -259,3 +262,20 @@ def test_app_flujo_1_0_omitir_anterior_y_ciego(tmp_path, monkeypatch):
     valores = [f.rsplit(",", 1)[1] for f in filas[1:]]
     assert valores == ["1", "", "0"]  # omitido queda vacío, nunca 0
     assert c.leer_meta(destino)["revision"] == 3
+
+
+@pytest.mark.skipif(not pool.POOL_CSV.exists(), reason="falta salida/04_pool.csv")
+def test_juicios_congelados_solo_lectura_sin_escribir(tmp_path, monkeypatch):
+    at = _app(tmp_path, monkeypatch, congelado=True).run()
+    assert not at.exception
+    etiquetas = {b.label for b in at.button}
+    assert not etiquetas & {"Relevante (1)", "No relevante (0)", "Omitir por ahora", "Anterior"}
+    next(b for b in at.button if b.label == "Pasaje siguiente ▶").click().run()
+    assert not at.exception
+    assert not (tmp_path / "anot" / "juicios.csv").exists()
+
+
+def test_juicios_congelados_segun_mejor_modelo(tmp_path):
+    assert not c.juicios_congelados(tmp_path / "no.json")
+    (tmp_path / "si.json").write_text("{}", encoding="utf-8")
+    assert c.juicios_congelados(tmp_path / "si.json")

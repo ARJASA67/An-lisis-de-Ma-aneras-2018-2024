@@ -25,6 +25,8 @@ from .. import adaptadores_kit, config, pool, preproceso
 CRITERIOS_RELEVANCIA = config.DIR_CONFIG / "criterios_relevancia.md"
 CIERRE_GOLD = config.DIR_ANOTACIONES / "cierre_gold.json"
 POOL_META = config.DIR_DATA / "pool_meta.json"
+MEJOR_MODELO = config.DIR_DATA / "mejor_modelo.json"
+"""Existe desde H4: a partir de ahí los juicios están congelados (PRD §11.1)."""
 COLUMNAS_PUBLICAS_POOL = ["query_id", "passage_id", "doc_id", "fecha", "texto", "texto_sha256"]
 """Únicas columnas del pool que ve la vista de Juicios (sin variantes, rangos ni `en_ventana`)."""
 
@@ -159,6 +161,15 @@ def metadatos_pasajes(ids: list[str], ruta: Path = config.PASAJES_PARQUET) -> pd
 
 
 # --------------------------------------------------------------------------- juicios
+
+
+def juicios_congelados(ruta: Path | None = None) -> bool:
+    """Los juicios quedan congelados en cuanto existe `data/mejor_modelo.json` (H4 cerrado).
+
+    Desde ahí la pestaña Juicios y la CLI son de solo lectura: «Omitir por ahora» borraría un
+    juicio congelado y cambiaría las métricas IR y el ganador.
+    """
+    return (ruta or MEJOR_MODELO).exists()
 
 
 def criterios_listos(ruta: Path | None = None) -> bool:

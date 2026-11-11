@@ -13,6 +13,9 @@ def main() -> int:
     if not pool.POOL_CSV.exists():
         print("Falta el pool: corre `make pool`.")
         return 1
+    if componentes.juicios_congelados():
+        print("Los juicios están congelados (existe data/mejor_modelo.json): la CLI no los cambia.")
+        return 1
     if not componentes.criterios_listos():
         print("Falta config/criterios_relevancia.md: escríbelo y apruébalo antes de juzgar.")
         return 1
