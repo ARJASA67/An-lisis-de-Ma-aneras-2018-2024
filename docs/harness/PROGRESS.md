@@ -26,15 +26,17 @@
 - H7, fusión y normalización (2026-11-11): `fusion.py`, `normalizacion.py`, `08_extraer.py`; `entidades.csv` (911 filas) y derivados en `salida/`. 378 pruebas rápidas verdes.
 - H6, gold (2026-11-11): Arturo anotó y cerró el gold (20 de 20 pasajes, 183 entidades: 102 LOC, 36 PER, 33 ORG, 6 MONTO, 6 FECHA); `anotaciones/cierre_gold.json` existe, `validar_gold()` sin errores, `gold_entidades.csv` en la raíz (commit `676919e`). **Modo ciego levantado.**
 - Pestaña Juicios en solo lectura desde H4 (`componentes.juicios_congelados()`); un clic en «Omitir por ahora» había borrado el juicio Q1 578_0 y se restauró. 380 pruebas rápidas verdes.
+- H7, evaluación IE (2026-11-11): `09_evaluar_ie.py`; F1 combinado TODOS 0.7740, sin alertas; análisis de errores y dos figuras `ie_*.png`.
+- H8, tablas (2026-11-11): `respuestas.py`, `10_tablas.py`; `salida/respuestas.csv` y `salida/tablas_respuesta/`. 396 pruebas rápidas verdes.
 - Entrega: repo en GitHub de Arturo, remoto `github` (https://github.com/ARJASA67/An-lisis-de-Ma-aneras-2018-2024.git), con `main` y la etiqueta `reglas-congeladas` subidas. `origin` es el GitLab del profesor: no se le hace push.
 
 ## Pendiente
 
-1. **H7, evaluación IE (siguiente, P0)** con skill `evaluacion-ie`: `scripts/09_evaluar_ie.py` y parte IE de `src/mtx/evaluacion.py`. `python kit/evaluar.py ie gold_entidades.csv entidades.csv` → `resultados_ie.csv` (raíz y `salida/`); `salida/09_ie_detalle.csv`; `salida/09_evaluacion_20_ids.csv` (cuenta falsos positivos en pasajes gold vacíos, P04); `analizar_errores()` → `salida/09_analisis_errores.csv` y `09_resumen_errores.csv` (frontera, tipo, sigla, en_marca, omisión, espuria); figuras `reporte/figuras/ie_*.png`. Sin conjunto de selección: no hay `09_comparacion_ner.csv` (el reporte declara elección técnica). Revisar umbrales de alerta (F1 TODOS < 0.30 o F1 = 1.0).
-2. H8, tablas de respuesta (skill `tablas-respuesta`): `respuestas.py`, `10_tablas.py`, `config/tablas_respuesta.yaml`, `config/excluir_tablas.yaml`. Las valoraciones (`anotaciones/valoraciones.yaml`) las redacta Arturo.
-3. H9 (skills `reporte-pdf`, `laminas-demo`, `entrega-reproducible`): reporte 4 a 6 páginas con cortes `[VALIDAR]`, máximo 5 láminas y guion, demo `13_demo.py`, README de 10 secciones con «Uso de IA», `requirements.txt`, `99_validar.py` y etiqueta `v1.0-entrega`. Pandoc no verificado en Windows; MiKTeX sí está instalado.
-4. Pendientes heredados: revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist; declarar el tiempo real de anotación (juicios y gold).
-5. Plazo registrado: entrega y presentación el 11 de noviembre de 2026, 20:00 (CDMX); Arturo no lo ha confirmado. Si aplica, recortar P1 y P2 según PRD §12.4, avisando.
+1. **H9, reporte (P0)**: corte 1 (esqueleto con tablas y figuras, `reporte/reporte.md`, `scripts/11_reporte.py`) en espera de aprobación de Arturo y de pandoc (`winget install JohnMacFarlane.Pandoc`). Luego corte 2 (prosa sección por sección, `[VALIDAR]`) y corte 3 (PDF de 4 a 6 páginas).
+2. **Valoraciones (Arturo)**: `anotaciones/valoraciones.yaml` con `Q1` a `Q10`, cada una `texto` (2 a 3 líneas) y `tabla_sha256` de `salida/10_tablas_hash.json`. `11_reporte.py` falla mientras falten.
+3. H9 resto: láminas (máximo 5) y guion `[VALIDAR]`, demo `13_demo.py`, README de 10 secciones con «Uso de IA» y marcadores `<!-- resultados:inicio -->`/`<!-- resultados:fin -->`, `requirements.txt`, `99_validar.py` ampliado y etiqueta `v1.0-entrega`.
+4. Pendientes heredados: discusión de la stoplist con `salida/02_vocabulario_top.csv`; tiempo real de anotación (juicios y gold) que declara Arturo.
+5. Plazo: hoy 11 de noviembre de 2026, 20:00. Si no alcanza, recortar en el orden de PRD §12.4 avisando antes.
 
 ## Entorno (Windows de Arturo)
 
