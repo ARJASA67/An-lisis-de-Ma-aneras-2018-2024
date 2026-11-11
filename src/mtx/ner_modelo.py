@@ -365,7 +365,8 @@ def ejecutar(pasajes: list[tuple[str, str]], modelo: dict, cfg: dict, raiz_cache
                      "etiquetas_modelo": sorted(etiquetas), "version_transformers": version,
                      **res}
             (carpeta / f"{pid}.json").write_text(
-                json.dumps(datos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+                json.dumps(datos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8",
+                newline="\n")
             crudas[pid] = res["crudas"]
     return ResultadoNER(crudas, len(pendientes), len(pasajes) - len(pendientes),
                         round(t_carga, 3), round(t_inf, 3), sorted(etiquetas) or None)
