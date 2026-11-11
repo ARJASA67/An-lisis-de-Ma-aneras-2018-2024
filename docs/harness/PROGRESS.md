@@ -29,19 +29,19 @@
 - H7, evaluación IE (2026-11-11): `09_evaluar_ie.py`; F1 combinado TODOS 0.7740, sin alertas; análisis de errores y dos figuras `ie_*.png`.
 - H8, tablas (2026-11-11): `respuestas.py`, `10_tablas.py`; `salida/respuestas.csv` y `salida/tablas_respuesta/`. 396 pruebas rápidas verdes.
 - H9 (2026-11-11): pandoc 3.13 instalado; reporte cortes 1 y 2 aprobados (recorte de dos figuras aprobado), PDF en 5 páginas sin valoraciones; README de 10 secciones; `requirements.txt`; demo `13_demo.py` y salida de contingencia; `laminas/guion.md`.
+- Reporte final (2026-11-11): formato de prácticas de Arturo, letra 10 e interlineado 1.0 por decisión suya, 8 páginas (portada, índice y 6 de cuerpo); láminas con python-pptx; gold en 1.5 h.
 - Entrega: repo en GitHub de Arturo, remoto `github` (https://github.com/ARJASA67/An-lisis-de-Ma-aneras-2018-2024.git), con `main` y la etiqueta `reglas-congeladas` subidas. `origin` es el GitLab del profesor: no se le hace push.
 
 ## Pendiente
 
-1. **Valoraciones (Arturo, bloquea el PDF final)**: `anotaciones/valoraciones.yaml`, claves `Q1` a `Q10`, cada una con `texto` y `tabla_sha256` de `salida/10_tablas_hash.json`.
-2. **Láminas y guion `[VALIDAR]`**: `laminas/guion.md` listo; las 5 láminas se arman a mano (P2 de python-pptx recortado, avisado). Falta el ensayo cronometrado de Arturo.
-3. **Corte 3 del reporte**: con valoraciones, `11_reporte.py` sin problemas, revisar todas las páginas (la tabla 3 se partía entre páginas) y confirmar 4 a 6 páginas.
-4. `docs/guia_defensa.md` (P0 del skill laminas-demo) y `99_validar.py` ampliado; etiqueta `v1.0-entrega` al final, después del corte 3.
-5. Pendientes heredados: tiempo real de anotación; respuesta del profesor sobre utilerías; tamaño y tiempo de descarga del corpus.
+1. **Valoraciones (Arturo, lo único que bloquea la entrega)**: `anotaciones/valoraciones.yaml`, claves `Q1` a `Q10`, cada una con `texto` (2 a 3 líneas) y `tabla_sha256` de `salida/10_tablas_hash.json`. El asistente no las redacta (R08).
+2. Con valoraciones: regenerar el reporte (`scripts/11b_reporte_practica.py`, ver README), revisar que el cuerpo siga en 6 páginas (hoy la página 6 está casi vacía), commit y etiqueta `v1.0-entrega`; Arturo sube con `git push github main` y `git push github v1.0-entrega`.
+3. Arturo edita `laminas/laminas.pptx` y escribe su propio guion; ensayo con cronómetro.
 
 ## Entorno (Windows de Arturo)
 
 - Pandoc: `C:\Users\arjas\AppData\Local\Pandoc` (agregarlo al PATH en Git Bash).
+- Node.js en `C:\Program Files\nodejs`; paquete `docx` fuera del repo (exportar `NODE_PATH` a su `node_modules`).
 - Sin `make`: correr `.venv/Scripts/python.exe scripts/NN_*.py` (o `python -m uv run python ...`), con `PYTHONUTF8=1`. Pruebas: `.venv/Scripts/python.exe -m pytest -q`; lint: `.venv/Scripts/python.exe -m ruff check .`.
 - `core.autocrlf=false` en el repo y `.gitattributes` con `eol=lf` (con CRLF fallan los hashes de `kit/`). Si un script deja diffs solo de fin de línea, `git checkout --` los archivos.
 - App: `python -m uv run streamlit run src/mtx/app/app.py` (config de vista previa en `C:\Ciencias\Textos\.claude\launch.json`, nombre `app-anotacion`).
