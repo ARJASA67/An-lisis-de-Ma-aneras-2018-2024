@@ -50,7 +50,8 @@ def _commit() -> str:
 def _actualizar_json(ruta, clave: str, valor: dict) -> None:
     datos = json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
     datos[clave] = valor
-    ruta.write_text(json.dumps(datos, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    ruta.write_text(json.dumps(datos, indent=2, ensure_ascii=False) + "\n", encoding="utf-8",
+                    newline="\n")
 
 
 def _figura(fig: go.Figure, nombre: str, titulo: str, **ejes) -> None:
@@ -109,7 +110,11 @@ def main() -> int:
 
     # 1. Cifra oficial (kit, salida literal).
     res = evaluacion.evaluar_ie_oficial(GOLD, ENTIDADES, config.DIR_SALIDA)
-    shutil.copyfile(config.DIR_SALIDA / "resultados_ie.csv", config.RAIZ / "resultados_ie.csv")
+    oficial = config.DIR_SALIDA / "resultados_ie.csv"
+    # El kit escribe con el fin de línea del sistema; se normaliza a LF (eol=lf del repo) para
+    # que el hash registrado coincida con un clon limpio. El contenido no cambia.
+    oficial.write_bytes(oficial.read_bytes().replace(b"\r\n", b"\n"))
+    shutil.copyfile(oficial, config.RAIZ / "resultados_ie.csv")
     problemas = evaluacion.verificar_resultados_ie(res)
     alertas = evaluacion.alertas_ie(res)
 
@@ -168,7 +173,7 @@ def main() -> int:
         "errores_clasificados": len(err), "problemas": problemas, "alertas": alertas,
     }
     (config.DIR_SALIDA / "09_ejecucion_ie.json").write_text(
-        json.dumps(registro, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        json.dumps(registro, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     _actualizar_json(MANIFIESTO, "evaluar_ie", registro)
     _actualizar_json(TIEMPOS, "evaluar_ie", {"segundos": round(time.perf_counter() - t0, 2),
                                              "ejecutado": registro["ejecutado"]})
