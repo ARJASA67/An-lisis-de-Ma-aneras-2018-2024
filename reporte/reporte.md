@@ -49,7 +49,6 @@ BM25 con filtro obtiene el mayor MAP oficial (0.575 frente a 0.385 de TF-IDF con
 
 : AP por consulta de las variantes con filtro y etiquetas calculadas (`salida/05_ir_ganador_por_consulta.csv`).
 
-![AP por consulta, variantes con filtro (`reporte/figuras/ir_ap_por_consulta.png`)](figuras/ir_ap_por_consulta.png){width=85%}
 
 # Extracción con reglas y con modelo
 
@@ -73,7 +72,6 @@ Los errores se clasificaron sobre la salida combinada (tabla 6; una fila puede c
 
 : Errores de la extracción combinada por categoría, no excluyentes (`salida/09_resumen_errores.csv`).
 
-![F1 por tipo y método (`reporte/figuras/ie_f1_por_tipo_metodo.png`)](figuras/ie_f1_por_tipo_metodo.png){width=85%}
 
 # Tablas de respuesta
 

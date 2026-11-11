@@ -145,10 +145,10 @@ def tabla_valoraciones(s: Path = config.DIR_SALIDA,
     val = (yaml.safe_load(ruta.read_text(encoding="utf-8")) or {}) if ruta.exists() else {}
     cons = pd.read_csv(config.CONSULTAS_CSV)
     filas = []
-    for q, c in zip(cons["query_id"], cons["consulta"], strict=True):
+    for q in cons["query_id"]:
         texto = str((val.get(q) or {}).get("texto", "")).strip()
-        filas.append((q, c, " ".join(texto.split()) or "[VALIDAR] pendiente del alumno"))
-    return _md(pd.DataFrame(filas, columns=["Consulta", "Tema", "Valoración del alumno"]), "lll")
+        filas.append((q, " ".join(texto.split()) or "[VALIDAR] pendiente del alumno"))
+    return _md(pd.DataFrame(filas, columns=["Consulta", "Valoración del alumno"]), "ll")
 
 
 TABLAS = {"corpus": tabla_corpus, "postings": tabla_postings, "valoraciones": tabla_valoraciones, "ir": tabla_ir, "ir_consulta": tabla_ir_consulta,
