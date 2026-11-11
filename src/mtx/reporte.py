@@ -72,7 +72,8 @@ def tabla_ir(s: Path = config.DIR_SALIDA) -> str:
 
 def tabla_ir_consulta(s: Path = config.DIR_SALIDA) -> str:
     g = pd.read_csv(s / "05_ir_ganador_por_consulta.csv")
-    g["ganador"] = g["ganador"].map(lambda x: NOMBRES_IR.get(x, x))
+    g["ganador"] = g["ganador"].map({"bm25_con_filtro": "BM25", "tfidf_con_filtro": "TF-IDF",
+                                     "empate": "empate"})
     g["sigla_o_nombre_propio"] = g["sigla_o_nombre_propio"].map({True: "sí", False: "no"})
     df = g[["query_id", "ap_tfidf_con_filtro", "ap_bm25_con_filtro", "ganador", "longitud",
             "terminos_df_alto", "sigla_o_nombre_propio"]].copy()
