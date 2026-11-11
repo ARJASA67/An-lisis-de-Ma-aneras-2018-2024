@@ -1,0 +1,184 @@
+# Mapa consulta → campos de respuesta y evidencia mínima de la relación (PRD §6.13.2, D17).
+# Fijado antes de generar las tablas (2026-11-11). Cambiarlo después de ver la salida es ajustar al
+# resultado: se registra en docs/decisiones.md y se regenera.
+#
+# Cada campo:
+#   tipo:   PER | ORG | LOC | FECHA | MONTO (de entidades_enriquecidas.csv)
+#           CANTIDAD | PORCENTAJE (de cantidades_auxiliares.csv)
+#   filtro: opcional. farmaceutica | entidad_federativa | organizacion_empresarial (gazetteers)
+#   unidad: opcional, solo auxiliares: regex sobre la columna `unidad`
+#   patrones_contexto: regex en minúsculas y sin acentos; se buscan a ±60 caracteres del span y en
+#           la oración que lo contiene y las contiguas. Sin coincidencia → `ambiguo`.
+#   unico:  opcional. Dos valores distintos respaldados en el mismo discurso → `contradictorio`.
+#   unidad_respuesta: texto de la columna `unidad` de respuestas.csv.
+ventana_contexto: 60
+max_valores_tabla: 8
+
+consultas:
+  Q1:
+    - campo: dependencias_y_empresas
+      tipo: ORG
+      relacion: participa en la construcción u operación del Tren Maya
+      patrones_contexto: ['tren maya', 'tramo', 'constru', 'obra', 'particip', 'contrat', 'ingenier']
+    - campo: estados
+      tipo: LOC
+      filtro: entidad_federativa
+      relacion: estado por donde pasa o donde se construye el Tren Maya
+      patrones_contexto: ['tren maya', 'tramo', 'estacion', 'pasa por', 'construc', 'obra']
+    - campo: montos
+      tipo: MONTO
+      relacion: inversión o costo vinculado al Tren Maya
+      patrones_contexto: ['tren maya', 'tramo', 'invers', 'costo', 'cuesta', 'presupuesto', 'obra']
+  Q2:
+    - campo: farmaceuticas
+      tipo: ORG
+      filtro: farmaceutica
+      relacion: entrega o contrato de vacunas
+      patrones_contexto: ['vacuna', 'dosis', 'llega', 'contrat', 'entreg', 'envas']
+    - campo: funcionarios
+      tipo: PER
+      relacion: gestión o aplicación de la vacunación
+      patrones_contexto: ['vacuna', 'dosis', 'aplica', 'secretari', 'subsecretari', 'salud']
+    - campo: fechas
+      tipo: FECHA
+      relacion: fecha de llegada o aplicación de vacunas
+      patrones_contexto: ['vacuna', 'dosis', 'llega', 'aplica', 'arrib']
+    - campo: dosis
+      tipo: CANTIDAD
+      unidad: 'dosis'
+      unidad_respuesta: dosis
+      relacion: cantidad de dosis recibidas o aplicadas
+      patrones_contexto: ['vacuna', 'dosis', 'llega', 'aplica', 'recib']
+  Q3:
+    - campo: organizaciones
+      tipo: ORG
+      relacion: responsable o participante en la refinería de Dos Bocas
+      patrones_contexto: ['dos bocas', 'refineria', 'olmeca', 'constru', 'obra']
+    - campo: responsables
+      tipo: PER
+      relacion: persona responsable de la obra o de la empresa a cargo
+      patrones_contexto: ['dos bocas', 'refineria', 'olmeca', 'directora?', 'secretaria? de energia', 'responsable', 'a cargo']
+    - campo: montos_inversion
+      tipo: MONTO
+      relacion: inversión o costo de la refinería
+      patrones_contexto: ['dos bocas', 'refineria', 'olmeca', 'invers', 'costo', 'cuesta']
+  Q4:
+    - campo: dependencia_constructora
+      tipo: ORG
+      relacion: construye el aeropuerto Felipe Ángeles
+      patrones_contexto: ['aeropuerto', 'santa lucia', 'felipe angeles', 'aifa', 'constru', 'ingenieros']
+    - campo: lugares
+      tipo: LOC
+      relacion: lugar mencionado en relación con el aeropuerto
+      patrones_contexto: ['aeropuerto', 'santa lucia', 'felipe angeles', 'aifa']
+    - campo: costos
+      tipo: MONTO
+      relacion: costo o ahorro asociado al AIFA o Santa Lucía, no a otro aeropuerto
+      patrones_contexto: ['santa lucia', 'felipe angeles', 'aifa', 'costo', 'cuesta', 'invers', 'ahorr']
+  Q5:
+    - campo: secretaria_operadora
+      tipo: ORG
+      relacion: opera el programa Sembrando Vida
+      patrones_contexto: ['sembrando vida', 'programa', 'opera', 'bienestar']
+    - campo: estados
+      tipo: LOC
+      filtro: entidad_federativa
+      relacion: estado donde opera el programa
+      patrones_contexto: ['sembrando vida', 'programa', 'sembrador', 'hectarea', 'campesin']
+    - campo: monto_por_beneficiario
+      tipo: MONTO
+      unico: true
+      relacion: apoyo por beneficiario, distinto del presupuesto total
+      patrones_contexto: ['mensual', 'al mes', 'por sembrador', 'por beneficiario', 'cada sembrador', 'cada campesino']
+    - campo: beneficiarios
+      tipo: CANTIDAD
+      unidad: 'beneficiarios|sembradores'
+      unidad_respuesta: personas
+      relacion: número de beneficiarios o sembradores
+      patrones_contexto: ['sembrando vida', 'programa', 'sembrador', 'beneficiari']
+  Q6:
+    - campo: lugares
+      tipo: LOC
+      relacion: lugar de robo, ducto o evento de huachicol
+      patrones_contexto: ['huachicol', 'robo', 'ducto', 'toma clandestina', 'combustible', 'gasolina', 'explosion']
+    - campo: organizaciones
+      tipo: ORG
+      relacion: organización que combate o sufre el robo de combustible
+      patrones_contexto: ['huachicol', 'robo', 'ducto', 'combustible', 'gasolina', 'pemex']
+    - campo: perdidas
+      tipo: MONTO
+      relacion: pérdida o ahorro por el robo de combustible
+      patrones_contexto: ['huachicol', 'robo', 'perdi', 'ahorr', 'combustible', 'gasolina']
+    - campo: litros
+      tipo: CANTIDAD
+      unidad: 'litros|barriles'
+      unidad_respuesta: litros
+      relacion: volumen robado o recuperado
+      patrones_contexto: ['huachicol', 'robo', 'combustible', 'gasolina', 'barril', 'litro']
+  Q7:
+    - campo: montos_bimestrales
+      tipo: MONTO
+      unidad_respuesta: bimestral
+      relacion: monto bimestral de la pensión (previo o nuevo)
+      patrones_contexto: ['bimestr']
+    - campo: institucion
+      tipo: ORG
+      relacion: institución que paga o entrega la pensión
+      patrones_contexto: ['pension', 'adultos mayores', 'paga', 'entreg', 'banco']
+    - campo: fechas_aumento
+      tipo: FECHA
+      relacion: fecha de aumento de la pensión
+      patrones_contexto: ['aument']
+  Q8:
+    - campo: organizaciones_empresariales
+      tipo: ORG
+      filtro: organizacion_empresarial
+      relacion: participa en el acuerdo o anuncio salarial
+      patrones_contexto: ['salario', 'acuerdo', 'aumento', 'empresari', 'sector privado']
+    - campo: porcentajes
+      tipo: PORCENTAJE
+      unidad_respuesta: '%'
+      relacion: porcentaje de aumento al salario mínimo
+      patrones_contexto: ['salario', 'aument', 'incremento']
+    - campo: montos_diarios
+      tipo: MONTO
+      unidad_respuesta: diario
+      relacion: salario mínimo diario
+      patrones_contexto: ['diario', 'al dia', 'por dia']
+  Q9:
+    - campo: institucion
+      tipo: ORG
+      relacion: institución que opera las sucursales
+      patrones_contexto: ['banco', 'sucursal', 'bienestar']
+    - campo: sucursales
+      tipo: CANTIDAD
+      unidad: 'sucursales'
+      unidad_respuesta: sucursales
+      relacion: número de sucursales construidas, abiertas u operando
+      patrones_contexto: ['sucursal', 'banco', 'constru', 'abiert', 'operando', 'funcionando']
+    - campo: estados
+      tipo: LOC
+      filtro: entidad_federativa
+      relacion: estado donde hay o se construyen sucursales
+      patrones_contexto: ['sucursal', 'banco']
+    - campo: montos
+      tipo: MONTO
+      relacion: inversión o recursos del Banco del Bienestar
+      patrones_contexto: ['banco', 'sucursal', 'invers', 'costo']
+  Q10:
+    - campo: dependencias_y_empresas
+      tipo: ORG
+      relacion: participa en la construcción u operación del Tren Interoceánico
+      patrones_contexto: ['interoceanico', 'istmo', 'ferrocarril', 'tren', 'constru', 'opera']
+    - campo: lugares
+      tipo: LOC
+      relacion: lugar que conecta el corredor o el tren
+      patrones_contexto: ['interoceanico', 'istmo', 'ferrocarril', 'tren', 'conecta', 'puerto', 'estacion']
+    - campo: montos
+      tipo: MONTO
+      relacion: inversión o costo del corredor o del tren
+      patrones_contexto: ['interoceanico', 'istmo', 'ferrocarril', 'tren', 'invers', 'costo']
+    - campo: fechas_inauguracion
+      tipo: FECHA
+      relacion: fecha de inauguración o inicio de operación
+      patrones_contexto: ['inaugur', 'inicia', 'arranca', 'operacion', 'empieza']

@@ -1,0 +1,12 @@
+# Exclusiones de presentación para las tablas de respuesta (PRD U14, §6.13).
+# Solo aplican a campos de tipo PER (funcionarios o responsables); no tocan ORG, LOC, FECHA ni MONTO.
+# Se comparan con `texto_normalizado` de salida/entidades_enriquecidas.csv (minúsculas, sin acentos).
+# Valor por defecto del PRD: variantes del nombre del presidente.
+per_excluidas:
+  - andres manuel lopez obrador
+  - andres manuel lopez
+  - andres manuel
+  - lopez obrador
+  - manuel lopez obrador
+  - manuel lopez
+  - amlo
