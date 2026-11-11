@@ -59,7 +59,11 @@ El segundo enfoque es el modelo mrm8488/bert-spanish-cased-finetuned-ner, fijado
 
 # Evaluación de extracción y análisis de errores
 
-[Prosa del corte 2: fórmulas de P, R y F1 con coincidencia exacta; 20 pasajes evaluados por el kit y por la complementaria; un caso real por categoría de `salida/09_analisis_errores.csv`.]
+El gold son 20 pasajes sorteados con semilla 42 del top-10 de BM25 con filtro, dos por consulta (uno de rango 1 a 5 y otro de 6 a 10), anotados a mano en la app sin ver predicciones y cerrados con 183 entidades. Una predicción es TP solo si coincide en pasaje, tipo, inicio y fin; con eso $P = TP/(TP+FP)$, $R = TP/(TP+FN)$ y $F1 = 2PR/(P+R)$. El kit evalúa solo los pasajes con entidades gold; como ninguno de los 20 quedó vacío, la evaluación complementaria sobre los 20 IDs del sorteo da las mismas cifras.
+
+La combinación obtiene F1 = 0.774 (tabla 5) frente a 0.587 de las reglas y 0.708 del modelo. Las reglas son precisas y cubren poco (P = 0.82, R = 0.46); el modelo encuentra más ORG y LOC, y la unión sube el recall a 0.81 a costa de bajar la precisión a 0.74. En PER la unión llega a R = 0.92 porque la regla de marca aporta los nombres de quien habla y el modelo los del cuerpo. FECHA y MONTO solo tienen reglas y 6 entidades gold cada uno, así que sus cifras se mueven con un solo acierto.
+
+Los errores se clasificaron sobre la salida combinada (tabla 6; una fila puede caer en varias categorías). El más común es de frontera, 38 casos: el modelo marca Felipe Ángeles donde el gold tiene aeropuerto Felipe Ángeles (1606_0) y de México donde el gold tiene Estado de México (343_2). La entidad partida apareció 2 veces: Centro y Sudamérica (354_38) sale como dos entidades, Centro y Sudamérica. El efecto de las mayúsculas se concentra en la marca de interlocutor, con 20 errores ahí, 17 del modelo, que corta los nombres en mayúsculas en fragmentos como MAN o MANUEL LÓPEZ (420_10, 343_2). La única sigla no reconocida es UMAS (1216_44). La confusión de obra entre LOC y ORG aparece una vez: Tren Maya en «empresa de participación estatal mayoritaria Tren Maya» es ORG para el modelo y LOC en el gold (396_23). El monto sin unidad, entendido como una predicción que corta la moneda, no apareció; sí hay montos gold sin moneda junto a la cifra (500 en 1415_16; Sesenta y cinco mil y 65 mil millones en 2115_5) que la regla omite porque exige la moneda. Entre las 17 omisiones destacan programas que ningún gazetteer registra, como Sembrando Vida (420_10, 776_72). No hubo cambios a reglas ni gazetteers después de ver estos resultados.
 
 <!-- tabla:ie -->
 
@@ -73,12 +77,18 @@ El segundo enfoque es el modelo mrm8488/bert-spanish-cased-finetuned-ner, fijado
 
 # Tablas de respuesta
 
-[Corte 2: tablas compactas Q1 a Q10 desde `salida/tablas_respuesta/` con la valoración del alumno de `anotaciones/valoraciones.yaml`.]
+Para cada consulta, cada campo de la pregunta (dependencias, estados, montos, fechas, dosis) se llena con las entidades del top-10 del tipo correspondiente, quitando las que caen en la marca del interlocutor y las variantes del nombre del presidente en los campos de personas. Un valor cuenta como respaldado en texto solo si un patrón de la relación pedida (por ejemplo bimestr para la pensión o diario para el salario) aparece a 60 caracteres o en la oración del valor o en sus contiguas; si no, queda ambiguo con su cita. Lo que dice un reportero queda como ambiguo con su interlocutor. Respaldado significa que el corpus lo afirma, sin implicar que sea verdad. Las diez tablas completas, con valor, pasaje, fecha y cita, están en `salida/tablas_respuesta/`; aquí se resumen por estado (tabla 7) con la valoración de cada una (tabla 8). Tres campos no tienen evidencia en el top-10: montos del Tren Maya en Q1, fechas de aumento de la pensión en Q7 y organizaciones empresariales en Q8.
 
 <!-- tabla:respuestas -->
 
 : Estado de la evidencia por consulta (`salida/respuestas.csv`).
 
+<!-- tabla:valoraciones -->
+
+: Valoración de credibilidad de cada tabla, escrita por el alumno (`anotaciones/valoraciones.yaml`).
+
 # Uso de IA, limitaciones y reproducibilidad
 
-[Prosa del corte 2: autoría (D21), pendientes y cómo reproducir.]
+El código, las pruebas y los borradores de este reporte los escribió un asistente de IA (Claude, en Claude Code), a partir de las cifras de `salida/`; el alumno revisó y aprobó cada sección y la lista de archivos generados está en el README. Las decisiones humanas no se delegaron al asistente: los juicios de relevancia se hicieron a mano, en la app y en una hoja compartida autorizada por el profesor, durante la etapa del repositorio anterior al relevo; el gold y las valoraciones son del alumno. No se midió el acuerdo entre anotadores de los juicios.
+
+Las limitaciones principales son el tamaño del gold (20 pasajes, 6 FECHA y 6 MONTO), un solo modelo NER sin comparación, la pérdida de preguntas cortas de reporteros por la segmentación y que AP depende del pool de las cuatro variantes. Todo se reproduce sin TeX desde el repositorio con los scripts numerados (`scripts/01` a `scripts/10`, que usan los juicios, el gold y la caché del NER versionados) y el PDF con `scripts/11_reporte.py`; los hashes del kit, del gold y de las entidades están en `salida/manifiesto_ejecucion.json`.
