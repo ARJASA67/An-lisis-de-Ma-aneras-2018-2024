@@ -22,11 +22,12 @@
 
 - Relevo (2026-11-11): el profesor inició el repo hasta H5 y pidió continuarlo individualmente; el alumno ahora es Arturo Jaramillo Salmerón, en Windows sin `make` (correr `uv run python scripts/NN_*.py`). Datos regenerados con hashes idénticos; `.gitattributes` con `eol=lf`.
 - H5, NER (2026-11-11): `ner_modelo.py`, `scripts/07_ner.py`, `config/ner.yaml`, 19 pruebas sin red. Principal verificado (P06, `salida/07_verificacion_ner_bert_mrm8488.md`) y corrido sobre los 99 pasajes del top-10 (`salida/entidades_bert_mrm8488.csv`, caché en `data/cache_ner/`). 327 pruebas rápidas verdes, ruff limpio.
+- H5, muestra gold (2026-11-11): `muestreo.py`, `gold.py`, `08b_muestra_gold.py`, pestaña Gold, `config/protocolo.txt`; 20 pasajes sorteados, una sustitución objetiva. 343 pruebas rápidas verdes.
 
 ## Pendiente
 
 1. ~~NER principal~~: aprobado y fijado en `data/modelo_ner.json` (2026-11-11, criterio técnico).
-2. Muestra del gold (skill `gold-anotacion`, `08b_muestra_gold.py`, semilla 42) y pestaña Gold de la app; luego Arturo anota el gold (H6). Modo ciego: Arturo no abre `salida/entidades_*.csv`, `salida/07_*` ni `data/cache_ner/` hasta `cierre_gold.json`.
+2. ~~Muestra y pestaña Gold~~ hechas (2026-11-11). **Siguiente: Arturo anota el gold (H6)** en la pestaña Gold (`python -m uv run streamlit run src/mtx/app/app.py`), 20 pasajes, unas 2 a 3.5 h; al terminar, «Cerrar gold». Mientras tanto se puede construir la fusión (H7) sin mirar la muestra. Modo ciego: Arturo no abre `salida/entidades_*.csv`, `salida/07_*` ni `data/cache_ner/` hasta `cierre_gold.json`.
 3. H7 a H9: fusión, evaluación IE, tablas, reporte, láminas (P0 primero; recortes según PRD §12.4).
 4. Pendientes heredados: revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist; declarar el tiempo real de anotación de juicios.
 5. Subir el repo al GitHub de Arturo cuando él cree el repo vacío y dé el visto bueno.

@@ -1,0 +1,40 @@
+# Fórmulas de protocolo (saludos, agradecimientos, despedidas, cortesías de turno).
+# Criterio objetivo de sustitución de pasajes gold (PRD §6.11, U13): si más de la mitad de las
+# palabras de contenido del cuerpo del pasaje (sin marca ni stoplist) están en esta lista, se
+# sustituye por el siguiente sorteado. Una palabra por línea, en minúsculas y con acentos.
+adelante
+adiós
+agradecemos
+agradecer
+agradezco
+amables
+amable
+apreciable
+bienvenida
+bienvenidas
+bienvenido
+bienvenidos
+buen
+buena
+buenas
+buenos
+cariño
+cordial
+cordialmente
+días
+felicidades
+gracias
+gusto
+hola
+luego
+noches
+permiso
+placer
+pronto
+saludamos
+saludar
+saludo
+saludos
+tardes
+abrazo
+abrazos

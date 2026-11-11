@@ -325,9 +325,27 @@ def _pendientes_posteriores() -> list[Artefacto]:
     return [
         Artefacto("Gazetteer extendido", "pendiente humano", "H5, sin validador aún",
                   "Pestaña Gazetteer (H5)"),
-        Artefacto("Muestra y gold de evaluación", "pendiente técnico", "H5 y H6, sin validador aún",
-                  "scripts/08b_muestra_gold.py (H5)"),
+        _estado_muestra_gold(),
         Artefacto("Cierre del gold", "pendiente humano",
                   "existe" if gold_cerrado() else "no existe (modo ciego activo)", "Pestaña Gold (H6)"),
-        Artefacto("Caché NER", "pendiente técnico", "H5 y H7, sin validador aún", "make ner (H5)"),
+        Artefacto("Caché NER", "válido" if (config.DIR_DATA / "cache_ner").exists()
+                  else "pendiente técnico", "data/cache_ner/ (oculta hasta cerrar el gold)",
+                  "scripts/07_ner.py"),
     ]
+
+
+def _estado_muestra_gold() -> Artefacto:
+    """Muestra sorteada y avance del gold (sin leer predicciones)."""
+    muestra = config.DIR_ANOTACIONES / "muestra_gold.csv"
+    estado = config.DIR_ANOTACIONES / "estado_gold.csv"
+    if not muestra.exists():
+        return Artefacto("Muestra y gold de evaluación", "pendiente técnico", "sin muestra",
+                         "python scripts/08b_muestra_gold.py")
+    if not estado.exists():
+        return Artefacto("Muestra y gold de evaluación", "pendiente humano",
+                         "muestra de 20 sorteada; 0 pasajes cerrados", "Pestaña Gold")
+    est = pd.read_csv(estado, dtype=str)
+    cerrados = int((est["estado"] == "cerrado").sum())
+    return Artefacto("Muestra y gold de evaluación",
+                     "válido" if cerrados == len(est) else "pendiente humano",
+                     f"{cerrados} de {len(est)} pasajes cerrados", "Pestaña Gold")

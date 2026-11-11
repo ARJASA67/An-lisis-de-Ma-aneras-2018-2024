@@ -232,7 +232,9 @@ def _app(tmp_path, monkeypatch, con_criterios=True):
 def test_app_sin_criterios_no_ofrece_botones_de_juicio(tmp_path, monkeypatch):
     at = _app(tmp_path, monkeypatch, con_criterios=False).run()
     assert not at.exception
-    assert [b.label for b in at.button] == ["Actualizar"]
+    etiquetas = {b.label for b in at.button}
+    assert "Actualizar" in etiquetas
+    assert not etiquetas & {"Relevante (1)", "No relevante (0)", "Omitir por ahora", "Anterior"}
 
 
 @pytest.mark.skipif(not pool.POOL_CSV.exists(), reason="falta salida/04_pool.csv")
