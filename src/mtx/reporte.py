@@ -195,6 +195,57 @@ def actualizar_readme(readme: Path, bloque: str) -> bool:
     return True
 
 
+def _tabla_bloque(md_tabla: str, pie: str) -> dict:
+    lineas = [ln.strip().strip("|") for ln in md_tabla.strip().splitlines()]
+    enc = [c.strip() for c in lineas[0].split("|")]
+    filas = [[c.strip() for c in ln.split("|")] for ln in lineas[2:]]
+    anchos = [max(len(enc[j]), *(len(f[j]) for f in filas)) for j in range(len(enc))]
+    return {"tipo": "tabla", "encabezados": enc, "filas": filas, "anchos": anchos,
+            "alineacion": "izquierda" if max(anchos) > 30 else "centro", "pie": pie}
+
+
+def _en_linea(texto: str) -> str:
+    """Pesos literales escapados para el formato de la skill (`\\$`), sin tocar `$math$`."""
+    return texto
+
+
+def spec_practica(md: str, tablas: dict[str, str], portada: dict) -> dict:
+    """Convierte `reporte.md` aprobado al spec de la skill `practicas-arturo` sin cambiar el texto.
+
+    Cada `# Título` es una sección; los párrafos pasan literales; `$$…$$` es un bloque de
+    ecuación; `<!-- tabla:X -->` seguido de `: pie` es una tabla con su pie.
+    """
+    cuerpo = re.sub(r"^---\n.*?\n---\n", "", md, flags=re.DOTALL)
+    cuerpo = re.sub(r"<!--(?!\s*tabla:).*?-->", "", cuerpo, flags=re.DOTALL)
+    secciones, actual, previos = [], None, []
+    bloques = [b.strip() for b in re.split(r"\n\s*\n", cuerpo) if b.strip()]
+    i = 0
+    while i < len(bloques):
+        b = bloques[i]
+        if b.startswith("# "):
+            actual = {"titulo": b[2:].strip(), "bloques": []}
+            secciones.append(actual)
+        elif (m := MARCADOR.fullmatch(b)):
+            pie = ""
+            if i + 1 < len(bloques) and bloques[i + 1].startswith(": "):
+                pie = bloques[i + 1][2:].strip()
+                i += 1
+            (actual["bloques"] if actual else previos).append(_tabla_bloque(tablas[m.group(1)], pie))
+        elif b.startswith("$$"):
+            for eq in re.findall(r"\$\$(.+?)\$\$", b, flags=re.DOTALL):
+                partes = [p.strip() for p in re.split(r",?\s*\\qquad\s*", eq.strip()) if p.strip()]
+                for p in partes:
+                    actual["bloques"].append({"tipo": "ecuacion", "latex": p.rstrip(",")})
+        else:
+            (actual["bloques"] if actual else previos).append(
+                {"tipo": "parrafo", "texto": _en_linea(" ".join(b.split()))})
+        i += 1
+    if previos and secciones:
+        secciones[0]["bloques"] = previos + secciones[0]["bloques"]
+    return {"config": {"indice": True, "numeracion": "desde_uno", "estilo_referencias": "IEEE"},
+            "portada": portada, "secciones": secciones, "referencias": []}
+
+
 def compilar(md: Path, pdf: Path, encabezado: Path) -> tuple[bool, str]:
     """pandoc + XeLaTeX. Devuelve (ok, mensaje)."""
     pandoc = shutil.which("pandoc")
