@@ -1,0 +1,183 @@
+SALIDA GUARDADA, NO DEMO EN VIVO. Generada el 2026-11-11 con: python scripts/13_demo.py --q Q3
+Usar solo si falla la máquina y anunciarla como tal.
+
+┌────────────────────────────────────────────────────────────── 1 · Consulta ──────────────────────────────────────────────────────────────┐
+│ Q3 · refinería de Dos Bocas en Tabasco                                                                                                   │
+│ Ventana: 2019-01-01 a 2022-12-31                                                                                                         │
+│ Pregunta: Qué organizaciones, qué personas responsables y qué montos de inversión                                                        │
+│ Modelo para extracción: bm25_con_filtro (fijado por MAP oficial)                                                                         │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+─────────────────────────────────────────── 2 · Top-10 de TF-IDF y BM25 con filtro (ranking.csv) ───────────────────────────────────────────
+                                                             TF-IDF con filtro                                                              
+┌────┬─────────┬────────────┬──────┬─────────┬─────────────────────────────────────────────────────────────────────────────────────────────┐
+│ #  │ pasaje  │ fecha      │ pos. │ puntaje │ inicio del texto                                                                            │
+├────┼─────────┼────────────┼──────┼─────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 1  │ 754_67  │ 2022-06-27 │ 67   │ 0.5100  │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: Sí, yo creo que sí va a haber mañanera porque,      │
+│    │         │            │      │         │ aunque vamos                                                                                │
+│ 2  │ 2149_27 │ 2019-03-13 │ 27   │ 0.4694  │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: el país y al sector energético, ahora tenemos que   │
+│    │         │            │      │         │ producir p                                                                                  │
+│ 3  │ 1759_60 │ 2019-11-25 │ 60   │ 0.4693  │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: Bueno, vamos a informar también sobre el avance en  │
+│    │         │            │      │         │ la constr                                                                                   │
+│ 4  │ 1971_29 │ 2019-07-10 │ 29   │ 0.4521  │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: No, es fácil de convencer que hace falta la         │
+│    │         │            │      │         │ refinería de Dos                                                                            │
+│ 5  │ 564_101 │ 2022-12-23 │ 101  │ 0.4464  │ INTERLOCUTORA: Para terminar, señor presidente, Rocío Nahle comentó que hay 50 auditorías   │
+│    │         │            │      │         │ para lo qu                                                                                  │
+│ 6  │ 2033_3  │ 2019-06-02 │ 3    │ 0.4314  │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: esta manera poder ofrecer mejores precios de estos  │
+│    │         │            │      │         │ combustib                                                                                   │
+│ 7  │ 1569_23 │ 2020-04-15 │ 23   │ 0.4231  │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: refinación de cada una de las seis refinerías.      │
+│    │         │            │      │         │ También esto                                                                                │
+│ 8  │ 1787_11 │ 2019-11-04 │ 11   │ 0.4142  │ VOZ DE HOMBRE: En un video que compartió en redes sociales, la secretaria de Energía, Rocío │
+│    │         │            │      │         │ Nahle, m                                                                                    │
+│ 9  │ 662_58  │ 2022-09-20 │ 58   │ 0.4139  │ INTERLOCUTORA: hacienda pública. En todo caso, esta campaña mediática indica, sin presentar │
+│    │         │            │      │         │ ningún d                                                                                    │
+│ 10 │ 834_74  │ 2022-04-22 │ 74   │ 0.4101  │ INTERLOCUTORA: Gracias, presidente; gracias, secretario. Y ahora nada más a manera de       │
+│    │         │            │      │         │ retomar un poc                                                                              │
+└────┴─────────┴────────────┴──────┴─────────┴─────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                              BM25 con filtro                                                               
+┌────┬─────────┬────────────┬──────┬─────────┬─────────────────────────────────────────────────────────────────────────────────────────────┐
+│ #  │ pasaje  │ fecha      │ pos. │ puntaje │ inicio del texto                                                                            │
+├────┼─────────┼────────────┼──────┼─────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 1  │ 754_67  │ 2022-06-27 │ 67   │ 23.1056 │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: Sí, yo creo que sí va a haber mañanera porque,      │
+│    │         │            │      │         │ aunque vamos                                                                                │
+│ 2  │ 2149_27 │ 2019-03-13 │ 27   │ 22.7515 │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: el país y al sector energético, ahora tenemos que   │
+│    │         │            │      │         │ producir p                                                                                  │
+│ 3  │ 2033_3  │ 2019-06-02 │ 3    │ 22.4183 │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: esta manera poder ofrecer mejores precios de estos  │
+│    │         │            │      │         │ combustib                                                                                   │
+│ 4  │ 745_5   │ 2022-07-06 │ 5    │ 21.4871 │ ANA ELIZABETH GARCÍA VILCHIS: la investidura, con el presidente de la República, el         │
+│    │         │            │      │         │ presidente de to                                                                            │
+│ 5  │ 657_54  │ 2022-09-27 │ 54   │ 21.3968 │ PREGUNTA: Buenos días, señor presidente. Soy Yesenia Peralta, de Business Energy, Tabasco.  │
+│    │         │            │      │         │ Traigo un                                                                                   │
+│ 6  │ 2045_9  │ 2019-05-26 │ 9    │ 21.2518 │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: California y lo mismo 72 aviones y helicópteros     │
+│    │         │            │      │         │ para altos f                                                                                │
+│ 7  │ 834_74  │ 2022-04-22 │ 74   │ 21.1307 │ INTERLOCUTORA: Gracias, presidente; gracias, secretario. Y ahora nada más a manera de       │
+│    │         │            │      │         │ retomar un poc                                                                              │
+│ 8  │ 1787_11 │ 2019-11-04 │ 11   │ 20.5477 │ VOZ DE HOMBRE: En un video que compartió en redes sociales, la secretaria de Energía, Rocío │
+│    │         │            │      │         │ Nahle, m                                                                                    │
+│ 9  │ 917_1   │ 2022-01-19 │ 1    │ 20.4765 │ ANA ELIZABETH GARCÍA VILCHIS: Con su permiso, señor presidente. Hoy traemos dos notas y una │
+│    │         │            │      │         │ invitaci                                                                                    │
+│ 10 │ 1527_0  │ 2020-06-05 │ 0    │ 20.1470 │ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: Amigas, amigos: Nos da mucho gusto estar aquí en    │
+│    │         │            │      │         │ esta constr                                                                                 │
+└────┴─────────┴────────────┴──────┴─────────┴─────────────────────────────────────────────────────────────────────────────────────────────┘
+Pasajes en ambos top-10: 5 de 10.
+─────────────────────────────────────── 3 · Entidades del top-10 de BM25 con filtro (entidades.csv) ────────────────────────────────────────
+Tipos: PER ORG LOC FECHA MONTO · subrayado = lo dio el modelo (modelo o ambos) · gris = marca de interlocutor
+┌─────────────────────────────────────────────────────── #1 · 754_67 · 5 entidades ────────────────────────────────────────────────────────┐
+│ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: Sí, yo creo que sí va a haber mañanera porque, aunque vamos a ir Tabasco, vamos a ir a iniciar   │
+│ la etapa de prueba de la refinería de Dos Bocas… Va a estar también el velero Cuauhtémoc en Dos Bocas. Es un día de fiesta, cumplimos 40 │
+│ años del triunfo.                                                                                                                        │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────── #2 · 2149_27 · 11 entidades ───────────────────────────────────────────────────────┐
+│ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: el país y al sector energético, ahora tenemos que producir petróleo, tener materia prima para    │
+│ poderla procesar, para poderla refinar y convertirla en gasolinas. Pero sí vamos a eso, vamos a la autosuficiencia, a que no se compre   │
+│ gasolina en el extranjero. Entonces, por eso la rehabilitación de las seis refinerías y la construcción de la nueva refinería de Dos     │
+│ Bocas. Y está en el presupuesto de este año, 50 mil millones de pesos están presupuestados con ese propósito. Quedamos que en tres años  │
+│ la vamos a terminar para utilizar todo el petróleo que se produce en la Sonda de Campeche y en los campos petroleros de tierra de        │
+│ Tabasco, de Veracruz, y refinar ese petróleo en Dos Bocas. Se escogió Dos Bocas porque esa es una terminal que se utiliza para mandar    │
+│ petróleo crudo al extranjero. Por ahí salen alrededor de un millón de barriles diarios al extranjero, por Dos Bocas. Entonces, como      │
+│ están las instalaciones ahí, es el sitio más adecuado para construir la refinería. Entonces, sí vamos a construir la refinería. ¿Lo otro │
+│ que planteabas…?                                                                                                                         │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────── #3 · 2033_3 · 9 entidades ────────────────────────────────────────────────────────┐
+│ PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: esta manera poder ofrecer mejores precios de estos combustibles a los consumidores. En esta      │
+│ primera etapa del gobierno, mientras rehabilitamos las seis refinerías y construimos esta nueva refinería, mantengo el compromiso de que │
+│ no van a aumentar en términos reales los precios de las gasolinas, del diésel, del gas y de la luz. Y una vez rehabilitadas las seis     │
+│ refinerías, y construida y en operación esta nueva refinería, vamos a bajar los precios de los combustibles. Y esto ayuda también para   │
+│ explicar a otras regiones del país el porqué de la construcción de la refinería en Dos Bocas que se construye en Tabasco. Primero,       │
+│ porque es el mejor sitio. No hay otro lugar más apropiado, es una información que hay que transmitir a este puerto, a Dos Bocas. A esta  │
+│ terminal marítima llega todo el petróleo que se produce en el sureste en Campeche y en Tabasco, y eso muchos no lo saben. ¿Por qué se    │
+│ escogió Dos Bocas? Porque aquí llegan un millón cien mil barriles diarios de crudo y aquí se exporta ese crudo, o va a los ductos para   │
+│ abastecer las seis refinerías del país. Imagínense cuánto nos ahorramos en instalaciones si ya llega aquí el petróleo,                   │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+ Entidades del top-10 por tipo y  
+              método              
+┌───────┬───────┬────────┬───────┐
+│ tipo  │ ambos │ modelo │ regla │
+├───────┼───────┼────────┼───────┤
+│ FECHA │     0 │      0 │     1 │
+│ LOC   │    43 │     10 │     7 │
+│ MONTO │     0 │      0 │     1 │
+│ ORG   │     2 │     17 │     0 │
+│ PER   │     0 │     15 │     7 │
+└───────┴───────┴────────┴───────┘
+────────────────────────────────────── 4 · Tabla de respuesta con evidencia (salida/tablas_respuesta) ──────────────────────────────────────
+                                                   Q3 · refinería de Dos Bocas en Tabasco                                                   
+
+Pregunta: Qué organizaciones, qué personas responsables y qué montos de inversión                                                           
+
+Modelo: bm25_con_filtro (top-10 con filtro de fecha 2019-01-01 a 2022-12-31). Exclusiones: 18 entidades en la marca de interlocutor y 0 PER 
+de la lista (config/excluir_tablas.yaml). «Respaldado» = el texto lo afirma, no que sea verdad.                                             
+
+organizaciones                                                                                                                              
+
+Relación exigida: responsable o participante en la refinería de Dos Bocas.                                                                  
+
+                                                                                                                                            
+ valor                estado               discursos (pasajes)  pasaje  fecha       cita                                                    
+ ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+ Petróleos Mexicanos  respaldado_en_texto  1 (1)                2045_9  2019-05-26  Entonces, así como se está apoyando a Pemex estamos     
+                                                                                    calculando y esa es la estrategia que Pemex cuando esté 
+                                                                                    en plena producción, cuando mejoren las refinerías,…    
+ Reforma              respaldado_en_texto  1 (1)                917_1   2022-01-19  Desde hace tres años son cotidianos los ataques en      
+                                                                                    contra de la construcción de la refinería en Dos Bocas, 
+                                                                                    Tabasco, tan sólo en esta sección se han documento a…   
+ Animal Político      respaldado_en_texto  1 (1)                917_1   2022-01-19  Desde hace tres años son cotidianos los ataques en      
+                                                                                    contra de la construcción de la refinería en Dos Bocas, 
+                                                                                    Tabasco, tan sólo en esta sección se han documento a…   
+ Diario de Yucatán    respaldado_en_texto  1 (1)                917_1   2022-01-19  Por eso, no extraña que la semana pasada el periódico   
+                                                                                    Reforma, la revista Proceso, Diario de Yucatán, entre   
+                                                                                    otros, publicaron fotografías sobre la supuesta nuc…    
+ El Universal         respaldado_en_texto  1 (1)                917_1   2022-01-19  Desde hace tres años son cotidianos los ataques en      
+                                                                                    contra de la construcción de la refinería en Dos Bocas, 
+                                                                                    Tabasco, tan sólo en esta sección se han documento a…   
+ Latinus              respaldado_en_texto  1 (1)                745_5   2022-07-06  El presentador principal de la plataforma Latinus       
+                                                                                    publicó en su cuenta de Twitter una serie de            
+                                                                                    fotografías con la leyenda: ‘La pura escenografía,      
+                                                                                    afinan detall…                                          
+ Proceso              respaldado_en_texto  1 (1)                917_1   2022-01-19  Por eso, no extraña que la semana pasada el periódico   
+                                                                                    Reforma, la revista Proceso, Diario de Yucatán, entre   
+                                                                                    otros, publicaron fotografías sobre la supuesta nuc…    
+ Ref                  respaldado_en_texto  1 (1)                1527_0  2020-06-05  Evaluación de trabajos de la Refinería Dos Bocas, desde 
+                                                                                    Paraíso, Tabasco En Paraíso, Tabasco, supervisamos el   
+                                                                                    avance de las obras de la Refinería Dos Bocas.          
+                                                                                                                                            
+
+6 valores más en salida/respuestas.csv.                                                                                                     
+
+responsables                                                                                                                                
+
+Relación exigida: persona responsable de la obra o de la empresa a cargo.                                                                   
+
+                                                                                                                                            
+ valor                 estado               discursos (pasajes)  pasaje   fecha       cita                                                  
+ ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+ Rocío Nahle           respaldado_en_texto  2 (2)                1787_11  2019-11-04  VOZ DE HOMBRE: En un video que compartió en redes     
+                                                                                      sociales, la secretaria de Energía, Rocío Nahle,      
+                                                                                      mostró diferentes puntos del predio en el que se      
+                                                                                      construye l…                                          
+ Carlos Loret de Mola  respaldado_en_texto  1 (1)                745_5    2022-07-06  Carlos Loret de Mola cayó en la chapuza de publicar   
+                                                                                      fotografías como pruebas falsas de que la refinería   
+                                                                                      de Dos Bocas aún no se ha terminado de construir.     
+ Loret                 respaldado_en_texto  1 (1)                745_5    2022-07-06  El presentador principal de la plataforma Latinus     
+                                                                                      publicó en su cuenta de Twitter una serie de          
+                                                                                      fotografías con la leyenda: ‘La pura escenografía,    
+                                                                                      afinan detall…                                        
+ Yesenia Peralta       ambiguo              1 (1)                657_54   2022-09-27  Soy Yesenia Peralta, de Business Energy, Tabasco.     
+                                                                                      (PREGUNTA)                                            
+                                                                                                                                            
+
+montos inversion                                                                                                                            
+
+Relación exigida: inversión o costo de la refinería.                                                                                        
+
+                                                                                                                                            
+ valor                     estado               discursos (pasajes)  pasaje   fecha       cita                                              
+ ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+ 50 mil millones de pesos  respaldado_en_texto  1 (1)                2149_27  2019-03-13  Y está en el presupuesto de este año, 50 mil      
+                                                                                          millones de pesos están presupuestados con ese    
+                                                                                          propósito.                                        
+                                                                                                                                            
+
+Valoración                                                                                                                                  
+
+[VALIDAR] pendiente del alumno                                                                                                              
+─────────────────────────────────────────────────────────── Tiempo total: 0.5 s ────────────────────────────────────────────────────────────
