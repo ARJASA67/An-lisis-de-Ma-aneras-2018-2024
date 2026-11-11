@@ -9,13 +9,13 @@ from __future__ import annotations
 
 import hashlib
 import json
-import resource
 import time
 
 import numpy as np
 import pandas as pd
 
 from mtx import adaptadores_kit, config, consultas, indice, preproceso, ranking
+from mtx.sistema import rss_mb
 
 TOKENS_PARQUET = config.DIR_DATA / "tokens.parquet"
 INDICE_PKL = config.DIR_DATA / "indice.pkl"
@@ -23,11 +23,6 @@ INDICE_META = config.DIR_DATA / "indice_meta.json"
 TFIDF_PKL = config.DIR_DATA / "tfidf.pkl"
 TFIDF_NPZ = config.DIR_DATA / "tfidf_X.npz"
 TERMINOS_POSTINGS = ["tren", "vacuna", "refinería", "huachicol"]
-
-
-def rss_mb() -> float:
-    """Memoria residente máxima del proceso, en MB (Linux reporta KB)."""
-    return resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024
 
 
 def escribir_tokens_consultas(cons: pd.DataFrame) -> list[str]:
