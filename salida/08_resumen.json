@@ -1,0 +1,32 @@
+{
+  "mejor_modelo_ir": "bm25_con_filtro",
+  "modelo_ner": "bert_mrm8488",
+  "revision_ner": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_extractor": "1",
+  "pasajes": 99,
+  "filas_entidades": 911,
+  "entidades_unicas": 903,
+  "por_tipo_y_metodo": {
+    "FECHA|regla": 14,
+    "LOC|ambos": 198,
+    "LOC|modelo": 146,
+    "LOC|regla": 77,
+    "MONTO|regla": 32,
+    "ORG|ambos": 60,
+    "ORG|modelo": 101,
+    "ORG|regla": 41,
+    "PER|ambos": 4,
+    "PER|modelo": 151,
+    "PER|regla": 79
+  },
+  "solapes": {
+    "solape_parcial": 140,
+    "tipo_distinto": 6
+  },
+  "estado_fecha": {
+    "ok": 14
+  },
+  "estado_monto": {
+    "ok": 32
+  }
+}
