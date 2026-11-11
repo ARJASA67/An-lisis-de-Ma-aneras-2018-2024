@@ -24,15 +24,24 @@
 - H5, NER (2026-11-11): `ner_modelo.py`, `scripts/07_ner.py`, `config/ner.yaml`, 19 pruebas sin red. Principal verificado (P06, `salida/07_verificacion_ner_bert_mrm8488.md`) y corrido sobre los 99 pasajes del top-10 (`salida/entidades_bert_mrm8488.csv`, caché en `data/cache_ner/`). 327 pruebas rápidas verdes, ruff limpio.
 - H5, muestra gold (2026-11-11): `muestreo.py`, `gold.py`, `08b_muestra_gold.py`, pestaña Gold, `config/protocolo.txt`; 20 pasajes sorteados, una sustitución objetiva. 343 pruebas rápidas verdes.
 - H7, fusión y normalización (2026-11-11): `fusion.py`, `normalizacion.py`, `08_extraer.py`; `entidades.csv` (911 filas) y derivados en `salida/`. 378 pruebas rápidas verdes.
+- H6, gold (2026-11-11): Arturo anotó y cerró el gold (20 de 20 pasajes, 183 entidades: 102 LOC, 36 PER, 33 ORG, 6 MONTO, 6 FECHA); `anotaciones/cierre_gold.json` existe, `validar_gold()` sin errores, `gold_entidades.csv` en la raíz (commit `676919e`). **Modo ciego levantado.**
+- Pestaña Juicios en solo lectura desde H4 (`componentes.juicios_congelados()`); un clic en «Omitir por ahora» había borrado el juicio Q1 578_0 y se restauró. 380 pruebas rápidas verdes.
+- Entrega: repo en GitHub de Arturo, remoto `github` (https://github.com/ARJASA67/An-lisis-de-Ma-aneras-2018-2024.git), con `main` y la etiqueta `reglas-congeladas` subidas. `origin` es el GitLab del profesor: no se le hace push.
 
 ## Pendiente
 
-1. ~~NER principal~~: aprobado y fijado en `data/modelo_ner.json` (2026-11-11, criterio técnico).
-2. ~~Muestra y pestaña Gold~~ hechas (2026-11-11). **Siguiente: Arturo anota el gold (H6)** en la pestaña Gold (`python -m uv run streamlit run src/mtx/app/app.py`), 20 pasajes, unas 2 a 3.5 h; al terminar, «Cerrar gold». Mientras tanto se puede construir la fusión (H7) sin mirar la muestra. Modo ciego: Arturo no abre `salida/entidades_*.csv`, `salida/07_*` ni `data/cache_ner/` hasta `cierre_gold.json`.
-3. H7 resto: `09_evaluar_ie.py` (necesita el gold cerrado), análisis de errores y evaluación de 20 IDs. Luego H8 (tablas) y H9 (reporte, láminas, README). P0 primero; recortes según PRD §12.4.
-3b. (Resuelto 2026-11-11) Juicio de Q1 578_0 restaurado a petición de Arturo.
-4. Pendientes heredados: revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist; declarar el tiempo real de anotación de juicios.
-5. Subir el repo al GitHub de Arturo cuando él cree el repo vacío y dé el visto bueno.
+1. **H7, evaluación IE (siguiente, P0)** con skill `evaluacion-ie`: `scripts/09_evaluar_ie.py` y parte IE de `src/mtx/evaluacion.py`. `python kit/evaluar.py ie gold_entidades.csv entidades.csv` → `resultados_ie.csv` (raíz y `salida/`); `salida/09_ie_detalle.csv`; `salida/09_evaluacion_20_ids.csv` (cuenta falsos positivos en pasajes gold vacíos, P04); `analizar_errores()` → `salida/09_analisis_errores.csv` y `09_resumen_errores.csv` (frontera, tipo, sigla, en_marca, omisión, espuria); figuras `reporte/figuras/ie_*.png`. Sin conjunto de selección: no hay `09_comparacion_ner.csv` (el reporte declara elección técnica). Revisar umbrales de alerta (F1 TODOS < 0.30 o F1 = 1.0).
+2. H8, tablas de respuesta (skill `tablas-respuesta`): `respuestas.py`, `10_tablas.py`, `config/tablas_respuesta.yaml`, `config/excluir_tablas.yaml`. Las valoraciones (`anotaciones/valoraciones.yaml`) las redacta Arturo.
+3. H9 (skills `reporte-pdf`, `laminas-demo`, `entrega-reproducible`): reporte 4 a 6 páginas con cortes `[VALIDAR]`, máximo 5 láminas y guion, demo `13_demo.py`, README de 10 secciones con «Uso de IA», `requirements.txt`, `99_validar.py` y etiqueta `v1.0-entrega`. Pandoc no verificado en Windows; MiKTeX sí está instalado.
+4. Pendientes heredados: revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist; declarar el tiempo real de anotación (juicios y gold).
+5. Plazo registrado: entrega y presentación el 11 de noviembre de 2026, 20:00 (CDMX); Arturo no lo ha confirmado. Si aplica, recortar P1 y P2 según PRD §12.4, avisando.
+
+## Entorno (Windows de Arturo)
+
+- Sin `make`: correr `.venv/Scripts/python.exe scripts/NN_*.py` (o `python -m uv run python ...`), con `PYTHONUTF8=1`. Pruebas: `.venv/Scripts/python.exe -m pytest -q`; lint: `.venv/Scripts/python.exe -m ruff check .`.
+- `core.autocrlf=false` en el repo y `.gitattributes` con `eol=lf` (con CRLF fallan los hashes de `kit/`). Si un script deja diffs solo de fin de línea, `git checkout --` los archivos.
+- App: `python -m uv run streamlit run src/mtx/app/app.py` (config de vista previa en `C:\Ciencias\Textos\.claude\launch.json`, nombre `app-anotacion`).
+- Commits: Conventional Commits en español con la línea `Co-Authored-By` de Claude; el push lo hace Arturo con `git push github main`.
 
 ## Decisiones
 
@@ -41,6 +50,5 @@ Ver `docs/decisiones.md`. Las no obvias: el corpus real tiene otro formato de ma
 ## Bloqueos
 
 - (Resuelto 2026-11-11) NER principal aprobado y fijado.
-- H6 (gold) es trabajo humano de Arturo y bloqueará H7 en adelante.
-- Plazo registrado por el repo: entrega y presentación el 11 de noviembre de 2026, 20:00 (CDMX); confirmar con Arturo su plazo real.
+- (Resuelto 2026-11-11) Gold cerrado por Arturo.
 - Kaleido necesita el Chrome que instala `plotly_get_chrome` (`make setup` lo hace); los Chromium de snap fallan.
