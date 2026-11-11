@@ -56,3 +56,4 @@
 - (2026-11-11) **H9, compilación del reporte.** Se usa el encabezado `reporte/encabezado.tex` con la plantilla por defecto de pandoc en lugar de una `plantilla.tex` propia (misma salida sobria: booktabs, márgenes de 2.2 cm). Pandoc no está instalado en el Windows de Arturo; MiKTeX y `pdfinfo` sí.
 - (2026-11-11) **Corte 1 del reporte aprobado por Arturo** (`[VALIDAR]`, H9): orden de las 8 secciones, tablas y figuras del esqueleto. El corte 2 se presenta en bloques de dos secciones por el plazo.
 - (2026-11-11) **Corte 2, bloque 1 aprobado por Arturo** (`[VALIDAR]`): secciones de datos y preprocesamiento sin cambios.
+- (2026-11-11) **Corte 2, bloque 2 aprobado por Arturo** (`[VALIDAR]`): ranking y extracción, con las hipótesis de Q3, Q4 y Q10 marcadas como no probadas.
