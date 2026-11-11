@@ -1,0 +1,227 @@
+query_id,campo_respuesta,clave,valor,n_menciones,n_pasajes,n_discursos,estado
+Q1,dependencias_y_empresas,tren maya,Tren Maya,3,3,2,respaldado_en_texto
+Q1,dependencias_y_empresas,instituto nacional de antropologia e historia,Instituto Nacional de Antropología e Historia,2,2,2,respaldado_en_texto
+Q1,dependencias_y_empresas,cuxtal,Cuxtal,1,1,1,respaldado_en_texto
+Q1,dependencias_y_empresas,grupo ica,Grupo ICA,1,1,1,respaldado_en_texto
+Q1,dependencias_y_empresas,ingenieros civiles asociados,Ingenieros Civiles Asociados,1,1,1,respaldado_en_texto
+Q1,estados,yucatan,Yucatán,6,3,3,respaldado_en_texto
+Q1,estados,chiapas,Chiapas,2,1,1,respaldado_en_texto
+Q1,estados,campeche,Campeche,1,1,1,respaldado_en_texto
+Q1,estados,tabasco,Tabasco,1,1,1,respaldado_en_texto
+Q2,farmaceuticas,astrazeneca,AstraZeneca,4,3,3,respaldado_en_texto
+Q2,farmaceuticas,pfizer,Pfizer,4,3,3,respaldado_en_texto
+Q2,farmaceuticas,biontech,BioNTech,2,2,2,respaldado_en_texto
+Q2,farmaceuticas,sinovac,Sinovac,2,2,2,respaldado_en_texto
+Q2,farmaceuticas,cansino,CanSino,3,1,1,respaldado_en_texto
+Q2,farmaceuticas,gamaleya,Gamaleya,1,1,1,respaldado_en_texto
+Q2,funcionarios,edgar jesus zitle garcia,Edgar Jesús Zitle García,1,1,1,respaldado_en_texto
+Q2,funcionarios,joseph biden,Joseph Biden,1,1,1,respaldado_en_texto
+Q2,funcionarios,luis cresencio sandoval,Luis Cresencio Sandoval,1,1,1,respaldado_en_texto
+Q2,funcionarios,melina vega,MELINA VEGA,1,1,1,respaldado_en_texto
+Q2,funcionarios,gatell,Gatell,1,1,1,ambiguo
+Q2,funcionarios,shaila rosagel,Shaila Rosagel,1,1,1,ambiguo
+Q2,fechas,14 de febrero de 2021,14 de febrero de 2021,1,1,1,respaldado_en_texto
+Q2,fechas,27 de marzo,27 de marzo,1,1,1,respaldado_en_texto
+Q2,fechas,28 de marzo,28 de marzo,1,1,1,respaldado_en_texto
+Q2,dosis,2.7 millones de dosis,2.7 millones de dosis,1,1,1,respaldado_en_texto
+Q2,dosis,383 mil 375 dosis,383 mil 375 dosis,1,1,1,respaldado_en_texto
+Q2,dosis,385 mil 584 dosis,385 mil 584 dosis,1,1,1,respaldado_en_texto
+Q2,dosis,940 mil 470 dosis,940 mil 470 dosis,1,1,1,respaldado_en_texto
+Q2,dosis,mil 375 dosis,mil 375 dosis,1,1,1,respaldado_en_texto
+Q2,dosis,mil 69 dosis,mil 69 dosis,1,1,1,respaldado_en_texto
+Q3,organizaciones,petroleos mexicanos,Petróleos Mexicanos,2,1,1,respaldado_en_texto
+Q3,organizaciones,reforma,Reforma,2,1,1,respaldado_en_texto
+Q3,organizaciones,animal politico,Animal Político,1,1,1,respaldado_en_texto
+Q3,organizaciones,diario de yucatan,Diario de Yucatán,1,1,1,respaldado_en_texto
+Q3,organizaciones,el universal,El Universal,1,1,1,respaldado_en_texto
+Q3,organizaciones,latinus,Latinus,1,1,1,respaldado_en_texto
+Q3,organizaciones,proceso,Proceso,1,1,1,respaldado_en_texto
+Q3,organizaciones,ref,Ref,1,1,1,respaldado_en_texto
+Q3,organizaciones,refineria olmeca,Refinería Olmeca,1,1,1,respaldado_en_texto
+Q3,organizaciones,w radio,W Radio,1,1,1,respaldado_en_texto
+Q3,organizaciones,business energy,Business Energy,1,1,1,ambiguo
+Q3,organizaciones,grupo canton,Grupo Cantón,1,1,1,ambiguo
+Q3,organizaciones,republica,República,1,1,1,ambiguo
+Q3,organizaciones,sco,sco,1,1,1,ambiguo
+Q3,responsables,rocio nahle,Rocío Nahle,2,2,2,respaldado_en_texto
+Q3,responsables,carlos loret de mola,Carlos Loret de Mola,2,1,1,respaldado_en_texto
+Q3,responsables,loret,Loret,2,1,1,respaldado_en_texto
+Q3,responsables,yesenia peralta,Yesenia Peralta,1,1,1,ambiguo
+Q3,montos_inversion,50 mil millones de pesos,50 mil millones de pesos,1,1,1,respaldado_en_texto
+Q4,dependencia_constructora,secretaria de la defensa,Secretaría de la Defensa,3,1,1,respaldado_en_texto
+Q4,dependencia_constructora,colegio militar,Colegio Militar,2,1,1,respaldado_en_texto
+Q4,dependencia_constructora,estado de mexico,Estado de México,1,1,1,respaldado_en_texto
+Q4,dependencia_constructora,frente civico nacional,Frente Cívico Nacional,1,1,1,respaldado_en_texto
+Q4,dependencia_constructora,fuerza aerea,Fuerza Aérea,1,1,1,respaldado_en_texto
+Q4,dependencia_constructora,fuerzas armadas,Fuerzas Armadas,1,1,1,respaldado_en_texto
+Q4,dependencia_constructora,mitre,Mitre,1,1,1,respaldado_en_texto
+Q4,lugares,santa lucia,Santa Lucía,30,10,7,respaldado_en_texto
+Q4,lugares,felipe angeles,Felipe Ángeles,9,7,4,respaldado_en_texto
+Q4,lugares,ciudad de mexico,Ciudad de México,7,4,4,respaldado_en_texto
+Q4,lugares,toluca,Toluca,6,5,4,respaldado_en_texto
+Q4,lugares,texcoco,Texcoco,3,2,2,respaldado_en_texto
+Q4,lugares,angeles,Ángeles,2,2,2,respaldado_en_texto
+Q4,lugares,estado de mexico,Estado de México,2,2,2,respaldado_en_texto
+Q4,lugares,hidalgo,Hidalgo,2,2,2,respaldado_en_texto
+Q4,lugares,lago de texcoco,lago de Texcoco,2,2,2,respaldado_en_texto
+Q4,lugares,base aerea militar de santa lucia,Base Aérea Militar de Santa Lucía,2,1,1,respaldado_en_texto
+Q4,lugares,italia,Italia,2,2,1,respaldado_en_texto
+Q4,lugares,santa lucia felipe angeles,Santa Lucía Felipe Ángeles,2,2,1,respaldado_en_texto
+Q4,lugares,torre de pisa,Torre de Pisa,2,2,1,respaldado_en_texto
+Q4,lugares,base aerea de santa lucia,Base Aérea de Santa Lucía,1,1,1,respaldado_en_texto
+Q4,lugares,base aerea militar santa lucia,Base Aérea Militar Santa Lucía,1,1,1,respaldado_en_texto
+Q4,lugares,felipe,Felipe,1,1,1,respaldado_en_texto
+Q4,lugares,felipe ‘angeles,Felipe ‘Ángeles,1,1,1,respaldado_en_texto
+Q4,lugares,miercoles,Miércoles,1,1,1,respaldado_en_texto
+Q4,lugares,morelos,Morelos,1,1,1,respaldado_en_texto
+Q4,lugares,mexico,México,1,1,1,ambiguo
+Q4,costos,100 mil millones de pesos,100 mil millones de pesos,1,1,1,respaldado_en_texto
+Q5,secretaria_operadora,secretaria de bienestar,Secretaría de Bienestar,3,2,2,respaldado_en_texto
+Q5,secretaria_operadora,secretaria de la defensa,Secretaría de la Defensa,1,1,1,respaldado_en_texto
+Q5,secretaria_operadora,asociacion campesina independiente emiliano zapata,Asociación Campesina Independiente Emiliano Zapata,1,1,1,ambiguo
+Q5,secretaria_operadora,organizacion campesina independiente emiliano,Organización Campesina Independiente Emiliano,1,1,1,ambiguo
+Q5,estados,veracruz,Veracruz,6,3,3,respaldado_en_texto
+Q5,estados,chiapas,Chiapas,3,3,3,respaldado_en_texto
+Q5,estados,guerrero,Guerrero,2,2,2,respaldado_en_texto
+Q5,estados,tabasco,Tabasco,2,2,2,respaldado_en_texto
+Q5,estados,quintana roo,Quintana Roo,2,1,1,respaldado_en_texto
+Q5,estados,tamaulipas,Tamaulipas,2,1,1,respaldado_en_texto
+Q5,estados,campeche,Campeche,1,1,1,respaldado_en_texto
+Q5,estados,durango,Durango,1,1,1,respaldado_en_texto
+Q5,estados,morelos,Morelos,1,1,1,respaldado_en_texto
+Q5,estados,nayarit,Nayarit,1,1,1,respaldado_en_texto
+Q5,estados,oaxaca,Oaxaca,1,1,1,respaldado_en_texto
+Q5,estados,puebla,Puebla,1,1,1,respaldado_en_texto
+Q5,estados,yucatan,Yucatán,1,1,1,respaldado_en_texto
+Q5,estados,zacatecas,Zacatecas,1,1,1,respaldado_en_texto
+Q5,monto_por_beneficiario,cinco mil pesos,cinco mil pesos,4,4,4,respaldado_en_texto
+Q5,monto_por_beneficiario,29 mil millones de pesos,29 mil millones de pesos,1,1,1,ambiguo
+Q5,monto_por_beneficiario,tres mil millones de pesos,tres mil millones de pesos,1,1,1,ambiguo
+Q5,beneficiarios,400 mil sembradores,400 mil sembradores,1,1,1,respaldado_en_texto
+Q5,beneficiarios,440 mil sembradores,440 mil sembradores,1,1,1,respaldado_en_texto
+Q6,lugares,ciudad de mexico,Ciudad de México,2,2,2,respaldado_en_texto
+Q6,lugares,hidalgo,Hidalgo,2,2,2,respaldado_en_texto
+Q6,lugares,mexico,México,2,2,2,respaldado_en_texto
+Q6,lugares,michoacan,Michoacán,3,2,1,respaldado_en_texto
+Q6,lugares,refineria olmeca,Refinería Olmeca,1,1,1,respaldado_en_texto
+Q6,lugares,torre de pemex,Torre de Pemex,1,1,1,respaldado_en_texto
+Q6,organizaciones,petroleos mexicanos,Petróleos Mexicanos,3,2,2,respaldado_en_texto
+Q6,organizaciones,corte,Corte,2,2,2,ambiguo
+Q6,organizaciones,interven,Interven,1,1,1,ambiguo
+Q6,organizaciones,modelo,Modelo,1,1,1,ambiguo
+Q6,perdidas,65 mil millones de pesos,65 mil millones de pesos,4,4,4,respaldado_en_texto
+Q6,perdidas,35 mil millones de pesos,35 mil millones de pesos,2,2,2,respaldado_en_texto
+Q6,perdidas,56 mil millones de pesos,56 mil millones de pesos,1,1,1,respaldado_en_texto
+Q6,perdidas,80 mil millones de pesos,80 mil millones de pesos,1,1,1,respaldado_en_texto
+Q6,perdidas,mil millones de pesos,mil millones de pesos,1,1,1,ambiguo
+Q6,litros,40 litros,40 litros,1,1,1,respaldado_en_texto
+Q7,montos_bimestrales,dos mil 550 pesos,dos mil 550 pesos,4,3,3,respaldado_en_texto
+Q7,montos_bimestrales,mil 160 pesos,mil 160 pesos,2,2,2,ambiguo
+Q7,montos_bimestrales,120 mil millones de pesos,120 mil millones de pesos,1,1,1,ambiguo
+Q7,montos_bimestrales,350 mil millones de pesos,350 mil millones de pesos,1,1,1,ambiguo
+Q7,montos_bimestrales,diez mil millones de pesos,diez mil millones de pesos,1,1,1,ambiguo
+Q7,montos_bimestrales,mil 600 pesos,mil 600 pesos,1,1,1,ambiguo
+Q7,institucion,instituto de seguridad y servicios sociales de los trabajadores del estado,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,6,5,5,respaldado_en_texto
+Q7,institucion,is,Is,4,3,3,respaldado_en_texto
+Q7,institucion,seguro,Seguro,3,3,3,respaldado_en_texto
+Q7,institucion,petroleos mexicanos,Petróleos Mexicanos,2,2,2,respaldado_en_texto
+Q7,institucion,secretaria de bienestar,Secretaría de Bienestar,2,2,2,respaldado_en_texto
+Q7,institucion,banco del bienestar,Banco del Bienestar,1,1,1,respaldado_en_texto
+Q7,institucion,comision federal de electricidad,Comisión Federal de Electricidad,1,1,1,respaldado_en_texto
+Q7,institucion,congreso,Congreso,1,1,1,respaldado_en_texto
+Q7,institucion,ejercito,Ejército,1,1,1,respaldado_en_texto
+Q7,institucion,estado,Estado,1,1,1,respaldado_en_texto
+Q7,institucion,fuerzas armadas,Fuerzas Armadas,1,1,1,respaldado_en_texto
+Q7,institucion,ste,ste,1,1,1,respaldado_en_texto
+Q7,institucion,uma,UMA,1,1,1,respaldado_en_texto
+Q8,porcentajes,16 por ciento,16 por ciento,7,5,5,respaldado_en_texto
+Q8,porcentajes,20 por ciento,20 por ciento,3,3,3,respaldado_en_texto
+Q8,porcentajes,17 por ciento,17 por ciento,1,1,1,respaldado_en_texto
+Q8,porcentajes,30 por ciento,30 por ciento,1,1,1,respaldado_en_texto
+Q8,porcentajes,50 por ciento,50 por ciento,1,1,1,respaldado_en_texto
+Q8,porcentajes,75 por ciento,75 por ciento,1,1,1,respaldado_en_texto
+Q8,montos_diarios,200 pesos,200 pesos,1,1,1,ambiguo
+Q8,montos_diarios,tres mil 600 pesos,tres mil 600 pesos,1,1,1,ambiguo
+Q9,institucion,banco del bienestar,Banco del Bienestar,32,10,10,respaldado_en_texto
+Q9,institucion,secretaria de bienestar,Secretaría de Bienestar,11,5,5,respaldado_en_texto
+Q9,institucion,bancos del bienestar,Bancos del Bienestar,5,2,2,respaldado_en_texto
+Q9,institucion,azteca,Azteca,2,1,1,respaldado_en_texto
+Q9,institucion,banco de bienestar,Banco de Bienestar,1,1,1,respaldado_en_texto
+Q9,institucion,hacienda,Hacienda,1,1,1,respaldado_en_texto
+Q9,institucion,secretaria de la defensa,Secretaría de la Defensa,1,1,1,respaldado_en_texto
+Q9,institucion,secretaria de salud,Secretaría de Salud,1,1,1,respaldado_en_texto
+Q9,sucursales,tres mil sucursales,tres mil sucursales,3,3,3,respaldado_en_texto
+Q9,sucursales,dos mil 700 sucursales,dos mil 700 sucursales,2,2,2,respaldado_en_texto
+Q9,sucursales,262 sucursales,262 sucursales,2,1,1,respaldado_en_texto
+Q9,sucursales,129 sucursales,129 sucursales,1,1,1,respaldado_en_texto
+Q9,sucursales,230 sucursales,230 sucursales,1,1,1,respaldado_en_texto
+Q9,sucursales,dos mil 296 sucursales,dos mil 296 sucursales,1,1,1,respaldado_en_texto
+Q9,sucursales,dos mil 740 sucursales,dos mil 740 sucursales,1,1,1,respaldado_en_texto
+Q9,sucursales,dos mil 750 sucursales,dos mil 750 sucursales,1,1,1,respaldado_en_texto
+Q9,sucursales,mil 500 sucursales,mil 500 sucursales,1,1,1,respaldado_en_texto
+Q9,sucursales,mil 900 sucursales,mil 900 sucursales,1,1,1,respaldado_en_texto
+Q9,sucursales,tres sucursales,tres sucursales,1,1,1,respaldado_en_texto
+Q9,estados,oaxaca,Oaxaca,6,2,2,respaldado_en_texto
+Q9,estados,chiapas,Chiapas,4,1,1,respaldado_en_texto
+Q9,estados,puebla,Puebla,2,1,1,respaldado_en_texto
+Q9,estados,ciudad de mexico,Ciudad de México,1,1,1,respaldado_en_texto
+Q9,estados,jalisco,Jalisco,1,1,1,respaldado_en_texto
+Q9,estados,zacatecas,Zacatecas,1,1,1,respaldado_en_texto
+Q9,montos,600 mil millones de pesos,600 mil millones de pesos,2,2,2,respaldado_en_texto
+Q10,dependencias_y_empresas,gobierno de mexico,Gobierno de México,3,3,3,respaldado_en_texto
+Q10,dependencias_y_empresas,secretaria de marina,Secretaría de Marina,3,3,3,respaldado_en_texto
+Q10,dependencias_y_empresas,petroleos mexicanos,Petróleos Mexicanos,2,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,asiponas,Asiponas,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,c.v,C.V,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,eanico,eánico,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,ejercito nacional,Ejército Nacional,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,"empresa multimodal interoceanica, s.a","Empresa Multimodal Interoceánica, S.A",1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,estados unidos mexicanos,Estados Unidos Mexicanos,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,ferrocarril del istmo de tehuantepec,Ferrocarril del Istmo de Tehuantepec,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,fiscalia general,Fiscalía General,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,fuerzas armadas,Fuerzas Armadas,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,leos mexic,leos Mexic,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,pec,pec,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,portuario nacional,Portuario Nacional,1,1,1,respaldado_en_texto
+Q10,dependencias_y_empresas,covid,COVID,1,1,1,ambiguo
+Q10,dependencias_y_empresas,guardia nacional,Guardia Nacional,1,1,1,ambiguo
+Q10,dependencias_y_empresas,instituto nacional de antropologia e historia,Instituto Nacional de Antropología e Historia,1,1,1,ambiguo
+Q10,lugares,istmo de tehuantepec,Istmo de Tehuantepec,14,9,8,respaldado_en_texto
+Q10,lugares,corredor interoceanico del istmo de tehuantepec,Corredor Interoceánico del Istmo de Tehuantepec,7,6,6,respaldado_en_texto
+Q10,lugares,salina cruz,Salina Cruz,9,6,5,respaldado_en_texto
+Q10,lugares,coatzacoalcos,Coatzacoalcos,8,5,4,respaldado_en_texto
+Q10,lugares,tren maya,Tren Maya,7,3,3,respaldado_en_texto
+Q10,lugares,palenque,Palenque,4,3,3,respaldado_en_texto
+Q10,lugares,huantepec,huantepec,3,3,3,respaldado_en_texto
+Q10,lugares,corredor interoceanico,Corredor Interoceánico,5,3,2,respaldado_en_texto
+Q10,lugares,campeche,Campeche,2,2,2,respaldado_en_texto
+Q10,lugares,chiapas,Chiapas,2,2,2,respaldado_en_texto
+Q10,lugares,estados unidos,Estados Unidos,2,2,2,respaldado_en_texto
+Q10,lugares,is,Is,2,2,2,respaldado_en_texto
+Q10,lugares,merida,Mérida,2,2,2,respaldado_en_texto
+Q10,lugares,puerto chiapas,Puerto Chiapas,2,2,2,respaldado_en_texto
+Q10,lugares,refineria olmeca,Refinería Olmeca,2,2,2,respaldado_en_texto
+Q10,lugares,mexico,México,3,1,1,respaldado_en_texto
+Q10,lugares,asia,Asia,1,1,1,respaldado_en_texto
+Q10,lugares,atlantico,Atlántico,1,1,1,respaldado_en_texto
+Q10,lugares,baja california sur,Baja California Sur,1,1,1,respaldado_en_texto
+Q10,lugares,cancun,Cancún,1,1,1,respaldado_en_texto
+Q10,lugares,centro,Centro,1,1,1,respaldado_en_texto
+Q10,lugares,chetumal,Chetumal,1,1,1,respaldado_en_texto
+Q10,lugares,de,de,1,1,1,respaldado_en_texto
+Q10,lugares,el vizcaino,El Vizcaíno,1,1,1,respaldado_en_texto
+Q10,lugares,laguna de pajaritos,Laguna de Pajaritos,1,1,1,respaldado_en_texto
+Q10,lugares,medias aguas,Medias Aguas,1,1,1,respaldado_en_texto
+Q10,lugares,mo de tehuantepec,mo de Tehuantepec,1,1,1,respaldado_en_texto
+Q10,lugares,ntepec,ntepec,1,1,1,respaldado_en_texto
+Q10,lugares,oaxaca,Oaxaca,1,1,1,respaldado_en_texto
+Q10,lugares,pacifico,Pacífico,1,1,1,respaldado_en_texto
+Q10,lugares,pec,pec,1,1,1,respaldado_en_texto
+Q10,lugares,progreso,Progreso,1,1,1,respaldado_en_texto
+Q10,lugares,sudamerica,Sudamérica,1,1,1,respaldado_en_texto
+Q10,lugares,tren interoceanico,tren interoceánico,1,1,1,respaldado_en_texto
+Q10,lugares,pomuch,Pomuch,2,1,1,ambiguo
+Q10,lugares,escarcega,Escárcega,1,1,1,ambiguo
+Q10,lugares,poxila,Poxilá,1,1,1,ambiguo
+Q10,montos,tres mil millones de pesos,tres mil millones de pesos,1,1,1,respaldado_en_texto
+Q10,fechas_inauguracion,23 de noviembre de 2020,23 de noviembre de 2020,1,1,1,ambiguo
