@@ -61,6 +61,7 @@ modelo. `make resultados` no necesita TeX; `make entrega` añade el PDF.
 | `make evaluar-ie` | `uv run python scripts/09_evaluar_ie.py` (5.7 s) |
 | `make tablas` | `uv run python scripts/10_tablas.py` |
 | `make reporte` | `uv run python scripts/11_reporte.py` (requiere pandoc y xelatex) |
+| (entregable) | `uv run python scripts/11b_reporte_practica.py --skill <ruta de practicas-arturo>`: reporte en formato de prácticas, `reporte/reporte.docx` y `reporte/reporte.pdf` (requiere Node.js con `docx`, pandoc y Word) |
 | `make demo Q=Q3` | `uv run python scripts/13_demo.py --q Q3` (0.5 s) |
 | `make demo CONSULTA="..."` | `uv run python scripts/13_demo.py --consulta "..." --desde AAAA-MM-DD --hasta AAAA-MM-DD` |
 | `make test` | `uv run python -m pytest -q` (sin red) |

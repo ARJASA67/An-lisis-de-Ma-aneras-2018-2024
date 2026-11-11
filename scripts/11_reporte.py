@@ -19,7 +19,7 @@ from mtx import config, reporte, respuestas
 
 MD = reporte.DIR_REPORTE / "reporte.md"
 COMPILADO = reporte.DIR_REPORTE / "_compilado.md"
-PDF = reporte.DIR_REPORTE / "reporte.pdf"
+PDF = reporte.DIR_REPORTE / "borrador_latex.pdf"  # el entregable lo genera 11b_reporte_practica.py
 ENCABEZADO = reporte.DIR_REPORTE / "encabezado.tex"
 VALORACIONES = config.DIR_ANOTACIONES / "valoraciones.yaml"
 HASHES = config.DIR_SALIDA / "10_tablas_hash.json"

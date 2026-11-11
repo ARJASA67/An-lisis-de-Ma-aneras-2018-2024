@@ -2,7 +2,9 @@
  "config": {
   "indice": true,
   "numeracion": "desde_uno",
-  "estilo_referencias": "IEEE"
+  "estilo_referencias": "IEEE",
+  "tamano": 10,
+  "interlineado": 1.0
  },
  "portada": {
   "titulo": "Análisis de las Mañaneras 2018-2024",
@@ -641,7 +643,7 @@
     },
     {
      "tipo": "parrafo",
-     "texto": "Las limitaciones principales son el tamaño del gold (20 pasajes, 6 FECHA y 6 MONTO), un solo modelo NER sin comparación, la pérdida de preguntas cortas de reporteros por la segmentación y que AP depende del pool de las cuatro variantes. Todo se reproduce sin TeX desde el repositorio con los scripts numerados (`scripts/01` a `scripts/10`, que usan los juicios, el gold y la caché del NER versionados) y el PDF con `scripts/11_reporte.py`; los hashes del kit, del gold y de las entidades están en `salida/manifiesto_ejecucion.json`."
+     "texto": "Las limitaciones principales son el tamaño del gold (20 pasajes, 6 FECHA y 6 MONTO), un solo modelo NER sin comparación, la pérdida de preguntas cortas de reporteros por la segmentación y que AP depende del pool de las cuatro variantes. Todo se reproduce sin TeX desde el repositorio con los scripts numerados (`scripts/01` a `scripts/10`, que usan los juicios, el gold y la caché del NER versionados) y el PDF con `scripts/11b_reporte_practica.py`; los hashes del kit, del gold y de las entidades están en `salida/manifiesto_ejecucion.json`."
     }
    ]
   }

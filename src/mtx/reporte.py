@@ -244,7 +244,8 @@ def spec_practica(md: str, tablas: dict[str, str], portada: dict) -> dict:
         i += 1
     if previos and secciones:
         secciones[0]["bloques"] = previos + secciones[0]["bloques"]
-    return {"config": {"indice": True, "numeracion": "desde_uno", "estilo_referencias": "IEEE"},
+    return {"config": {"indice": True, "numeracion": "desde_uno", "estilo_referencias": "IEEE",
+                       "tamano": 10, "interlineado": 1.0},  # pedido por Arturo para caber en 6
             "portada": portada, "secciones": secciones, "referencias": []}
 
 
