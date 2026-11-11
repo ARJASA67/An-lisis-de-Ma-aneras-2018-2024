@@ -199,7 +199,9 @@ def _tabla_bloque(md_tabla: str, pie: str) -> dict:
     lineas = [ln.strip().strip("|") for ln in md_tabla.strip().splitlines()]
     enc = [c.strip() for c in lineas[0].split("|")]
     filas = [[c.strip() for c in ln.split("|")] for ln in lineas[2:]]
-    anchos = [max(len(enc[j]), *(len(f[j]) for f in filas)) for j in range(len(enc))]
+    # Peso por el contenido más largo, con el encabezado partido en palabras (puede usar 2 líneas).
+    anchos = [max(max(len(p) for p in enc[j].split()) + 2, *(len(f[j]) + 2 for f in filas))
+              for j in range(len(enc))]
     return {"tipo": "tabla", "encabezados": enc, "filas": filas, "anchos": anchos,
             "alineacion": "izquierda" if max(anchos) > 30 else "centro", "pie": pie}
 

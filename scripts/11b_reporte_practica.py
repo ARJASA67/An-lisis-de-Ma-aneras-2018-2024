@@ -43,7 +43,33 @@ def main() -> int:
     spec = reporte.spec_practica(md, reporte.escribir_tablas(), PORTADA)
     (DIR / "spec.json").write_text(json.dumps(spec, ensure_ascii=False, indent=1) + "\n",
                                    encoding="utf-8", newline="\n")
-    r = subprocess.run([a.python, str(a.skill / "scripts" / "generar_practica.py"),
+    # La skill renderiza con LibreOffice para numerar el índice; en Windows sin LibreOffice se
+    # sustituye su `to_pdf` por Word (misma firma), sin modificar la skill.
+    envoltura = (
+        "import importlib.util, subprocess, sys\n"
+        "from pathlib import Path\n"
+        "spec = importlib.util.spec_from_file_location('gp', sys.argv[1])\n"
+        "gp = importlib.util.module_from_spec(spec); spec.loader.exec_module(gp)\n"
+        "def to_pdf(docx, outdir):\n"
+        "    pdf = Path(outdir) / (Path(docx).stem + '.pdf')\n"
+        "    ps = (\"$w = New-Object -ComObject Word.Application; $w.Visible = $false; \"\n"
+        "          f\"$d = $w.Documents.Open('{Path(docx).resolve()}'); \"\n"
+        "          f\"$d.SaveAs2('{pdf.resolve()}', 17); $d.Close($false); $w.Quit()\")\n"
+        "    subprocess.run(['powershell', '-NoProfile', '-Command', ps], check=False)\n"
+        "    return pdf if pdf.exists() else None\n"
+        "def pdf_pages_text(pdf):\n"
+        "    import re\n"
+        "    def run(a):\n"
+        "        return subprocess.run(a, capture_output=True, text=True, encoding='utf-8',\n"
+        "                              errors='replace').stdout\n"
+        "    n = int(re.search(r'Pages:\\s+(\\d+)', run(['pdfinfo', '-enc', 'UTF-8', str(pdf)])).group(1))\n"
+        "    return [re.sub(r'\\s+', ' ', run(['pdftotext', '-enc', 'UTF-8', '-f', str(i), '-l', str(i),\n"
+        "            '-layout', str(pdf), '-'])) for i in range(1, n + 1)]\n"
+        "gp.to_pdf = to_pdf\n"
+        "gp.pdf_pages_text = pdf_pages_text\n"
+        "sys.argv = ['generar_practica.py'] + sys.argv[2:]\n"
+        "gp.main()\n")
+    r = subprocess.run([a.python, "-c", envoltura, str(a.skill / "scripts" / "generar_practica.py"),
                         str(DIR / "spec.json"), "-o", str(DOCX)], check=False)
     if r.returncode != 0:
         return r.returncode
