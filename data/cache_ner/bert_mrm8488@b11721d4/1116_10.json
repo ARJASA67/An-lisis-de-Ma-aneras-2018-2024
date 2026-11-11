@@ -1,0 +1,89 @@
+{
+ "clave": "575e8b378476d1a22cd1d1b0c034e2411789ae08d96d854f6e0de7b8329cb7ea",
+ "passage_id": "1116_10",
+ "texto_sha256": "e2af0302201173d240c4a4d5846d9d5bf62181b896342761eef4ea85f935a7ac",
+ "parametros": {
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_fragmentacion": "1",
+  "solapamiento": 64,
+  "margen": 16,
+  "aggregation_strategy": "simple"
+ },
+ "etiquetas_modelo": [
+  "LOC",
+  "MISC",
+  "ORG",
+  "PER"
+ ],
+ "version_transformers": "5.22.1",
+ "crudas": [
+  {
+   "etiqueta": "PER",
+   "inicio": 0,
+   "fin": 1,
+   "confianza": 0.988745,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 1,
+   "fin": 10,
+   "confianza": 0.699386,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 11,
+   "fin": 14,
+   "confianza": 0.766741,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 14,
+   "fin": 17,
+   "confianza": 0.426554,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 83,
+   "fin": 130,
+   "confianza": 0.998772,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 131,
+   "fin": 133,
+   "confianza": 0.588049,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 384,
+   "fin": 407,
+   "confianza": 0.999327,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1264,
+   "fin": 1270,
+   "confianza": 0.999719,
+   "cortada": false,
+   "ventana": 0
+  }
+ ],
+ "ventanas": 1,
+ "segundos": 0.286
+}

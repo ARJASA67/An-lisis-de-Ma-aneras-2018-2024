@@ -1,0 +1,97 @@
+{
+ "clave": "4ae880da727cd8f1e69ab6da6e9202d9458f6b57dba6b8ced835f493c6577537",
+ "passage_id": "1290_77",
+ "texto_sha256": "2a387a5a8f5f77104090437dc9f356876769588babbfb4572ee225df22c61385",
+ "parametros": {
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_fragmentacion": "1",
+  "solapamiento": 64,
+  "margen": 16,
+  "aggregation_strategy": "simple"
+ },
+ "etiquetas_modelo": [
+  "LOC",
+  "MISC",
+  "ORG",
+  "PER"
+ ],
+ "version_transformers": "5.22.1",
+ "crudas": [
+  {
+   "etiqueta": "PER",
+   "inicio": 0,
+   "fin": 20,
+   "confianza": 0.870714,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 240,
+   "fin": 241,
+   "confianza": 0.999432,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 241,
+   "fin": 243,
+   "confianza": 0.9735,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 243,
+   "fin": 246,
+   "confianza": 0.531515,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 399,
+   "fin": 407,
+   "confianza": 0.896173,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 430,
+   "fin": 431,
+   "confianza": 0.999314,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 431,
+   "fin": 433,
+   "confianza": 0.875182,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 433,
+   "fin": 436,
+   "confianza": 0.584917,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 437,
+   "fin": 445,
+   "confianza": 0.925974,
+   "cortada": false,
+   "ventana": 0
+  }
+ ],
+ "ventanas": 1,
+ "segundos": 0.286
+}

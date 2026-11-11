@@ -1,0 +1,225 @@
+{
+ "clave": "87ad1664a01a15d48230b89cb6fa68016026017214bb75c0bd2b811faad156e1",
+ "passage_id": "1188_80",
+ "texto_sha256": "466284575fcaf565f6a197f8ae1774dd730eae62c1ac1d11d4346b52d9d3d3b6",
+ "parametros": {
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_fragmentacion": "1",
+  "solapamiento": 64,
+  "margen": 16,
+  "aggregation_strategy": "simple"
+ },
+ "etiquetas_modelo": [
+  "LOC",
+  "MISC",
+  "ORG",
+  "PER"
+ ],
+ "version_transformers": "5.22.1",
+ "crudas": [
+  {
+   "etiqueta": "MISC",
+   "inicio": 4,
+   "fin": 9,
+   "confianza": 0.464048,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 36,
+   "fin": 42,
+   "confianza": 0.996621,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 91,
+   "fin": 102,
+   "confianza": 0.999622,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 110,
+   "fin": 118,
+   "confianza": 0.932715,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 240,
+   "fin": 246,
+   "confianza": 0.679825,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 248,
+   "fin": 275,
+   "confianza": 0.999533,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 282,
+   "fin": 296,
+   "confianza": 0.998358,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 298,
+   "fin": 310,
+   "confianza": 0.999091,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 476,
+   "fin": 493,
+   "confianza": 0.997877,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 680,
+   "fin": 686,
+   "confianza": 0.996031,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 687,
+   "fin": 695,
+   "confianza": 0.969966,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 697,
+   "fin": 708,
+   "confianza": 0.998939,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 710,
+   "fin": 717,
+   "confianza": 0.989386,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 719,
+   "fin": 728,
+   "confianza": 0.996529,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 734,
+   "fin": 783,
+   "confianza": 0.999735,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 786,
+   "fin": 808,
+   "confianza": 0.989809,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 814,
+   "fin": 831,
+   "confianza": 0.955929,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 899,
+   "fin": 906,
+   "confianza": 0.979314,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 930,
+   "fin": 932,
+   "confianza": 0.417281,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 932,
+   "fin": 937,
+   "confianza": 0.58103,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 941,
+   "fin": 950,
+   "confianza": 0.924518,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 1090,
+   "fin": 1128,
+   "confianza": 0.989414,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 1138,
+   "fin": 1148,
+   "confianza": 0.975859,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 1174,
+   "fin": 1182,
+   "confianza": 0.982182,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1186,
+   "fin": 1192,
+   "confianza": 0.999757,
+   "cortada": false,
+   "ventana": 0
+  }
+ ],
+ "ventanas": 1,
+ "segundos": 0.286
+}

@@ -1,0 +1,81 @@
+{
+ "clave": "ae385c32251b09572bb9025b7403caec88c36e15df2a702161076389616e9a98",
+ "passage_id": "1415_16",
+ "texto_sha256": "4224c7ceba5f55466e632deb47f61739535a341dd29a24eec820c493cc5fadd5",
+ "parametros": {
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_fragmentacion": "1",
+  "solapamiento": 64,
+  "margen": 16,
+  "aggregation_strategy": "simple"
+ },
+ "etiquetas_modelo": [
+  "LOC",
+  "MISC",
+  "ORG",
+  "PER"
+ ],
+ "version_transformers": "5.22.1",
+ "crudas": [
+  {
+   "etiqueta": "ORG",
+   "inicio": 18,
+   "fin": 21,
+   "confianza": 0.355441,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 250,
+   "fin": 258,
+   "confianza": 0.999565,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 276,
+   "fin": 284,
+   "confianza": 0.999621,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 319,
+   "fin": 322,
+   "confianza": 0.999713,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 322,
+   "fin": 333,
+   "confianza": 0.828466,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 943,
+   "fin": 951,
+   "confianza": 0.999263,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 983,
+   "fin": 991,
+   "confianza": 0.999706,
+   "cortada": false,
+   "ventana": 0
+  }
+ ],
+ "ventanas": 1,
+ "segundos": 0.286
+}

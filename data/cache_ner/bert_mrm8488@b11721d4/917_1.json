@@ -1,0 +1,145 @@
+{
+ "clave": "addfaaef97b3d10ed8ceb371832bb51513455506ba4d22f6b9929536f2dbb2c7",
+ "passage_id": "917_1",
+ "texto_sha256": "ae0b7c24e57964378300e9e5129a27c60bb8527d81691a0d0a8dd8b5f52d85d3",
+ "parametros": {
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_fragmentacion": "1",
+  "solapamiento": 64,
+  "margen": 16,
+  "aggregation_strategy": "simple"
+ },
+ "etiquetas_modelo": [
+  "LOC",
+  "MISC",
+  "ORG",
+  "PER"
+ ],
+ "version_transformers": "5.22.1",
+ "crudas": [
+  {
+   "etiqueta": "PER",
+   "inicio": 0,
+   "fin": 2,
+   "confianza": 0.857147,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 2,
+   "fin": 13,
+   "confianza": 0.879164,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 21,
+   "fin": 23,
+   "confianza": 0.25865,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 25,
+   "fin": 28,
+   "confianza": 0.387338,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 133,
+   "fin": 142,
+   "confianza": 0.998724,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 274,
+   "fin": 283,
+   "confianza": 0.998862,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 285,
+   "fin": 292,
+   "confianza": 0.991879,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 400,
+   "fin": 407,
+   "confianza": 0.99984,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 409,
+   "fin": 424,
+   "confianza": 0.999701,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 426,
+   "fin": 438,
+   "confianza": 0.999717,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 539,
+   "fin": 548,
+   "confianza": 0.985538,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 657,
+   "fin": 664,
+   "confianza": 0.997299,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 677,
+   "fin": 684,
+   "confianza": 0.71735,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 686,
+   "fin": 703,
+   "confianza": 0.999582,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 934,
+   "fin": 945,
+   "confianza": 0.997858,
+   "cortada": false,
+   "ventana": 0
+  }
+ ],
+ "ventanas": 1,
+ "segundos": 0.286
+}

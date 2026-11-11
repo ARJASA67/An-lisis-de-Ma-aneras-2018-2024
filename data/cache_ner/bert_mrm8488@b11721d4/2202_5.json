@@ -1,0 +1,129 @@
+{
+ "clave": "88f2ada5a4049f8f8124b2013b1e403b125047635c3ca8db6b51d87708990820",
+ "passage_id": "2202_5",
+ "texto_sha256": "b444a3603b09dab9fb722bc6e4669131600171fa7ebcf6211477f8f01d0f334f",
+ "parametros": {
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_fragmentacion": "1",
+  "solapamiento": 64,
+  "margen": 16,
+  "aggregation_strategy": "simple"
+ },
+ "etiquetas_modelo": [
+  "LOC",
+  "MISC",
+  "ORG",
+  "PER"
+ ],
+ "version_transformers": "5.22.1",
+ "crudas": [
+  {
+   "etiqueta": "PER",
+   "inicio": 18,
+   "fin": 30,
+   "confianza": 0.859862,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 109,
+   "fin": 120,
+   "confianza": 0.999571,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 479,
+   "fin": 494,
+   "confianza": 0.999771,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 684,
+   "fin": 698,
+   "confianza": 0.999775,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 750,
+   "fin": 761,
+   "confianza": 0.999514,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 815,
+   "fin": 826,
+   "confianza": 0.999523,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 861,
+   "fin": 877,
+   "confianza": 0.998193,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 929,
+   "fin": 941,
+   "confianza": 0.999412,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 972,
+   "fin": 983,
+   "confianza": 0.999526,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 1014,
+   "fin": 1028,
+   "confianza": 0.999553,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 1039,
+   "fin": 1053,
+   "confianza": 0.999431,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 1112,
+   "fin": 1127,
+   "confianza": 0.998946,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 1157,
+   "fin": 1172,
+   "confianza": 0.998892,
+   "cortada": false,
+   "ventana": 0
+  }
+ ],
+ "ventanas": 1,
+ "segundos": 0.286
+}

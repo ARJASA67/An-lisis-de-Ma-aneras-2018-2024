@@ -1,0 +1,12 @@
+{
+  "modelo": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "slug": "bert_mrm8488",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "f1_seleccion": null,
+  "f1_seleccion_alternativa": null,
+  "criterio": "tecnico",
+  "verificacion": "salida/07_verificacion_ner_bert_mrm8488.md",
+  "aprobado_por": "alumno (Arturo Jaramillo Salmerón)",
+  "fecha": "2026-11-11",
+  "nota": "Sin conjunto de selección ni candidato 2 (PlanTL-GOB-ES/roberta-base-bne-capitel-ner retirado de Hugging Face). Fijado antes de abrir el gold (D09)."
+}

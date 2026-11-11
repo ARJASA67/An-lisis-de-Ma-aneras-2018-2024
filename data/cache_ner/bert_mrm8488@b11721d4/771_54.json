@@ -1,0 +1,201 @@
+{
+ "clave": "9a01c8d58a0b5514ff5e2b60c5f9b6aac7ea5c973944557e9104b8fc104d1fe0",
+ "passage_id": "771_54",
+ "texto_sha256": "3642b778e8ad46f144f0ef3e2fb76ba534abbb9c1c69f17366b3950b4c0fe11d",
+ "parametros": {
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_fragmentacion": "1",
+  "solapamiento": 64,
+  "margen": 16,
+  "aggregation_strategy": "simple"
+ },
+ "etiquetas_modelo": [
+  "LOC",
+  "MISC",
+  "ORG",
+  "PER"
+ ],
+ "version_transformers": "5.22.1",
+ "crudas": [
+  {
+   "etiqueta": "PER",
+   "inicio": 18,
+   "fin": 21,
+   "confianza": 0.497992,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "PER",
+   "inicio": 23,
+   "fin": 30,
+   "confianza": 0.463542,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 362,
+   "fin": 390,
+   "confianza": 0.999161,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 496,
+   "fin": 504,
+   "confianza": 0.979655,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 587,
+   "fin": 598,
+   "confianza": 0.987187,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 644,
+   "fin": 647,
+   "confianza": 0.999835,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 647,
+   "fin": 658,
+   "confianza": 0.999303,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 729,
+   "fin": 732,
+   "confianza": 0.999787,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 732,
+   "fin": 743,
+   "confianza": 0.909695,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 937,
+   "fin": 945,
+   "confianza": 0.80566,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1009,
+   "fin": 1013,
+   "confianza": 0.999676,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1013,
+   "fin": 1016,
+   "confianza": 0.998823,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1020,
+   "fin": 1026,
+   "confianza": 0.999805,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1028,
+   "fin": 1034,
+   "confianza": 0.999793,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1036,
+   "fin": 1043,
+   "confianza": 0.999781,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1045,
+   "fin": 1054,
+   "confianza": 0.999816,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1056,
+   "fin": 1061,
+   "confianza": 0.999706,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1061,
+   "fin": 1063,
+   "confianza": 0.616739,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1065,
+   "fin": 1067,
+   "confianza": 0.999582,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1067,
+   "fin": 1070,
+   "confianza": 0.9044,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1070,
+   "fin": 1072,
+   "confianza": 0.595488,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1085,
+   "fin": 1093,
+   "confianza": 0.999847,
+   "cortada": false,
+   "ventana": 0
+  }
+ ],
+ "ventanas": 1,
+ "segundos": 0.286
+}

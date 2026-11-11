@@ -1,0 +1,105 @@
+{
+ "clave": "70c14bd2503ef458a7d64ed1c295b84eff518c66b7fb7a23009ffd3295fb07bf",
+ "passage_id": "1342_19",
+ "texto_sha256": "d05bd03c37279bb7cc4d449c0fe5fe06b261af4fa8dc28b73641a77edf94276d",
+ "parametros": {
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_fragmentacion": "1",
+  "solapamiento": 64,
+  "margen": 16,
+  "aggregation_strategy": "simple"
+ },
+ "etiquetas_modelo": [
+  "LOC",
+  "MISC",
+  "ORG",
+  "PER"
+ ],
+ "version_transformers": "5.22.1",
+ "crudas": [
+  {
+   "etiqueta": "MISC",
+   "inicio": 0,
+   "fin": 9,
+   "confianza": 0.913368,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 14,
+   "fin": 30,
+   "confianza": 0.576639,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 30,
+   "fin": 36,
+   "confianza": 0.516592,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 37,
+   "fin": 58,
+   "confianza": 0.56524,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 58,
+   "fin": 61,
+   "confianza": 0.586425,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 133,
+   "fin": 146,
+   "confianza": 0.934563,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 522,
+   "fin": 541,
+   "confianza": 0.99856,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 593,
+   "fin": 604,
+   "confianza": 0.994504,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 948,
+   "fin": 975,
+   "confianza": 0.803397,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 975,
+   "fin": 984,
+   "confianza": 0.672995,
+   "cortada": false,
+   "ventana": 0
+  }
+ ],
+ "ventanas": 1,
+ "segundos": 0.286
+}

@@ -1,0 +1,43 @@
+{
+  "bert_mrm8488": {
+    "modelo": "bert_mrm8488",
+    "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+    "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+    "version_posproceso": "1",
+    "parametros_cache": {
+      "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+      "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+      "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+      "version_fragmentacion": "1",
+      "solapamiento": 64,
+      "margen": 16,
+      "aggregation_strategy": "simple"
+    },
+    "ambito": {
+      "filas_query_pasaje": 100,
+      "pasajes_unicos": 99,
+      "mejor_modelo_ir": "bm25_con_filtro"
+    },
+    "pasajes_inferidos": 0,
+    "pasajes_cacheados": 99,
+    "segundos_carga_modelo": 0.0,
+    "segundos_inferencia": 0.0,
+    "segundos_total": 3.353,
+    "entidades_por_tipo": {
+      "LOC": 347,
+      "ORG": 161,
+      "PER": 156
+    },
+    "entidades_unicas_por_pasaje": 660,
+    "uniones_interpalabra": 2,
+    "descartes": {
+      "MISC": 243,
+      "vacia_tras_recorte": 3
+    },
+    "versiones": {
+      "python": "3.11.18",
+      "transformers": "5.22.1"
+    },
+    "fecha": "2026-11-11T13:00:07"
+  }
+}

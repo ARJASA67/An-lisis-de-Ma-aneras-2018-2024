@@ -1,0 +1,105 @@
+{
+ "clave": "01b7cd287c7bd8cbaf3fd603324dc2fa4e1c3adb91f907564d1dd8cb4bf6edb3",
+ "passage_id": "657_54",
+ "texto_sha256": "1497bd310a20b6d74cdbb8e3526c5453404399771dda93e4852e1682607fd5d9",
+ "parametros": {
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_fragmentacion": "1",
+  "solapamiento": 64,
+  "margen": 16,
+  "aggregation_strategy": "simple"
+ },
+ "etiquetas_modelo": [
+  "LOC",
+  "MISC",
+  "ORG",
+  "PER"
+ ],
+ "version_transformers": "5.22.1",
+ "crudas": [
+  {
+   "etiqueta": "PER",
+   "inicio": 45,
+   "fin": 60,
+   "confianza": 0.997185,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 65,
+   "fin": 80,
+   "confianza": 0.992365,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 82,
+   "fin": 86,
+   "confianza": 0.961963,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 86,
+   "fin": 89,
+   "confianza": 0.724124,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 232,
+   "fin": 241,
+   "confianza": 0.996984,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 388,
+   "fin": 395,
+   "confianza": 0.93781,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 537,
+   "fin": 546,
+   "confianza": 0.998524,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 671,
+   "fin": 680,
+   "confianza": 0.99874,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 784,
+   "fin": 791,
+   "confianza": 0.999731,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 877,
+   "fin": 884,
+   "confianza": 0.989325,
+   "cortada": false,
+   "ventana": 0
+  }
+ ],
+ "ventanas": 1,
+ "segundos": 0.286
+}

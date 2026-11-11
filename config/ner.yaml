@@ -1,0 +1,34 @@
+# NER con modelo (PRD §6.8, D09, D18). La revisión es el hash de commit registrado en la primera
+# descarga; nunca `main`. Cambiar cualquier parámetro de fragmentación o de inferencia cambia la
+# clave de la caché (data/cache_ner/) y obliga a reinferir; cambiar `version_posproceso` no.
+
+version_posproceso: "1"
+
+fragmentacion:
+  # Subtokens de solapamiento entre ventanas consecutivas.
+  solapamiento: 64
+  # Margen de seguridad por debajo del límite real: el pipeline vuelve a tokenizar cada ventana
+  # y en los bordes puede producir algún subtoken más que la tokenización del pasaje completo.
+  margen: 16
+
+inferencia:
+  aggregation_strategy: simple
+  device: -1
+  lote: 8
+
+mapa_etiquetas:
+  PER: PER
+  PERSON: PER
+  ORG: ORG
+  LOC: LOC
+  GPE: LOC
+# Etiquetas que se descartan pero se cuentan (van al análisis de errores).
+descartadas: [MISC, OTH]
+
+modelos:
+  - slug: bert_mrm8488
+    repo_id: mrm8488/bert-spanish-cased-finetuned-ner
+    revision: b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7
+    principal: true
+  # Candidato 2 (P1). El repo del PRD, PlanTL-GOB-ES/roberta-base-bne-capitel-ner, responde 401
+  # (retirado de Hugging Face) al 2026-11-11. Queda fuera hasta elegir un reemplazo verificado.

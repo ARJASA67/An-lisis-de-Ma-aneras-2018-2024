@@ -20,14 +20,16 @@
 
 - H5, reglas cerradas y congeladas (2026-11-08): `src/mtx/reglas.py`, `scripts/06_reglas.py` (`make reglas`), `tests/test_reglas.py` (108 pruebas y 2 `xfail` documentados), `config/gazetteer_extendido.csv` (109 filas: kit, PRD, 16 siglas minadas), `config/gazetteer_loc.csv`, `config/criterios_anotacion.md` aprobado por Daniel. Etiqueta `reglas-congeladas` creada. Desviación del PRD §6.7.6 en la regla de marca (el corpus trae «NOMBRE, CARGO»), documentada. Cambios posteriores a reglas o gazetteers son exploratorios y conservan el F1 congelado (D15).
 
+- Relevo (2026-11-11): el profesor inició el repo hasta H5 y pidió continuarlo individualmente; el alumno ahora es Arturo Jaramillo Salmerón, en Windows sin `make` (correr `uv run python scripts/NN_*.py`). Datos regenerados con hashes idénticos; `.gitattributes` con `eol=lf`.
+- H5, NER (2026-11-11): `ner_modelo.py`, `scripts/07_ner.py`, `config/ner.yaml`, 19 pruebas sin red. Principal verificado (P06, `salida/07_verificacion_ner_bert_mrm8488.md`) y corrido sobre los 99 pasajes del top-10 (`salida/entidades_bert_mrm8488.csv`, caché en `data/cache_ner/`). 327 pruebas rápidas verdes, ruff limpio.
+
 ## Pendiente
 
-1. H5, NER (skill `ner-modelo`): `src/mtx/ner_modelo.py`, `scripts/07_ner.py`, `config/ner.yaml` con revisión fija del modelo, chunking, posproceso de spans y caché versionada en `data/cache_ner/`. Fijar `data/modelo_ner.json` por criterios técnicos, sin usar el gold (D09). Necesita descarga de modelos de Hugging Face (red).
-2. Muestra del gold (skill `gold-anotacion`, `08b_muestra_gold.py`, semilla 42) y pestañas Gold y Gazetteer de la app; luego el alumno anota el gold (H6). El gold solo se abre con la etiqueta `reglas-congeladas` ya creada.
-3. Aplicar el diff del arnés (CLAUDE.md, `corpus-segmentacion`, `kit-contratos`, `indice-ranking`, `entrega-reproducible`): Daniel dijo "Sí" pero el diff no está en el repo; pedirle que lo pegue.
-4. Revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist.
-5. Daniel: declarar el tiempo real de anotación (hoy sin declarar); decidir qué hacer con `04_hoja_juicios_done.xlsx` en la raíz (sin versionar).
-6. Luego H7 a H9: fusión, evaluación IE, tablas, reporte, láminas.
+1. ~~NER principal~~: aprobado y fijado en `data/modelo_ner.json` (2026-11-11, criterio técnico).
+2. Muestra del gold (skill `gold-anotacion`, `08b_muestra_gold.py`, semilla 42) y pestaña Gold de la app; luego Arturo anota el gold (H6). Modo ciego: Arturo no abre `salida/entidades_*.csv`, `salida/07_*` ni `data/cache_ner/` hasta `cierre_gold.json`.
+3. H7 a H9: fusión, evaluación IE, tablas, reporte, láminas (P0 primero; recortes según PRD §12.4).
+4. Pendientes heredados: revisar `salida/02_vocabulario_top.csv` para la discusión de la stoplist; declarar el tiempo real de anotación de juicios.
+5. Subir el repo al GitHub de Arturo cuando él cree el repo vacío y dé el visto bueno.
 
 ## Decisiones
 
@@ -35,7 +37,7 @@ Ver `docs/decisiones.md`. Las no obvias: el corpus real tiene otro formato de ma
 
 ## Bloqueos
 
-- NER: necesita red para descargar el modelo de Hugging Face; fijar `data/modelo_ner.json` solo por criterios técnicos, sin gold. Antes de fijarlo, Daniel aprueba el modelo propuesto.
-- H6 (gold) es trabajo humano de Daniel y bloqueará H7 en adelante.
-- NLTK no descarga stopwords aquí (validación de rutas); `preproceso.py` debe usar `config/stopwords_es.txt`, que hay que crear versionado en H2.
+- (Resuelto 2026-11-11) NER principal aprobado y fijado.
+- H6 (gold) es trabajo humano de Arturo y bloqueará H7 en adelante.
+- Plazo registrado por el repo: entrega y presentación el 11 de noviembre de 2026, 20:00 (CDMX); confirmar con Arturo su plazo real.
 - Kaleido necesita el Chrome que instala `plotly_get_chrome` (`make setup` lo hace); los Chromium de snap fallan.

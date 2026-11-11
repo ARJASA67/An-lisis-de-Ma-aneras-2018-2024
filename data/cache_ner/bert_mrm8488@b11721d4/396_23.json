@@ -1,0 +1,105 @@
+{
+ "clave": "06758a703c88bf1b20d73ff948234f89cd40189b90841f47d1f4ea6824fecaa5",
+ "passage_id": "396_23",
+ "texto_sha256": "4bfa4eef11b90438d87ae1f45924825c66964bc3382d6da2bacd8b2fe9b83206",
+ "parametros": {
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "version_fragmentacion": "1",
+  "solapamiento": 64,
+  "margen": 16,
+  "aggregation_strategy": "simple"
+ },
+ "etiquetas_modelo": [
+  "LOC",
+  "MISC",
+  "ORG",
+  "PER"
+ ],
+ "version_transformers": "5.22.1",
+ "crudas": [
+  {
+   "etiqueta": "MISC",
+   "inicio": 73,
+   "fin": 75,
+   "confianza": 0.637427,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 409,
+   "fin": 415,
+   "confianza": 0.999614,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 460,
+   "fin": 466,
+   "confianza": 0.663128,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 467,
+   "fin": 477,
+   "confianza": 0.902036,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 534,
+   "fin": 543,
+   "confianza": 0.984499,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 666,
+   "fin": 670,
+   "confianza": 0.991375,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 673,
+   "fin": 677,
+   "confianza": 0.960718,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "MISC",
+   "inicio": 1031,
+   "fin": 1040,
+   "confianza": 0.966519,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "LOC",
+   "inicio": 1068,
+   "fin": 1074,
+   "confianza": 0.999612,
+   "cortada": false,
+   "ventana": 0
+  },
+  {
+   "etiqueta": "ORG",
+   "inicio": 1155,
+   "fin": 1164,
+   "confianza": 0.9996,
+   "cortada": false,
+   "ventana": 0
+  }
+ ],
+ "ventanas": 1,
+ "segundos": 0.286
+}

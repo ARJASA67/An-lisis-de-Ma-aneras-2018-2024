@@ -60,7 +60,8 @@ en `salida/` o `data/`.
 | `evaluacion.py` | Envoltorio de `evaluar.py` (ir/ie), vista con ventana, etiquetas por consulta, mejor modelo (D08), análisis de errores. La parte IR existe; la de IE llega en H7 | 05, 09 | juicios, ranking, gold, entidades | `resultados_ir.csv`, `resultados_ie.csv`, `salida/05_*`, `salida/09_*`, `data/mejor_modelo.json`, `reporte/figuras/ir_*.png` |
 | `muestreo.py` | Muestra gold y conjunto de selección con emparejamiento global | 08b | `ranking.csv`, `mejor_modelo.json` | `anotaciones/muestra_gold.csv`, `muestra_seleccion.csv` |
 | `reglas.py` | Regex FECHA y MONTO, cantidades auxiliares, gazetteers, regla de marca (por segmentos: el corpus trae «NOMBRE, CARGO»), cargo sin ORG/LOC, colisiones, minado de siglas | 06 | `texto` canónico, `config/gazetteer_extendido.csv` (parte del kit), `config/gazetteer_loc.csv` | `salida/06_*`, `salida/cantidades_auxiliares.csv` |
-| `ner_modelo.py` | Pipeline HF, chunking, caché versionada, posproceso de spans | 07 | pasajes del top-10 del ganador, `config/ner.yaml` | `data/cache_ner/`, `salida/07_uniones_spans.csv` |
+| `ner_modelo.py` | Pipeline HF, chunking, caché versionada, posproceso de spans (pipeline inyectable para pruebas) | 07 | pasajes del top-10 del ganador, `config/ner.yaml` | `data/cache_ner/`, `salida/entidades_{slug}.csv`, `salida/07_*` |
+| `sistema.py` | Memoria pico del proceso en Linux y Windows | 02, 07 | — | — |
 | `fusion.py` | Fusión reglas + modelo por span exacto (D12) | 08 | salidas de 06 y 07 | `entidades.csv`, `salida/entidades_unicas.csv`, `entidades_enriquecidas.csv` |
 | `normalizacion.py` | `fecha_iso`, `valor_num`, moneda, canónicos (sin tocar spans) | 08 | entidades | columnas de `entidades_enriquecidas.csv` |
 | `respuestas.py` | Tablas de respuesta con evidencia y estados (D17) | 10 | `entidades_enriquecidas.csv`, `cantidades_auxiliares.csv`, `config/tablas_respuesta.yaml` | `salida/respuestas.csv`, `salida/tablas_respuesta/*.md` |
