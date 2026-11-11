@@ -1,5 +1,5 @@
 | Concepto | Valor |
-| :--- | ---: |
+| :-------------------------------------------------- | -----------------------: |
 | Discursos en el snapshot | 2,294 |
 | Periodo | 2018-12-02 a 2024-09-30 |
 | Discursos excluidos (duplicados y casi duplicados) | 5 |

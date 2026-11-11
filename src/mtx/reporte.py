@@ -30,7 +30,11 @@ def _md(df: pd.DataFrame, alinear: str | None = None) -> str:
     """Tabla Markdown de tubos (pandoc la convierte en tabla con booktabs)."""
     cols = list(df.columns)
     al = alinear or "l" + "r" * (len(cols) - 1)
-    sep = ["---:" if a == "r" else ":---" for a in al]
+    # Guiones proporcionales al contenido: pandoc los usa como anchos relativos de columna.
+    anchos = [max(len(str(c)), *(len(str(v)) for v in df[c])) if len(df) else len(str(c))
+              for c in cols]
+    sep = ["-" * max(3, w) + ":" if a == "r" else ":" + "-" * max(3, w)
+           for a, w in zip(al, anchos, strict=True)]
     filas = ["| " + " | ".join(map(str, cols)) + " |", "| " + " | ".join(sep) + " |"]
     filas += ["| " + " | ".join(str(v) for v in f) + " |" for f in df.itertuples(index=False)]
     return "\n".join(filas) + "\n"
@@ -129,9 +133,9 @@ def tabla_postings(s: Path = config.DIR_SALIDA) -> str:
         df_idf = re.search(r"df = (\d+) de N = \d+; idf BM25 = ([\d.]+)", bloque)
         post = re.findall(r"^\| (\d+_\d+) \| [\d-]+ \| (\d+) \|", bloque, re.MULTILINE)[:3]
         filas.append((cab.group(1), cab.group(2), _miles(df_idf.group(1)), df_idf.group(2),
-                      ", ".join(f"{p} (tf {t})" for p, t in post)))
+                      ", ".join(f"{p} ({t})" for p, t in post)))
     return _md(pd.DataFrame(filas, columns=["Término", "Stem", "df", "idf BM25",
-                                            "Primeros postings por tf"]), "llrrl")
+                                            "Primeros postings (tf)"]), "llrrl")
 
 
 TABLAS = {"corpus": tabla_corpus, "postings": tabla_postings, "ir": tabla_ir, "ir_consulta": tabla_ir_consulta,

@@ -1,5 +1,5 @@
 | Categoría | Errores | Subcasos |
-| :--- | ---: | :--- |
+| :------------------- | -------: | :------------------ |
 | frontera | 38 | entidad_partida: 2 |
 | en_marca | 20 |  |
 | omision | 17 |  |
