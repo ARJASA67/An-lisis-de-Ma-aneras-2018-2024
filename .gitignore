@@ -30,3 +30,6 @@ reporte/*.toc
 # Hojas generadas para repartir juicios
 salida/*.xlsx
 anotaciones/respaldo/
+
+# Copia de compilación del reporte (marcadores sustituidos)
+reporte/_compilado.md
