@@ -28,18 +28,20 @@
 - Pestaña Juicios en solo lectura desde H4 (`componentes.juicios_congelados()`); un clic en «Omitir por ahora» había borrado el juicio Q1 578_0 y se restauró. 380 pruebas rápidas verdes.
 - H7, evaluación IE (2026-11-11): `09_evaluar_ie.py`; F1 combinado TODOS 0.7740, sin alertas; análisis de errores y dos figuras `ie_*.png`.
 - H8, tablas (2026-11-11): `respuestas.py`, `10_tablas.py`; `salida/respuestas.csv` y `salida/tablas_respuesta/`. 396 pruebas rápidas verdes.
+- H9 (2026-11-11): pandoc 3.13 instalado; reporte cortes 1 y 2 aprobados (recorte de dos figuras aprobado), PDF en 5 páginas sin valoraciones; README de 10 secciones; `requirements.txt`; demo `13_demo.py` y salida de contingencia; `laminas/guion.md`.
 - Entrega: repo en GitHub de Arturo, remoto `github` (https://github.com/ARJASA67/An-lisis-de-Ma-aneras-2018-2024.git), con `main` y la etiqueta `reglas-congeladas` subidas. `origin` es el GitLab del profesor: no se le hace push.
 
 ## Pendiente
 
-1. **H9, reporte (P0)**: corte 1 (esqueleto con tablas y figuras, `reporte/reporte.md`, `scripts/11_reporte.py`) en espera de aprobación de Arturo y de pandoc (`winget install JohnMacFarlane.Pandoc`). Luego corte 2 (prosa sección por sección, `[VALIDAR]`) y corte 3 (PDF de 4 a 6 páginas).
-2. **Valoraciones (Arturo)**: `anotaciones/valoraciones.yaml` con `Q1` a `Q10`, cada una `texto` (2 a 3 líneas) y `tabla_sha256` de `salida/10_tablas_hash.json`. `11_reporte.py` falla mientras falten.
-3. H9 resto: láminas (máximo 5) y guion `[VALIDAR]`, demo `13_demo.py`, README de 10 secciones con «Uso de IA» y marcadores `<!-- resultados:inicio -->`/`<!-- resultados:fin -->`, `requirements.txt`, `99_validar.py` ampliado y etiqueta `v1.0-entrega`.
-4. Pendientes heredados: discusión de la stoplist con `salida/02_vocabulario_top.csv`; tiempo real de anotación (juicios y gold) que declara Arturo.
-5. Plazo: hoy 11 de noviembre de 2026, 20:00. Si no alcanza, recortar en el orden de PRD §12.4 avisando antes.
+1. **Valoraciones (Arturo, bloquea el PDF final)**: `anotaciones/valoraciones.yaml`, claves `Q1` a `Q10`, cada una con `texto` y `tabla_sha256` de `salida/10_tablas_hash.json`.
+2. **Láminas y guion `[VALIDAR]`**: `laminas/guion.md` listo; las 5 láminas se arman a mano (P2 de python-pptx recortado, avisado). Falta el ensayo cronometrado de Arturo.
+3. **Corte 3 del reporte**: con valoraciones, `11_reporte.py` sin problemas, revisar todas las páginas (la tabla 3 se partía entre páginas) y confirmar 4 a 6 páginas.
+4. `docs/guia_defensa.md` (P0 del skill laminas-demo) y `99_validar.py` ampliado; etiqueta `v1.0-entrega` al final, después del corte 3.
+5. Pendientes heredados: tiempo real de anotación; respuesta del profesor sobre utilerías; tamaño y tiempo de descarga del corpus.
 
 ## Entorno (Windows de Arturo)
 
+- Pandoc: `C:\Users\arjas\AppData\Local\Pandoc` (agregarlo al PATH en Git Bash).
 - Sin `make`: correr `.venv/Scripts/python.exe scripts/NN_*.py` (o `python -m uv run python ...`), con `PYTHONUTF8=1`. Pruebas: `.venv/Scripts/python.exe -m pytest -q`; lint: `.venv/Scripts/python.exe -m ruff check .`.
 - `core.autocrlf=false` en el repo y `.gitattributes` con `eol=lf` (con CRLF fallan los hashes de `kit/`). Si un script deja diffs solo de fin de línea, `git checkout --` los archivos.
 - App: `python -m uv run streamlit run src/mtx/app/app.py` (config de vista previa en `C:\Ciencias\Textos\.claude\launch.json`, nombre `app-anotacion`).
