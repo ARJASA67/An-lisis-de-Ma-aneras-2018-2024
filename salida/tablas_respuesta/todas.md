@@ -37,7 +37,7 @@ _Relación exigida: inversión o costo vinculado al Tren Maya._
 
 ## Valoración
 
-[VALIDAR] pendiente del alumno
+Las relaciones con las organizaciones en la consulta están bien al igual que con los estados, sin embargo no se encontró un monto exacto de cuánto se le dedicó al Tren Maya.
 
 
 # Q2 · llegada y aplicación de vacunas contra el COVID-19
@@ -97,7 +97,7 @@ _Relación exigida: cantidad de dosis recibidas o aplicadas._
 
 ## Valoración
 
-[VALIDAR] pendiente del alumno
+Las organizaciones con las empresas que dieron las vacunas están bien aunque varias de ellas se mencionan muy poco. En cuanto a las personas relevantes para la consulta Melina Vega y Shaila Rosagel se cuelan ya que son periodistas y no personas relevantes para la consulta. Fechas y dosis están bien.
 
 
 # Q3 · refinería de Dos Bocas en Tabasco
@@ -144,7 +144,7 @@ _Relación exigida: inversión o costo de la refinería._
 
 ## Valoración
 
-[VALIDAR] pendiente del alumno
+A la parte de organizaciones se colaron los periódicos que criticaron o hablaron de la refinería pero la única organización importante recuperada es PEMEX. Lo mismo pasó con los responsables donde se cuela Loret de Mola por ser un reportero al que se le menciona. Montos está bien.
 
 
 # Q4 · aeropuerto Felipe Ángeles en Santa Lucía
@@ -194,7 +194,7 @@ _Relación exigida: costo o ahorro asociado al AIFA o Santa Lucía, no a otro ae
 
 ## Valoración
 
-[VALIDAR] pendiente del alumno
+En los lugares se cuela Toluca por ser mencionada. Costos está bien.
 
 
 # Q5 · programa Sembrando Vida y apoyo a campesinos
@@ -252,7 +252,7 @@ _Relación exigida: número de beneficiarios o sembradores._
 
 ## Valoración
 
-[VALIDAR] pendiente del alumno
+Secretarías está bien. Estados está bien. Montos está bien. Beneficiados está bien.
 
 
 # Q6 · combate al huachicol y robo de combustible
@@ -307,7 +307,7 @@ _Relación exigida: volumen robado o recuperado._
 
 ## Valoración
 
-[VALIDAR] pendiente del alumno
+Lugares está bien. Organizaciones se cuela "interven", seguramente porque estaba capitalizada al inicio de una cita. Pérdidas y litros está bien.
 
 
 # Q7 · pensión universal para adultos mayores
@@ -356,7 +356,7 @@ _Relación exigida: fecha de aumento de la pensión._
 
 ## Valoración
 
-[VALIDAR] pendiente del alumno
+Si hablamos de los montos bimestrales que reciben los beneficiarios, todas las entradas con millones están mal, pero es relevante saber cuánto se dedicó a este programa. Organizaciones está bien, aunque se cuelan organizaciones a las que sus funcionarios se le da el beneficio como Pemex y CFE pero no lo veo mal. Fechas vacío porque no se mencionan.
 
 
 # Q8 · aumento al salario mínimo y acuerdo con empresarios
@@ -397,7 +397,7 @@ _Relación exigida: salario mínimo diario._
 
 ## Valoración
 
-[VALIDAR] pendiente del alumno
+Organizaciones está vacío porque es el mismo gobierno quien sube el salario no las empresas privadas. Porcentajes está bien pero se cuelan algunas métricas de comparación y no de aumento. Montos está bien.
 
 
 # Q9 · operación y apertura de sucursales del Banco del Bienestar
@@ -461,7 +461,7 @@ _Relación exigida: inversión o recursos del Banco del Bienestar._
 
 ## Valoración
 
-[VALIDAR] pendiente del alumno
+Organizaciones se duplica Banco del Bienestar porque se habló en plural de ellos y otra por seguramente un espacio. Se cuela Banco Azteca porque se le menciona. Sucursales está bien pero no hay lógica entre ellas por la manera de hablar del comunicador. Estados y montos está bien.
 
 
 # Q10 · construcción y operación del Tren Interoceánico del Istmo de Tehuantepec
@@ -522,4 +522,4 @@ _Relación exigida: fecha de inauguración o inicio de operación._
 
 ## Valoración
 
-[VALIDAR] pendiente del alumno
+CV y eánico se cuelan porque se cortó mal Empresa Multimodal Interoceánica S.A. de C.V. Tren Maya se cuela a los lugares porque se le menciona. Monto está bien. La fecha de inauguración está mal porque se habla de la fecha que se empezará a trabajar en el proyecto.
