@@ -200,7 +200,9 @@ def _tabla_bloque(md_tabla: str, pie: str) -> dict:
     enc = [c.strip() for c in lineas[0].split("|")]
     filas = [[c.strip() for c in ln.split("|")] for ln in lineas[2:]]
     # Peso por el contenido más largo, con el encabezado partido en palabras (puede usar 2 líneas).
-    anchos = [max(max(len(p) for p in enc[j].split()) + 2, *(len(f[j]) + 2 for f in filas))
+    # Tope de 60: una celda de párrafo (las valoraciones) se parte en líneas y no debe dejar
+    # sin espacio a las columnas cortas.
+    anchos = [min(60, max(max(len(p) for p in enc[j].split()) + 2, *(len(f[j]) + 2 for f in filas)))
               for j in range(len(enc))]
     return {"tipo": "tabla", "encabezados": enc, "filas": filas, "anchos": anchos,
             "alineacion": "izquierda" if max(anchos) > 30 else "centro", "pie": pie}

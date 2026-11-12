@@ -1,12 +1,12 @@
 | Consulta | Valoración del alumno |
-| :-------- | :------------------------------ |
-| Q1 | [VALIDAR] pendiente del alumno |
-| Q2 | [VALIDAR] pendiente del alumno |
-| Q3 | [VALIDAR] pendiente del alumno |
-| Q4 | [VALIDAR] pendiente del alumno |
-| Q5 | [VALIDAR] pendiente del alumno |
-| Q6 | [VALIDAR] pendiente del alumno |
-| Q7 | [VALIDAR] pendiente del alumno |
-| Q8 | [VALIDAR] pendiente del alumno |
-| Q9 | [VALIDAR] pendiente del alumno |
-| Q10 | [VALIDAR] pendiente del alumno |
+| :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Q1 | Las relaciones con las organizaciones en la consulta están bien al igual que con los estados, sin embargo no se encontró un monto exacto de cuánto se le dedicó al Tren Maya. |
+| Q2 | Las organizaciones con las empresas que dieron las vacunas están bien aunque varias de ellas se mencionan muy poco. En cuanto a las personas relevantes para la consulta Melina Vega y Shaila Rosagel se cuelan ya que son periodistas y no personas relevantes para la consulta. Fechas y dosis están bien. |
+| Q3 | A la parte de organizaciones se colaron los periódicos que criticaron o hablaron de la refinería pero la única organización importante recuperada es PEMEX. Lo mismo pasó con los responsables donde se cuela Loret de Mola por ser un reportero al que se le menciona. Montos está bien. |
+| Q4 | En los lugares se cuela Toluca por ser mencionada. Costos está bien. |
+| Q5 | Secretarías está bien. Estados está bien. Montos está bien. Beneficiados está bien. |
+| Q6 | Lugares está bien. Organizaciones se cuela "interven", seguramente porque estaba capitalizada al inicio de una cita. Pérdidas y litros está bien. |
+| Q7 | Si hablamos de los montos bimestrales que reciben los beneficiarios, todas las entradas con millones están mal, pero es relevante saber cuánto se dedicó a este programa. Organizaciones está bien, aunque se cuelan organizaciones a las que sus funcionarios se le da el beneficio como Pemex y CFE pero no lo veo mal. Fechas vacío porque no se mencionan. |
+| Q8 | Organizaciones está vacío porque es el mismo gobierno quien sube el salario no las empresas privadas. Porcentajes está bien pero se cuelan algunas métricas de comparación y no de aumento. Montos está bien. |
+| Q9 | Organizaciones se duplica Banco del Bienestar porque se habló en plural de ellos y otra por seguramente un espacio. Se cuela Banco Azteca porque se le menciona. Sucursales está bien pero no hay lógica entre ellas por la manera de hablar del comunicador. Estados y montos está bien. |
+| Q10 | CV y eánico se cuelan porque se cortó mal Empresa Multimodal Interoceánica S.A. de C.V. Tren Maya se cuela a los lugares porque se le menciona. Monto está bien. La fecha de inauguración está mal porque se habla de la fecha que se empezará a trabajar en el proyecto. |

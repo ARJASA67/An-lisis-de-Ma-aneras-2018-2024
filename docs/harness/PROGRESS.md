@@ -30,13 +30,14 @@
 - H8, tablas (2026-11-11): `respuestas.py`, `10_tablas.py`; `salida/respuestas.csv` y `salida/tablas_respuesta/`. 396 pruebas rápidas verdes.
 - H9 (2026-11-11): pandoc 3.13 instalado; reporte cortes 1 y 2 aprobados (recorte de dos figuras aprobado), PDF en 5 páginas sin valoraciones; README de 10 secciones; `requirements.txt`; demo `13_demo.py` y salida de contingencia; `laminas/guion.md`.
 - Reporte final (2026-11-11): formato de prácticas de Arturo, letra 10 e interlineado 1.0 por decisión suya, 8 páginas (portada, índice y 6 de cuerpo); láminas con python-pptx; gold en 1.5 h.
+- Valoraciones y entrega (2026-11-11): Arturo dictó las 10 valoraciones (transcritas con solo ortografía corregida a petición suya); tablas y reporte regenerados (8 páginas, cuerpo de 6; ancho de la tabla 8 corregido); etiqueta local `v1.0-entrega`.
 - Entrega: repo en GitHub de Arturo, remoto `github` (https://github.com/ARJASA67/An-lisis-de-Ma-aneras-2018-2024.git), con `main` y la etiqueta `reglas-congeladas` subidas. `origin` es el GitLab del profesor: no se le hace push.
 
 ## Pendiente
 
-1. **Valoraciones (Arturo, lo único que bloquea la entrega)**: `anotaciones/valoraciones.yaml`, claves `Q1` a `Q10`, cada una con `texto` (2 a 3 líneas) y `tabla_sha256` de `salida/10_tablas_hash.json`. El asistente no las redacta (R08).
-2. Con valoraciones: regenerar el reporte (`scripts/11b_reporte_practica.py`, ver README), revisar que el cuerpo siga en 6 páginas (hoy la página 6 está casi vacía), commit y etiqueta `v1.0-entrega`; Arturo sube con `git push github main` y `git push github v1.0-entrega`.
-3. Arturo edita `laminas/laminas.pptx` y escribe su propio guion; ensayo con cronómetro.
+1. Arturo sube la entrega: `git push github main` y `git push github v1.0-entrega`.
+2. Arturo edita `laminas/laminas.pptx` y escribe su propio guion; ensayo con cronómetro antes de las 20:00.
+3. Entre la entrega y la presentación no se cambia código que afecte cifras (`integridad-congelacion`).
 
 ## Entorno (Windows de Arturo)
 
